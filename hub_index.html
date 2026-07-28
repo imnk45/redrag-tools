@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REDRAG Tools — Free Utilities for Gamers & PC Builders | 2026</title>
+  <meta name="description" content="Free tools for gamers: Game Storage Planner, VRAM Calculator, RAM Latency Calculator, and more. Plan your PC build, storage, and gaming setup with REDRAG's free utilities.">
+  <meta name="keywords" content="gaming tools, PC build calculator, game storage planner, free gaming utilities, SSD calculator, PC hardware tools">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tools.redrag.in/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tools.redrag.in/">
+  <meta property="og:title" content="REDRAG Tools — Free Utilities for Gamers & PC Builders">
+  <meta property="og:description" content="Free gaming tools: Storage planner, VRAM calculator, RAM latency tool, and more.">
+  <meta property="og:site_name" content="REDRAG Tools">
+
+  <link rel="icon" href="https://www.redrag.in/favicon.ico">
+
+  <style>
+    :root {
+      --primary: #ff3333;
+      --primary-dark: #cc0000;
+      --bg-dark: #0d0d0d;
+      --bg-card: #1a1a1a;
+      --bg-card-hover: #222222;
+      --text-primary: #ffffff;
+      --text-secondary: #b3b3b3;
+      --text-muted: #666666;
+      --border: #2a2a2a;
+      --radius: 16px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #1a0000 0%, #0d0d0d 100%);
+      border-bottom: 2px solid var(--primary);
+      padding: 20px 0;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 42px; height: 42px;
+      background: var(--primary);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+
+    .logo-text span { color: var(--primary); }
+
+    .hero {
+      background: linear-gradient(135deg, #1a0000 0%, #0d0d0d 50%, #0a0a1a 100%);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span { color: var(--primary); }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,51,51,0.15);
+      border: 1px solid rgba(255,51,51,0.3);
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-size: 14px;
+      color: #ff6666;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .tools-section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-secondary);
+      margin-bottom: 40px;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 24px;
+    }
+
+    .tool-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tool-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .tool-card.coming-soon {
+      opacity: 0.6;
+      cursor: default;
+    }
+
+    .tool-card.coming-soon:hover {
+      border-color: var(--border);
+      transform: none;
+      box-shadow: none;
+    }
+
+    .tool-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(255,51,51,0.15);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    .tool-card.coming-soon .tool-icon {
+      background: rgba(102,102,102,0.15);
+    }
+
+    .tool-name {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .tool-desc {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+
+    .tool-meta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .tool-tag {
+      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: var(--bg-dark);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .tool-tag.live {
+      background: rgba(0,200,83,0.15);
+      color: #00c853;
+      border-color: rgba(0,200,83,0.3);
+    }
+
+    .tool-tag.coming {
+      background: rgba(255,214,0,0.15);
+      color: #ffd600;
+      border-color: rgba(255,214,0,0.3);
+    }
+
+    .footer {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .footer p {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #ff6666;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero { padding: 50px 20px; }
+      .tools-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="https://www.redrag.in/" class="logo">
+        <div class="logo-icon">🎯</div>
+        <div class="logo-text">RED<span>RAG</span></div>
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Free Tools for <span>Gamers</span> & PC Builders</h1>
+      <p>Plan your storage, calculate your hardware needs, and build the perfect gaming setup with REDRAG's free utilities. No signup required.</p>
+      <div class="badge">🛠️ 1 Live Tool &nbsp;•&nbsp; 4 More Coming Soon</div>
+    </div>
+  </section>
+
+  <section class="tools-section">
+    <div class="container">
+      <h2 class="section-title">Available Tools</h2>
+      <p class="section-subtitle">Interactive calculators and planners for your gaming and PC hardware needs</p>
+
+      <div class="tools-grid">
+
+        <!-- LIVE: Game Storage Planner -->
+        <a href="./storage/" class="tool-card">
+          <div class="tool-icon">💾</div>
+          <div class="tool-name">Game Storage Planner</div>
+          <div class="tool-desc">Select your games, pick your SSD size, and instantly see how many games fit on 500GB, 1TB, 2TB, or 4TB. Supports PC, PS5, and Xbox with real 2026 game install sizes.</div>
+          <div class="tool-meta">
+            <span class="tool-tag live">● LIVE</span>
+            <span class="tool-tag">100+ Games</span>
+            <span class="tool-tag">PC / PS5 / Xbox</span>
+          </div>
+        </a>
+
+        <!-- COMING SOON: VRAM Calculator -->
+        <div class="tool-card coming-soon">
+          <div class="tool-icon">🧠</div>
+          <div class="tool-name">VRAM Calculator for AI/LLMs</div>
+          <div class="tool-desc">Find out how much VRAM you need to run Llama, Mistral, Qwen, and other local AI models. Check if your GPU can handle different quantization levels (Q4, Q5, Q8, FP16).</div>
+          <div class="tool-meta">
+            <span class="tool-tag coming">Coming Soon</span>
+            <span class="tool-tag">AI Models</span>
+            <span class="tool-tag">GPU Check</span>
+          </div>
+        </div>
+
+        <!-- COMING SOON: RAM Latency -->
+        <div class="tool-card coming-soon">
+          <div class="tool-icon">⚡</div>
+          <div class="tool-name">RAM Latency Calculator</div>
+          <div class="tool-desc">Calculate true RAM latency in nanoseconds. Compare DDR4 vs DDR5, different CAS timings, and frequencies. Find out which RAM kit is actually faster for gaming.</div>
+          <div class="tool-meta">
+            <span class="tool-tag coming">Coming Soon</span>
+            <span class="tool-tag">DDR4 / DDR5</span>
+            <span class="tool-tag">Compare Tool</span>
+          </div>
+        </div>
+
+        <!-- COMING SOON: Resolution Visualizer -->
+        <div class="tool-card coming-soon">
+          <div class="tool-icon">🖥️</div>
+          <div class="tool-name">Resolution Scaling Visualizer</div>
+          <div class="tool-desc">See how 1080p, 1440p, and 4K content actually looks on different monitor sizes. Compare pixel density (PPI) and understand resolution scaling before buying a monitor.</div>
+          <div class="tool-meta">
+            <span class="tool-tag coming">Coming Soon</span>
+            <span class="tool-tag">1080p / 1440p / 4K</span>
+            <span class="tool-tag">PPI Calculator</span>
+          </div>
+        </div>
+
+        <!-- COMING SOON: PC Build Configurator -->
+        <div class="tool-card coming-soon">
+          <div class="tool-icon">🔧</div>
+          <div class="tool-name">Budget PC Build Configurator (India)</div>
+          <div class="tool-desc">Build the perfect gaming PC for your budget. Select your price range (₹30K to ₹2L), pick your use case, and get component recommendations with India pricing and FPS estimates.</div>
+          <div class="tool-meta">
+            <span class="tool-tag coming">Coming Soon</span>
+            <span class="tool-tag">₹30K - ₹2L</span>
+            <span class="tool-tag">India Pricing</span>
+          </div>
+        </div>
+
+        <!-- COMING SOON: PSU Calculator -->
+        <div class="tool-card coming-soon">
+          <div class="tool-icon">🔌</div>
+          <div class="tool-name">PSU Wattage Calculator</div>
+          <div class="tool-desc">Calculate exactly how much power your PC build needs. Select your CPU, GPU, and components to get the recommended PSU wattage with headroom and efficiency rating suggestions.</div>
+          <div class="tool-meta">
+            <span class="tool-tag coming">Coming Soon</span>
+            <span class="tool-tag">Wattage</span>
+            <span class="tool-tag">Efficiency</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 <a href="https://www.redrag.in/">REDRAG</a> — Gaming & Technology Blog. All rights reserved.</p>
+      <p style="margin-top: 8px; font-size: 12px;">Free tools for the gaming community. Built with ❤️ in India.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
