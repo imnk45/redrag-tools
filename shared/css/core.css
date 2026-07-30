@@ -1,0 +1,417 @@
+/* ============================================
+   REDRAG Tools — Core CSS
+   Design Tokens, Reset, Base, Layout, Utilities
+   Version: 2.0.0
+   ============================================ */
+
+/* ------------------------------------------
+   1. DESIGN TOKENS
+   ------------------------------------------ */
+:root {
+  /* Brand */
+  --rt-primary: #e63946;
+  --rt-primary-light: #ff6b7a;
+  --rt-primary-dark: #c1121f;
+
+  /* Backgrounds (elevation hierarchy) */
+  --rt-bg-base: #0a0a0f;
+  --rt-bg-elevated: #111118;
+  --rt-bg-card: #16161f;
+  --rt-bg-card-hover: #1e1e2a;
+  --rt-bg-input: #0f0f16;
+  --rt-bg-overlay: rgba(10, 10, 15, 0.85);
+
+  /* Borders */
+  --rt-border-default: #252535;
+  --rt-border-hover: #353550;
+  --rt-border-focus: #e63946;
+
+  /* Text (WCAG AA compliant on #0a0a0f) */
+  --rt-text-primary: #f0f0f5;
+  --rt-text-secondary: #a0a0b0;
+  --rt-text-muted: #7a7a8a;
+  --rt-text-disabled: #4a4a5a;
+
+  /* Semantic */
+  --rt-success: #22c55e;
+  --rt-warning: #f59e0b;
+  --rt-danger: #ef4444;
+  --rt-info: #3b82f6;
+
+  /* Typography Scale (fluid) */
+  --rt-text-hero: clamp(36px, 6vw, 64px);
+  --rt-text-h1: clamp(28px, 4vw, 40px);
+  --rt-text-h2: clamp(24px, 3.5vw, 32px);
+  --rt-text-h3: 20px;
+  --rt-text-h4: 17px;
+  --rt-text-body: 15px;
+  --rt-text-body-lg: 17px;
+  --rt-text-small: 13px;
+  --rt-text-xs: 11px;
+
+  /* Font Weights */
+  --rt-weight-regular: 400;
+  --rt-weight-medium: 500;
+  --rt-weight-semibold: 600;
+  --rt-weight-bold: 700;
+  --rt-weight-extrabold: 800;
+  --rt-weight-black: 900;
+
+  /* Spacing (8px base) */
+  --rt-space-1: 4px;
+  --rt-space-2: 8px;
+  --rt-space-3: 12px;
+  --rt-space-4: 16px;
+  --rt-space-5: 24px;
+  --rt-space-6: 32px;
+  --rt-space-8: 48px;
+  --rt-space-10: 64px;
+  --rt-space-12: 80px;
+
+  /* Border Radius */
+  --rt-radius-sm: 8px;
+  --rt-radius: 12px;
+  --rt-radius-lg: 16px;
+  --rt-radius-xl: 20px;
+  --rt-radius-full: 9999px;
+
+  /* Shadows */
+  --rt-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --rt-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --rt-shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.5);
+  --rt-shadow-glow: 0 4px 16px rgba(230, 57, 70, 0.3);
+  --rt-shadow-glow-lg: 0 8px 32px rgba(230, 57, 70, 0.4);
+
+  /* Transitions */
+  --rt-transition-fast: all 0.15s ease;
+  --rt-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --rt-transition-slow: all 0.35s ease;
+  --rt-transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Z-Index Scale */
+  --rt-z-base: 0;
+  --rt-z-dropdown: 50;
+  --rt-z-sticky: 100;
+  --rt-z-overlay: 200;
+  --rt-z-modal: 300;
+  --rt-z-toast: 400;
+
+  /* Layout */
+  --rt-container-max: 1280px;
+  --rt-header-height: 72px;
+}
+
+/* ------------------------------------------
+   2. CSS RESET (Minimal, Targeted)
+   ------------------------------------------ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--rt-bg-base);
+  color: var(--rt-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove default list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default button styles */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* Remove default link underline, inherit color */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Images responsive by default */
+img, svg, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove default fieldset styles */
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+/* Accessible focus states */
+*:focus-visible {
+  outline: 2px solid var(--rt-primary-light);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ------------------------------------------
+   3. BASE TYPOGRAPHY
+   ------------------------------------------ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--rt-weight-extrabold);
+  line-height: 1.2;
+  color: var(--rt-text-primary);
+}
+
+h1 { font-size: var(--rt-text-h1); letter-spacing: -0.5px; }
+h2 { font-size: var(--rt-text-h2); letter-spacing: -0.5px; }
+h3 { font-size: var(--rt-text-h3); letter-spacing: -0.3px; }
+h4 { font-size: var(--rt-text-h4); }
+
+p {
+  font-size: var(--rt-text-body);
+  line-height: 1.7;
+  color: var(--rt-text-secondary);
+}
+
+strong, b {
+  font-weight: var(--rt-weight-bold);
+  color: var(--rt-text-primary);
+}
+
+/* ------------------------------------------
+   4. LAYOUT
+   ------------------------------------------ */
+
+/* Container */
+.rt-container {
+  max-width: var(--rt-container-max);
+  margin: 0 auto;
+  padding: 0 var(--rt-space-5);
+}
+
+@media (max-width: 768px) {
+  .rt-container {
+    padding: 0 var(--rt-space-4);
+  }
+}
+
+/* Section spacing */
+.rt-section {
+  padding: var(--rt-space-10) 0;
+}
+
+@media (max-width: 768px) {
+  .rt-section {
+    padding: var(--rt-space-8) 0;
+  }
+}
+
+/* Tool Layout Grid */
+.rt-tool-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--rt-space-5);
+  align-items: start;
+  padding-bottom: var(--rt-space-5);
+}
+
+@media (max-width: 1000px) {
+  .rt-tool-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sidebar */
+.rt-sidebar {
+  position: sticky;
+  top: calc(var(--rt-header-height) + var(--rt-space-4));
+}
+
+@media (max-width: 1000px) {
+  .rt-sidebar {
+    position: static;
+  }
+}
+
+/* Content Section (SEO articles) */
+.rt-content-section {
+  padding: var(--rt-space-8) 0;
+  border-top: 1px solid var(--rt-border-default);
+}
+
+.rt-content-section h2 {
+  margin-bottom: var(--rt-space-4);
+}
+
+.rt-content-section h3 {
+  margin: var(--rt-space-6) 0 var(--rt-space-3);
+}
+
+.rt-content-section p {
+  margin-bottom: var(--rt-space-4);
+}
+
+.rt-content-section ul,
+.rt-content-section ol {
+  color: var(--rt-text-secondary);
+  margin-bottom: var(--rt-space-4);
+  padding-left: var(--rt-space-5);
+}
+
+.rt-content-section li {
+  margin-bottom: var(--rt-space-2);
+  line-height: 1.7;
+}
+
+.rt-content-section a {
+  color: var(--rt-primary-light);
+  font-weight: var(--rt-weight-semibold);
+}
+
+.rt-content-section a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------------
+   5. UTILITY CLASSES
+   ------------------------------------------ */
+
+/* Text */
+.u-text-center { text-align: center; }
+.u-text-left { text-align: left; }
+.u-text-right { text-align: right; }
+
+.u-text-primary { color: var(--rt-text-primary); }
+.u-text-secondary { color: var(--rt-text-secondary); }
+.u-text-muted { color: var(--rt-text-muted); }
+
+/* Display */
+.u-hidden { display: none !important; }
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Spacing */
+.u-mb-1 { margin-bottom: var(--rt-space-1); }
+.u-mb-2 { margin-bottom: var(--rt-space-2); }
+.u-mb-3 { margin-bottom: var(--rt-space-3); }
+.u-mb-4 { margin-bottom: var(--rt-space-4); }
+.u-mb-5 { margin-bottom: var(--rt-space-5); }
+.u-mb-6 { margin-bottom: var(--rt-space-6); }
+
+.u-mt-4 { margin-top: var(--rt-space-4); }
+.u-mt-5 { margin-top: var(--rt-space-5); }
+
+/* Flex */
+.u-flex { display: flex; }
+.u-flex-col { flex-direction: column; }
+.u-items-center { align-items: center; }
+.u-justify-between { justify-content: space-between; }
+.u-gap-2 { gap: var(--rt-space-2); }
+.u-gap-3 { gap: var(--rt-space-3); }
+
+/* Width */
+.u-w-full { width: 100%; }
+
+/* ------------------------------------------
+   6. ACCESSIBILITY
+   ------------------------------------------ */
+
+/* Skip to main content link */
+.rt-skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--rt-primary);
+  color: white;
+  padding: 8px 16px;
+  font-weight: var(--rt-weight-bold);
+  font-size: var(--rt-text-small);
+  z-index: 9999;
+  transition: top 0.3s;
+  border-radius: 0 0 var(--rt-radius-sm) 0;
+}
+
+.rt-skip-link:focus {
+  top: 0;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  :root {
+    --rt-border-default: #555;
+    --rt-text-secondary: #ccc;
+    --rt-text-muted: #aaa;
+  }
+}
+
+/* ------------------------------------------
+   7. ANIMATIONS
+   ------------------------------------------ */
+@keyframes rt-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rt-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rt-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rt-skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes rt-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
