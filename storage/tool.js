@@ -578,7 +578,7 @@
       },
       {
         question: 'Should I buy a 1TB or 2TB SSD for gaming?',
-        answer: '<p>For most gamers in 2026, we recommend <strong>2TB</strong>. Here's why:</p>' +
+        answer: '<p>For most gamers in 2026, we recommend <strong>2TB</strong>. Here is why:</p>' +
           '<ul><li>1TB fits only 6-9 AAA games — you'll uninstall constantly</li>' +
           '<li>2TB fits 15-18 AAA games — room for your library + future releases</li>' +
           '<li>Game sizes are growing 15-20% yearly</li>' +
