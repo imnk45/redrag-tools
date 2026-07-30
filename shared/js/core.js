@@ -2,7 +2,7 @@
    REDRAG Tools — Core JavaScript
    Namespace: RT
    Shell Injection, Utilities, Config, Analytics
-   Version: 2.0.1 (Hotfix — Syntax Error Resolved)
+   Version: 2.0.0
    ============================================ */
 
 (function (global) {
@@ -52,6 +52,7 @@
     // Analytics (privacy-first, no cookies)
     analytics: {
       enabled: true,
+      // Plausible.io configuration — swap provider here if needed
       provider: 'plausible',
       scriptUrl: 'https://plausible.io/js/script.js',
       domain: 'tools.redrag.in'
@@ -62,14 +63,33 @@
      2. DOM UTILITIES
      ========================================== */
   const dom = {
+    /**
+     * Shorthand for querySelector
+     * @param {string} selector
+     * @param {Element} [context=document]
+     * @returns {Element|null}
+     */
     $(selector, context) {
       return (context || document).querySelector(selector);
     },
 
+    /**
+     * Shorthand for querySelectorAll
+     * @param {string} selector
+     * @param {Element} [context=document]
+     * @returns {NodeList}
+     */
     $$(selector, context) {
       return (context || document).querySelectorAll(selector);
     },
 
+    /**
+     * Create an element with attributes and children
+     * @param {string} tag
+     * @param {Object} [attrs={}]
+     * @param {Array|string} [children=[]]
+     * @returns {Element}
+     */
     create(tag, attrs, children) {
       const el = document.createElement(tag);
       if (attrs) {
@@ -98,6 +118,12 @@
       return el;
     },
 
+    /**
+     * Inject HTML string into a container element
+     * @param {Element|string} target — element or selector
+     * @param {string} html
+     * @param {string} [position='beforeend']
+     */
     inject(target, html, position) {
       const el = typeof target === 'string' ? this.$(target) : target;
       if (!el) {
@@ -107,12 +133,21 @@
       el.insertAdjacentHTML(position || 'beforeend', html);
     },
 
+    /**
+     * Remove all children from an element
+     * @param {Element} el
+     */
     clear(el) {
       while (el.firstChild) {
         el.removeChild(el.firstChild);
       }
     },
 
+    /**
+     * Check if element is in viewport
+     * @param {Element} el
+     * @returns {boolean}
+     */
     isInViewport(el) {
       const rect = el.getBoundingClientRect();
       return (
@@ -123,6 +158,10 @@
       );
     },
 
+    /**
+     * Wait for DOM ready (or execute immediately if already ready)
+     * @param {Function} callback
+     */
     ready(callback) {
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', callback);
@@ -136,6 +175,12 @@
      3. UTILITIES
      ========================================== */
   const utils = {
+    /**
+     * Debounce a function
+     * @param {Function} func
+     * @param {number} wait — milliseconds
+     * @returns {Function}
+     */
     debounce(func, wait) {
       let timeout;
       return function executedFunction(...args) {
@@ -148,6 +193,12 @@
       };
     },
 
+    /**
+     * Throttle a function
+     * @param {Function} func
+     * @param {number} limit — milliseconds
+     * @returns {Function}
+     */
     throttle(func, limit) {
       let inThrottle;
       return function (...args) {
@@ -159,6 +210,11 @@
       };
     },
 
+    /**
+     * Escape HTML special characters
+     * @param {string} text
+     * @returns {string}
+     */
     escapeHtml(text) {
       if (!text) return '';
       const div = document.createElement('div');
@@ -166,22 +222,33 @@
       return div.innerHTML;
     },
 
-    escapeJs(text) {
+    /**
+     * Escape text for use in JavaScript strings (single quotes)
+     * @param {string} text
+     * @returns {string}
+     */
+        escapeJs(text) {
       if (!text) return '';
       return text
         .replace(/\\/g, '\\\\')
-        .replace(/'/g, "\'")
-        .replace(/"/g, '\"')
-        .replace(/\n/g, '\n')
-        .replace(/\r/g, '\r');
+        .replace(/'/g, "\\'")
+        .replace(/"/g, '\\"')
+        .replace(/\n/g, '\\n')
+        .replace(/\r/g, '\\r');
     },
 
+    /**
+     * Copy text to clipboard
+     * @param {string} text
+     * @returns {Promise<boolean>}
+     */
     async copyToClipboard(text) {
       try {
         if (navigator.clipboard && navigator.clipboard.writeText) {
           await navigator.clipboard.writeText(text);
           return true;
         }
+        // Fallback for older browsers
         const textarea = document.createElement('textarea');
         textarea.value = text;
         textarea.style.position = 'fixed';
@@ -197,10 +264,20 @@
       }
     },
 
+    /**
+     * Format a number with locale separators
+     * @param {number} num
+     * @returns {string}
+     */
     formatNumber(num) {
       return new Intl.NumberFormat('en-IN').format(num);
     },
 
+    /**
+     * Format bytes to human-readable (GB, MB, etc.)
+     * @param {number} bytes
+     * @returns {string}
+     */
     formatBytes(bytes) {
       if (bytes === 0) return '0 GB';
       const gb = bytes / (1024 ** 3);
@@ -209,11 +286,20 @@
       return mb.toFixed(0) + ' MB';
     },
 
+    /**
+     * Get URL query parameter
+     * @param {string} name
+     * @returns {string|null}
+     */
     getQueryParam(name) {
       const params = new URLSearchParams(window.location.search);
       return params.get(name);
     },
 
+    /**
+     * Set URL query parameter without reloading
+     * @param {Object} params — key-value pairs
+     */
     setQueryParams(params) {
       const url = new URL(window.location);
       Object.entries(params).forEach(([key, val]) => {
@@ -226,6 +312,9 @@
       window.history.replaceState({}, '', url);
     },
 
+    /**
+     * Simple localStorage wrapper with JSON support
+     */
     storage: {
       get(key, defaultValue) {
         try {
@@ -250,10 +339,18 @@
       }
     },
 
+    /**
+     * Detect if user prefers reduced motion
+     * @returns {boolean}
+     */
     prefersReducedMotion() {
       return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     },
 
+    /**
+     * Detect touch device
+     * @returns {boolean}
+     */
     isTouchDevice() {
       return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     }
@@ -266,6 +363,11 @@
     _headerLoaded: false,
     _footerLoaded: false,
 
+    /**
+     * Fetch and inject the shared header
+     * @param {Object} [options={}]
+     * @param {string} [options.activeNav] — which nav item is active
+     */
     async injectHeader(options) {
       const placeholder = dom.$('#rt-header');
       if (!placeholder) return;
@@ -274,17 +376,29 @@
         const res = await fetch(CONFIG.paths.html + 'header.html');
         if (!res.ok) throw new Error('Header fetch failed');
         let html = await res.text();
+
+        // Inject into placeholder
         placeholder.innerHTML = html;
         this._headerLoaded = true;
+
+        // Highlight active nav item
         this._setActiveNav(options && options.activeNav);
+
+        // Bind mobile menu toggle
         this._bindMobileMenu();
+
+        // Dispatch event for other scripts
         placeholder.dispatchEvent(new CustomEvent('rt:headerReady', { bubbles: true }));
       } catch (err) {
         console.error('[RT] Header injection failed:', err);
+        // Fallback: keep placeholder visible with minimal styling
         placeholder.style.minHeight = '72px';
       }
     },
 
+    /**
+     * Fetch and inject the shared footer
+     */
     async injectFooter() {
       const placeholder = dom.$('#rt-footer');
       if (!placeholder) return;
@@ -301,8 +415,13 @@
       }
     },
 
+    /**
+     * Set active nav item based on current URL or explicit option
+     * @param {string} [activeNav]
+     */
     _setActiveNav(activeNav) {
       if (!activeNav) {
+        // Auto-detect from pathname
         const path = window.location.pathname;
         if (path === '/' || path === '/index.html') activeNav = 'tools';
         else if (path.includes('/storage/') || path.includes('/vram/')) activeNav = 'tools';
@@ -318,6 +437,9 @@
       }
     },
 
+    /**
+     * Bind mobile menu open/close handlers
+     */
     _bindMobileMenu() {
       const openBtn = dom.$('.rt-mobile-menu-btn');
       const closeBtn = dom.$('.rt-mobile-menu__close');
@@ -337,6 +459,7 @@
         });
       }
 
+      // Close on Escape key
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && menu && menu.classList.contains('is-open')) {
           menu.classList.remove('is-open');
@@ -345,6 +468,10 @@
       });
     },
 
+    /**
+     * Promise that resolves when both header and footer are injected
+     * @returns {Promise<void>}
+     */
     get ready() {
       return new Promise((resolve) => {
         const check = () => {
@@ -369,34 +496,49 @@
       if (!CONFIG.features.analytics || !CONFIG.analytics.enabled) return;
       if (this._initialized) return;
 
-      if (CONFIG.analytics.provider === 'plausible') {
-        const link = dom.create('link', {
-          rel: 'dns-prefetch',
-          href: 'https://plausible.io'
-        });
-        document.head.appendChild(link);
+      // Plausible Analytics — lightweight, no cookies, GDPR compliant
+     if (CONFIG.analytics.provider === 'plausible') {
+  const link = dom.create('link', {
+    rel: 'dns-prefetch',
+    href: 'https://plausible.io'
+  });
+  document.head.appendChild(link);
 
-        const script = dom.create('script', {
-          defer: '',
-          'data-domain': CONFIG.analytics.domain,
-          src: CONFIG.analytics.scriptUrl
-        });
-        document.head.appendChild(script);
-      }
+  const script = dom.create('script', {
+    defer: '',
+    'data-domain': CONFIG.analytics.domain,
+    src: CONFIG.analytics.scriptUrl
+  });
+  document.head.appendChild(script);
+}
 
       this._initialized = true;
     },
 
+    /**
+     * Track a custom event
+     * @param {string} eventName
+     * @param {Object} [props={}]
+     */
     track(eventName, props) {
       if (!this._initialized) return;
+
+      // Plausible custom event
       if (window.plausible) {
         window.plausible(eventName, { props });
       }
+
+      // Console log in development
       if (location.hostname === 'localhost') {
         console.log('[Analytics]', eventName, props);
       }
     },
 
+    /**
+     * Track tool usage
+     * @param {string} toolSlug
+     * @param {string} action — e.g. 'calculate', 'share', 'reset'
+     */
     trackTool(toolSlug, action) {
       this.track('Tool Action', { tool: toolSlug, action });
     }
@@ -406,6 +548,7 @@
      6. INITIALIZATION
      ========================================== */
   function init() {
+    // Inject shell if placeholders exist
     const headerPlaceholder = dom.$('#rt-header');
     const footerPlaceholder = dom.$('#rt-footer');
 
@@ -418,23 +561,24 @@
       shell.injectFooter();
     }
 
+    // Initialize analytics
     analytics.init();
 
+    // Auto-init components that use data-rt-component
     if (global.RT && global.RT.components && global.RT.components.autoInit) {
       global.RT.components.autoInit();
     }
-
-    if (window.performance && window.performance.mark) {
-      window.performance.mark('rt-init-end');
-      window.performance.measure('rt-init', 'rt-init-start', 'rt-init-end');
-    }
+     if (window.performance && window.performance.mark) {
+  window.performance.mark('rt-init-end');
+  window.performance.measure('rt-init', 'rt-init-start', 'rt-init-end');
+}
   }
 
   /* ==========================================
      7. PUBLIC API
      ========================================== */
   global.RT = {
-    version: '2.0.1',
+    version: '2.0.0',
     config: CONFIG,
     dom,
     utils,
@@ -443,14 +587,15 @@
     init
   };
 
+  // Auto-init on DOM ready unless opted out
   dom.ready(() => {
-    if (window.performance && window.performance.mark) {
-      window.performance.mark('rt-init-start');
-    }
+  if (window.performance && window.performance.mark) {
+    window.performance.mark('rt-init-start');
+  }
 
-    if (document.documentElement.dataset.rtNoInit !== 'true') {
-      init();
-    }
-  });
+  if (document.documentElement.dataset.rtNoInit !== 'true') {
+    init();
+  }
+});
 
 })(window);
