@@ -132,8 +132,8 @@
         answer: '<p>Absolutely! We are actively building new calculators and planners. Next up: VRAM Calculator for AI models, RAM Latency comparison tool, and a full PC Build Configurator with India pricing.</p>'
       },
       {
-        question: 'Is my data private when using these tools?',
-        answer: '<p>Yes. All calculations happen in your browser. We don't collect personal data, don't use cookies for tracking, and don't store your selections on our servers. We use privacy-first analytics (Plausible) that is GDPR compliant.</p>'
+        question: "Is my data private when using these tools?",
+        answer: "<p>Yes. All calculations happen in your browser. We don't collect personal data, don't use cookies for tracking, and don't store your selections on our servers. We use privacy-first analytics (Plausible) that is GDPR compliant.</p>"
       }
     ];
 
@@ -196,7 +196,7 @@
     // 5. HowTo
     seo.howToSchema({
       name: 'How to Use REDRAG Tools',
-      description: 'Get started with REDRAG's free gaming calculators and planners in 3 simple steps.',
+      description: "Get started with REDRAG's free gaming calculators and planners in 3 simple steps.",
       totalTime: 'PT1M',
       steps: [
         { name: 'Choose a Tool', text: 'Browse our collection of free gaming utilities. Click on any live tool to open it instantly in your browser.', url: hubUrl + '#step1' },
