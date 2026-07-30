@@ -578,12 +578,12 @@
       },
       {
         question: 'Should I buy a 1TB or 2TB SSD for gaming?',
-        answer: '<p>For most gamers in 2026, we recommend <strong>2TB</strong>. Here is why:</p>' +
-          '<ul><li>1TB fits only 6-9 AAA games — you'll uninstall constantly</li>' +
-          '<li>2TB fits 15-18 AAA games — room for your library + future releases</li>' +
-          '<li>Game sizes are growing 15-20% yearly</li>' +
-          '<li>The price difference (usually ₹3,000-5,000) pays for itself in convenience</li></ul>' +
-          '<p>Only choose 1TB if you're on a strict budget and play mostly indie or competitive games.</p>'
+        answer: "<p>For most gamers in 2026, we recommend <strong>2TB</strong>. Here's why:</p>" +
+          "<ul><li>1TB fits only 6-9 AAA games — you'll uninstall constantly</li>" +
+          "<li>2TB fits 15-18 AAA games — room for your library + future releases</li>" +
+          "<li>Game sizes are growing 15-20% yearly</li>" +
+          "<li>The price difference (usually ₹3,000-5,000) pays for itself in convenience</li></ul>" +
+          "<p>Only choose 1TB if you're on a strict budget and play mostly indie or competitive games.</p>"
       },
       {
         question: 'How much space does GTA 6 take?',
