@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Preconnect to critical origins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://plausible.io">
+
+<!-- Critical: Inline placeholder styles to prevent FOUC -->
+<style>
+#rt-header { min-height: 72px; }
+#rt-footer { min-height: 120px; }
+</style>
+
+<!-- Preload critical shared CSS -->
+<link rel="preload" href="/shared/css/core.css?v=2" as="style">
+<link rel="preload" href="/shared/css/components.css?v=2" as="style">
+<link rel="preload" href="/shared/css/shell.css?v=2" as="style">
+
+<!-- ============================================
+     SEO META TAGS — EDIT THESE FOR EACH TOOL
+     ============================================ -->
+<title>TOOL_NAME | REDRAG Tools — 2026</title>
+<meta name="description" content="TOOL_DESCRIPTION. Free calculator for gamers and PC builders. No signup needed.">
+<meta name="keywords" content="TOOL_KEYWORDS, free gaming tools, PC calculator, India">
+<meta name="author" content="REDRAG">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#e63946">
+<meta name="msapplication-TileColor" content="#e63946">
+<meta name="color-scheme" content="dark">
+
+<!-- Canonical — UPDATE SLUG -->
+<link rel="canonical" href="https://tools.redrag.in/TOOL_SLUG/">
+
+<!-- Open Graph — UPDATE ALL VALUES -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tools.redrag.in/TOOL_SLUG/">
+<meta property="og:title" content="TOOL_NAME | REDRAG Tools">
+<meta property="og:description" content="TOOL_DESCRIPTION. Free calculator. No signup.">
+<meta property="og:image" content="https://tools.redrag.in/assets/images/og-TOOL_SLUG.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="REDRAG TOOL_NAME interface">
+<meta property="og:site_name" content="REDRAG Tools">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-07-31T00:00:00+05:30">
+<meta property="article:modified_time" content="2026-07-31T00:00:00+05:30">
+<meta property="article:author" content="https://www.redrag.in/">
+<meta property="article:section" content="Gaming Tools">
+<meta property="article:tag" content="Gaming, PC, Tools, India">
+
+<!-- Twitter Card — UPDATE ALL VALUES -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@redragblog">
+<meta name="twitter:creator" content="@redragblog">
+<meta name="twitter:title" content="TOOL_NAME | REDRAG Tools">
+<meta name="twitter:description" content="TOOL_DESCRIPTION. Free calculator.">
+<meta name="twitter:image" content="https://tools.redrag.in/assets/images/og-TOOL_SLUG.jpg">
+<meta name="twitter:image:alt" content="REDRAG TOOL_NAME interface">
+<meta name="twitter:label1" content="Category">
+<meta name="twitter:data1" content="Gaming Tools">
+<meta name="twitter:label2" content="Price">
+<meta name="twitter:data2" content="Free">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://www.redrag.in/favicon.ico">
+<link rel="apple-touch-icon" href="https://tools.redrag.in/assets/icons/apple-touch-icon.png">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Shared CSS -->
+<link rel="stylesheet" href="/shared/css/core.css?v=2">
+<link rel="stylesheet" href="/shared/css/components.css?v=2">
+<link rel="stylesheet" href="/shared/css/shell.css?v=2">
+
+<!-- Tool-specific CSS -->
+<link rel="stylesheet" href="tool.css?v=1">
+
+<!-- BreadcrumbList Schema (early injection) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.redrag.in/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://tools.redrag.in/"},{"@type":"ListItem","position":3,"name":"TOOL_NAME","item":"https://tools.redrag.in/TOOL_SLUG/"}]}
+</script>
+</head>
+<body>
+
+<!-- Skip to content -->
+<a href="#rt-main" class="rt-skip-link">Skip to main content</a>
+
+<!-- Header placeholder -->
+<div id="rt-header" data-active="tools"></div>
+
+<main id="rt-main" role="main" aria-label="TOOL_NAME Calculator">
+<div class="rt-container">
+
+<!-- Hero Section -->
+<section class="rt-hero" aria-label="Tool introduction">
+<div class="rt-hero__glow" aria-hidden="true"></div>
+<h1 class="rt-hero__title" fetchpriority="high">TOOL_NAME:<br><span class="rt-highlight">TOOL_TAGLINE</span></h1>
+<p class="rt-hero__desc">TOOL_SHORT_DESCRIPTION. Updated with real data for 2026. Free, instant, no signup.</p>
+</section>
+
+<!-- Tool Interface -->
+<div class="rt-tool-layout">
+
+<!-- Left: Inputs -->
+<div class="tool-left">
+<div class="rt-card" id="step1">
+<div class="template-section-header">
+<div class="template-section-icon">⚙️</div>
+<h3 class="template-section-title">Enter Your Details</h3>
+</div>
+
+<!-- Dynamic inputs injected by tool.js -->
+<div id="tool-inputs" role="form" aria-label="Calculator inputs"></div>
+
+<div class="template-action-btns">
+<button class="rt-btn rt-btn--primary rt-btn--full" id="calc-btn" aria-label="Calculate result">Calculate</button>
+<button class="rt-btn rt-btn--secondary rt-btn--full" id="reset-btn" aria-label="Reset all inputs">🔄 Reset</button>
+</div>
+</div>
+</div>
+
+<!-- Right: Results Panel -->
+<div class="tool-right rt-sidebar" role="complementary" aria-label="Calculation results">
+
+<!-- Results Card -->
+<div class="rt-card rt-card--result" id="step2" aria-live="polite" aria-atomic="false">
+<div class="u-text-center" style="padding-bottom:var(--rt-space-5);border-bottom:1px solid var(--rt-border-default);margin-bottom:var(--rt-space-5);">
+<div style="font-size:var(--rt-text-xs);color:var(--rt-text-muted);text-transform:uppercase;letter-spacing:1.5px;font-weight:var(--rt-weight-bold);margin-bottom:var(--rt-space-2);">Result</div>
+<div class="template-big-number" id="result-value" aria-label="Calculated result">—</div>
+<div style="font-size:var(--rt-text-body);color:var(--rt-text-secondary);margin-top:6px;font-weight:var(--rt-weight-medium);" id="result-label">Enter values and click Calculate</div>
+</div>
+
+<!-- Stats Grid -->
+<div class="template-stats-grid" role="region" aria-label="Calculation details">
+<div class="template-stat">
+<div class="rt-stat__value" id="stat-1" aria-label="Statistic one">—</div>
+<div class="rt-stat__label">Stat 1</div>
+</div>
+<div class="template-stat">
+<div class="rt-stat__value" id="stat-2" aria-label="Statistic two">—</div>
+<div class="rt-stat__label">Stat 2</div>
+</div>
+<div class="template-stat">
+<div class="rt-stat__value" id="stat-3" aria-label="Statistic three">—</div>
+<div class="rt-stat__label">Stat 3</div>
+</div>
+<div class="template-stat">
+<div class="rt-stat__value" id="stat-4" aria-label="Statistic four">—</div>
+<div class="rt-stat__label">Stat 4</div>
+</div>
+</div>
+
+<!-- Insight Box -->
+<div class="rt-insight" id="insight-box">
+<div class="rt-insight__title">💡 How It Works</div>
+<div>Enter your values on the left and click Calculate to see your results instantly.</div>
+</div>
+
+<!-- Share Button -->
+<div class="template-action-btns">
+<button class="rt-btn rt-btn--primary rt-btn--full" id="share-btn" aria-label="Copy results to clipboard">📋 Copy Results</button>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- SEO Content Section -->
+<section class="rt-content-section" id="step3">
+<h2>What is TOOL_NAME?</h2>
+<p>TOOL_LONG_DESCRIPTION. Our free calculator helps you make informed decisions without guesswork.</p>
+<h3>Why Use This Calculator?</h3>
+<p>Modern gaming and PC building requires precise calculations. Whether you're planning storage, checking VRAM requirements, or comparing RAM latency, having accurate numbers saves money and prevents mistakes.</p>
+<ul>
+<li><strong>Real-time calculations:</strong> See results instantly as you adjust inputs</li>
+<li><strong>Accurate data:</strong> All numbers sourced from official manufacturer specs</li>
+<li><strong>India-focused:</strong> Pricing and recommendations tailored for Indian market</li>
+<li><strong>Shareable:</strong> Copy results or share via unique URL</li>
+</ul>
+</section>
+
+<!-- Data Table Section (Optional) -->
+<section class="rt-content-section">
+<h2>Reference Data</h2>
+<p>Quick reference table for common scenarios:</p>
+<div class="rt-table-wrap">
+<table class="rt-table" id="data-table">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody id="table-body">
+<!-- Populated by tool.js -->
+<tr><td colspan="3" style="text-align:center;color:var(--rt-text-muted);">Loading data...</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- FAQ Section -->
+<section class="rt-content-section">
+<div class="rt-section-header">
+<h2>Frequently Asked Questions</h2>
+<p>Common questions about TOOL_NAME</p>
+</div>
+<div id="faq-container"></div>
+</section>
+
+<!-- Related Guides -->
+<section class="rt-content-section">
+<h2>Related Guides from REDRAG</h2>
+<div class="rt-guides-grid">
+<a href="https://www.redrag.in/" class="rt-card rt-card--guide rt-card--hover">
+<h4 style="font-size:17px;font-weight:var(--rt-weight-bold);margin-bottom:8px;color:var(--rt-text-primary);">📰 Related Blog Post 1</h4>
+<p style="font-size:14px;color:var(--rt-text-secondary);line-height:1.6;">Description of related blog post that links back to the main blog.</p>
+</a>
+<a href="https://www.redrag.in/" class="rt-card rt-card--guide rt-card--hover">
+<h4 style="font-size:17px;font-weight:var(--rt-weight-bold);margin-bottom:8px;color:var(--rt-text-primary);">📰 Related Blog Post 2</h4>
+<p style="font-size:14px;color:var(--rt-text-secondary);line-height:1.6;">Another related article that provides deeper context.</p>
+</a>
+</div>
+</section>
+
+<!-- About Section -->
+<section class="rt-content-section">
+<h2>About This Tool</h2>
+<p>The <strong>REDRAG TOOL_NAME</strong> is a free, browser-based calculator designed for Indian gamers and PC enthusiasts. All calculations happen in your browser — no data is sent to any server.</p>
+<p><strong>Last updated:</strong> July 31, 2026 | <strong>Data source:</strong> Official manufacturer specs | <strong>Accuracy:</strong> Best effort estimates</p>
+<p>Found incorrect data? <a href="https://www.redrag.in/p/contact-us.html">Contact us</a> and we'll update within 48 hours.</p>
+</section>
+
+</div>
+</main>
+
+<!-- Footer placeholder -->
+<div id="rt-footer"></div>
+
+<!-- Shared JS -->
+<script src="/shared/js/core.js?v=2"></script>
+<script src="/shared/js/components.js?v=2"></script>
+<script src="/shared/js/seo.js?v=2"></script>
+
+<!-- Tool-specific JS -->
+<script src="tool.js?v=1"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  RT.init();
+  if (typeof RTTool !== 'undefined') {
+    RTTool.init();
+  } else {
+    console.error('[RTTool] Tool script not loaded.');
+  }
+});
+</script>
+
+</body>
+</html>
