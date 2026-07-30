@@ -235,7 +235,8 @@
         .replace(/"/g, '\"')
         .replace(/
 /g, '\n')
-        .replace(//g, '\r');
+        .replace(/
+/g, '\r');
     },
 
     /**
@@ -498,14 +499,20 @@
       if (this._initialized) return;
 
       // Plausible Analytics — lightweight, no cookies, GDPR compliant
-      if (CONFIG.analytics.provider === 'plausible') {
-        const script = dom.create('script', {
-          defer: '',
-          'data-domain': CONFIG.analytics.domain,
-          src: CONFIG.analytics.scriptUrl
-        });
-        document.head.appendChild(script);
-      }
+     if (CONFIG.analytics.provider === 'plausible') {
+  const link = dom.create('link', {
+    rel: 'dns-prefetch',
+    href: 'https://plausible.io'
+  });
+  document.head.appendChild(link);
+
+  const script = dom.create('script', {
+    defer: '',
+    'data-domain': CONFIG.analytics.domain,
+    src: CONFIG.analytics.scriptUrl
+  });
+  document.head.appendChild(script);
+}
 
       this._initialized = true;
     },
@@ -563,6 +570,10 @@
     if (global.RT && global.RT.components && global.RT.components.autoInit) {
       global.RT.components.autoInit();
     }
+     if (window.performance && window.performance.mark) {
+  window.performance.mark('rt-init-end');
+  window.performance.measure('rt-init', 'rt-init-start', 'rt-init-end');
+}
   }
 
   /* ==========================================
@@ -580,9 +591,13 @@
 
   // Auto-init on DOM ready unless opted out
   dom.ready(() => {
-    if (document.documentElement.dataset.rtNoInit !== 'true') {
-      init();
-    }
-  });
+  if (window.performance && window.performance.mark) {
+    window.performance.mark('rt-init-start');
+  }
+
+  if (document.documentElement.dataset.rtNoInit !== 'true') {
+    init();
+  }
+});
 
 })(window);
