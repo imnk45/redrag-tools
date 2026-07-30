@@ -415,3 +415,41 @@ strong, b {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.5; }
 }
+/* ============================================
+   REDRAG Tools — Core CSS (Phase 7 Patch)
+   Additions: font-display swap, content-visibility
+   ============================================ */
+
+/* Font display swap for faster text rendering */
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-display: swap;
+}
+
+/* Content visibility for below-fold sections (performance) */
+.rt-content-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .rt-hero__glow {
+    animation: none !important;
+  }
+}
+
+/* Print styles for accessibility */
+@media print {
+  .rt-header, .rt-footer, .rt-mobile-menu-btn, .rt-mobile-menu {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+  .rt-card {
+    border: 1px solid #ccc;
+    break-inside: avoid;
+  }
+}
