@@ -1,6 +1,7 @@
 {
-  "version": "2026-07-30",
-  "last_updated": "2026-07-30",
+  "version": "2026-07-31",
+  "last_updated": "2026-07-31",
+  "_comment": "This registry drives the hub page. Add new tools here to auto-appear on the hub.",
   "tools": [
     {
       "slug": "storage",
