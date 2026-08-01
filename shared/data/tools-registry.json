@@ -1,70 +1,113 @@
 {
   "version": "2026-07-31",
   "last_updated": "2026-07-31",
-  "_comment": "This registry drives the hub page. Add new tools here to auto-appear on the hub.",
   "tools": [
     {
       "slug": "storage",
       "name": "Game Storage Planner",
-      "icon": "💾",
+      "icon": "\ud83d\udcbe",
       "description": "Select your games, pick your SSD size, and instantly see how many games fit on 500GB, 1TB, 2TB, or 4TB. Supports PC, PS5, and Xbox with real 2026 game install sizes.",
       "category": "Gaming",
       "status": "live",
-      "tags": ["PC", "PS5", "Xbox", "SSD", "Storage"],
+      "tags": [
+        "PC",
+        "PS5",
+        "Xbox",
+        "SSD",
+        "Storage"
+      ],
       "ogImage": "/assets/images/og-storage.jpg",
       "schema": {
         "applicationCategory": "UtilityApplication",
-        "keywords": ["game storage calculator", "SSD planner", "how many games fit in 1TB"]
+        "keywords": [
+          "game storage calculator",
+          "SSD planner",
+          "how many games fit in 1TB"
+        ]
       }
     },
     {
-      "slug": "vram",
+      "slug": "vram-calculator",
       "name": "VRAM Calculator for AI/LLMs",
-      "icon": "🧠",
+      "icon": "\ud83e\udde0",
       "description": "Find out how much VRAM you need to run Llama, Mistral, Qwen, and other local AI models. Check if your GPU can handle different quantization levels.",
       "category": "AI",
-      "status": "coming-soon",
-      "tags": ["AI", "GPU", "LLM", "VRAM"],
-      "ogImage": "/assets/images/og-vram.jpg"
+      "status": "live",
+      "tags": [
+        "AI",
+        "GPU",
+        "LLM",
+        "VRAM"
+      ],
+      "ogImage": "/assets/images/og-vram.jpg",
+      "schema": {
+        "applicationCategory": "UtilityApplication",
+        "keywords": [
+          "vram calculator",
+          "gpu memory for llm",
+          "local ai vram"
+        ]
+      }
     },
     {
       "slug": "ram",
       "name": "RAM Latency Calculator",
-      "icon": "⚡",
+      "icon": "\u26a1",
       "description": "Calculate true RAM latency in nanoseconds. Compare DDR4 vs DDR5, different CAS timings, and frequencies. Find out which RAM kit is actually faster for gaming.",
       "category": "Hardware",
       "status": "coming-soon",
-      "tags": ["DDR4", "DDR5", "RAM", "Latency"],
+      "tags": [
+        "DDR4",
+        "DDR5",
+        "RAM",
+        "Latency"
+      ],
       "ogImage": "/assets/images/og-ram.jpg"
     },
     {
       "slug": "ppi",
       "name": "Resolution Scaling Visualizer",
-      "icon": "🖥️",
+      "icon": "\ud83d\udda5\ufe0f",
       "description": "See how 1080p, 1440p, and 4K content actually looks on different monitor sizes. Compare pixel density (PPI) and understand resolution scaling before buying a monitor.",
       "category": "Hardware",
       "status": "coming-soon",
-      "tags": ["Monitor", "PPI", "1080p", "1440p", "4K"],
+      "tags": [
+        "Monitor",
+        "PPI",
+        "1080p",
+        "1440p",
+        "4K"
+      ],
       "ogImage": "/assets/images/og-ppi.jpg"
     },
     {
       "slug": "pc-build",
       "name": "Budget PC Build Configurator (India)",
-      "icon": "🔧",
-      "description": "Build the perfect gaming PC for your budget. Select your price range (₹30K to ₹2L), pick your use case, and get component recommendations with India pricing and FPS estimates.",
+      "icon": "\ud83d\udd27",
+      "description": "Build the perfect gaming PC for your budget. Select your price range (\u20b930K to \u20b92L), pick your use case, and get component recommendations with India pricing and FPS estimates.",
       "category": "Gaming",
       "status": "coming-soon",
-      "tags": ["PC Build", "India", "Budget", "Gaming PC"],
+      "tags": [
+        "PC Build",
+        "India",
+        "Budget",
+        "Gaming PC"
+      ],
       "ogImage": "/assets/images/og-pc-build.jpg"
     },
     {
       "slug": "psu",
       "name": "PSU Wattage Calculator",
-      "icon": "🔌",
+      "icon": "\ud83d\udd0c",
       "description": "Calculate exactly how much power your PC build needs. Select your CPU, GPU, and components to get the recommended PSU wattage with headroom and efficiency rating suggestions.",
       "category": "Hardware",
       "status": "coming-soon",
-      "tags": ["PSU", "Wattage", "Power Supply", "PC Build"],
+      "tags": [
+        "PSU",
+        "Wattage",
+        "Power Supply",
+        "PC Build"
+      ],
       "ogImage": "/assets/images/og-psu.jpg"
     }
   ]
