@@ -96,7 +96,7 @@
       analytics.trackTool('storage', 'load');
     }).catch(err => {
       console.error('[RTTool] Init failed:', err);
-      components.Toast.show('Failed to initialize tool. Please refresh.', 'error', 5000);
+      components.Toast.show({ message: 'Failed to initialize tool. Please refresh.', type: 'error', duration: 5000 });
     });
   }
 
@@ -111,7 +111,7 @@
       state.games = data.games.sort((a, b) => b.size_gb - a.size_gb);
     } catch (err) {
       console.error('[RTTool] Failed to load games:', err);
-      components.Toast.show('Failed to load game data. Please refresh.', 'error', 5000);
+      components.Toast.show({ message: 'Failed to load game data. Please refresh.', type: 'error', duration: 5000 });
       state.games = [];
     }
   }
@@ -454,7 +454,7 @@
     const selectedGames = games.filter(g => selected.has(g.name));
 
     if (selectedGames.length === 0) {
-      components.Toast.show('Select some games first!', 'warning', 3000);
+      components.Toast.show({ message: 'Select some games first!', type: 'warning', duration: 3000 });
       return;
     }
 
@@ -475,10 +475,10 @@
 
     const success = await utils.copyToClipboard(text);
     if (success) {
-      components.Toast.show('Results copied to clipboard!', 'success', 3000);
+      components.Toast.show({ message: 'Results copied to clipboard!', type: 'success', duration: 3000 });
       analytics.trackTool('storage', 'share');
     } else {
-      components.Toast.show('Could not copy. Try manually selecting the results.', 'error', 4000);
+      components.Toast.show({ message: 'Could not copy. Try manually selecting the results.', type: 'error', duration: 4000 });
     }
   }
 
@@ -501,7 +501,7 @@
     updateResults();
     saveState();
 
-    components.Toast.show('All selections reset', 'info', 3000);
+    components.Toast.show({ message: 'All selections reset', type: 'info', duration: 3000 });
     analytics.trackTool('storage', 'reset');
   }
 
