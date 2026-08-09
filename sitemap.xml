@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://tools.redrag.in/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.redrag.in/assets/og-tools-hub.jpg</image:loc>
+      <image:title>REDRAG Tools Hub</image:title>
+      <image:caption>Free gaming tools and PC calculators</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tools.redrag.in/storage/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.redrag.in/assets/og-game-storage-planner.jpg</image:loc>
+      <image:title>Game Storage Planner</image:title>
+      <image:caption>Calculate how many games fit on your SSD</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tools.redrag.in/vram-calculator/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://tools.redrag.in/assets/images/og-vram.jpg</image:loc>
+      <image:title>VRAM Calculator for AI/LLMs</image:title>
+      <image:caption>Calculate GPU memory requirements for local AI models</image:caption>
+    </image:image>
+  </url>
+  <!-- Coming soon tools — uncomment when live
+  <url>
+    <loc>https://tools.redrag.in/ram/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tools.redrag.in/ppi/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tools.redrag.in/pc-build/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://tools.redrag.in/psu/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  -->
+</urlset>
