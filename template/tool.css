@@ -1,0 +1,15 @@
+/* ============================================
+   [Tool Name] Specific Styles
+   All shared components (buttons, inputs, cards) 
+   should use classes from shared/css/components.css
+   ============================================ */
+
+/* Tool-specific variables */
+:root {
+  /* Add any specific colors or sizing here */
+}
+
+/* Example custom element for this tool */
+.custom-tool-element {
+  margin-top: var(--rt-space-4);
+}
