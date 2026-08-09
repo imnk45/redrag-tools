@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tools.redrag.in/sitemap.xml
+
+# Crawl delay for polite bots
+Crawl-delay: 1
+
+# Old URL (redirects to new)
+Disallow: /vram/
+
+# Disallow non-existent tool URLs until they go live
+# (Remove these lines when tools launch)
+
+Disallow: /ppi/
+Disallow: /pc-build/
+Disallow: /psu/
+
+# Allow static assets
+Allow: /shared/
+Allow: /assets/
+Disallow: /template/
+Disallow: /test.html
