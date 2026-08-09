@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Preconnect to critical origins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Critical: Inline placeholder styles to prevent FOUC -->
+<style>
+#rt-header { min-height: 72px; }
+#rt-footer { min-height: 120px; }
+</style>
+
+<!-- Preload critical shared CSS -->
+<link rel="preload" href="/shared/css/core.css?v=40" as="style">
+<link rel="preload" href="/shared/css/components.css?v=45" as="style">
+<link rel="preload" href="/shared/css/shell.css?v=40" as="style">
+
+<!-- Title & Meta -->
+<title>RAM Latency Calculator: True Latency in ns | REDRAG Tools</title>
+<meta name="description" content="Calculate true RAM latency in nanoseconds. Compare DDR4 vs DDR5, different CAS timings, and frequencies. Find out which RAM kit is actually faster for gaming.">
+<meta name="keywords" content="ram latency calculator, true ram latency, ddr4 vs ddr5 latency, cas latency calculator, ns ram calculator">
+<meta name="author" content="REDRAG">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#e63946">
+<meta name="msapplication-TileColor" content="#e63946">
+<meta name="color-scheme" content="dark">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://tools.redrag.in/ram/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tools.redrag.in/ram/">
+<meta property="og:title" content="RAM Latency Calculator: True Latency in ns">
+<meta property="og:description" content="Calculate true RAM latency in nanoseconds. Compare DDR4 vs DDR5, different CAS timings, and frequencies.">
+<meta property="og:image" content="https://tools.redrag.in/assets/images/thumbnails/thumb-ram.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="REDRAG Tools">
+<meta property="og:locale" content="en_US">
+<meta property="article:section" content="Hardware Tools">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@redragblog">
+<meta name="twitter:url" content="https://tools.redrag.in/ram/">
+<meta name="twitter:title" content="RAM Latency Calculator">
+<meta name="twitter:description" content="Calculate true RAM latency in nanoseconds. Compare DDR4 vs DDR5, different CAS timings, and frequencies.">
+<meta name="twitter:image" content="https://tools.redrag.in/assets/images/thumbnails/thumb-ram.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://www.redrag.in/favicon.ico">
+<link rel="apple-touch-icon" href="https://tools.redrag.in/assets/icons/apple-touch-icon.png">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Shared CSS -->
+<link rel="stylesheet" href="/shared/css/core.css?v=42">
+<link rel="stylesheet" href="/shared/css/components.css?v=45">
+<link rel="stylesheet" href="/shared/css/shell.css?v=42">
+
+<!-- Tool-specific CSS -->
+<link rel="stylesheet" href="tool.css?v=42">
+
+<!-- Structured Data: BreadcrumbList (injected early for Google discovery) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.redrag.in/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://tools.redrag.in/"},{"@type":"ListItem","position":3,"name":"RAM Latency Calculator","item":"https://tools.redrag.in/ram/"}]}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "RAM Latency Calculator",
+  "operatingSystem": "Any",
+  "applicationCategory": "UtilityApplication",
+  "description": "Calculate true RAM latency in nanoseconds. Compare DDR4 vs DDR5, different CAS timings, and frequencies. Find out which RAM kit is actually faster for gaming.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<base target="_blank">
+</head>
+<body>
+
+<!-- Skip to content -->
+<a href="#rt-main" class="rt-skip-link">Skip to main content</a>
+
+<!-- Header placeholder -->
+<div id="rt-header" data-active="tools"></div>
+
+<main id="rt-main" role="main" aria-label="[Tool Title]">
+<div class="rt-container">
+
+<!-- Hero Section -->
+<section class="rt-hero" aria-label="Tool introduction">
+<div class="rt-hero__glow" aria-hidden="true"></div>
+<h1 class="rt-hero__title" fetchpriority="high">RAM Latency Calculator:<br><span class="rt-highlight">True Speed in ns</span></h1>
+<p class="rt-hero__desc">Find out which RAM is actually faster. Convert CAS Latency and MT/s into true nanoseconds and compare DDR4 vs DDR5 side-by-side.</p>
+</section>
+
+<!-- Tool Interface Grid -->
+<div class="rt-tool-layout">
+
+<!-- Left/Main Column: Inputs -->
+<div class="tool-left">
+  
+  <div class="rt-card u-mb-4" id="kit-a">
+    <div class="storage-section-header">
+      <div class="storage-section-icon" style="color: #4ade80;">A</div>
+      <h3 class="storage-section-title">RAM Kit A</h3>
+    </div>
+    <div style="padding: var(--rt-space-4); display:flex; gap:16px; flex-wrap:wrap;">
+      <div style="flex:1; min-width:140px;">
+        <label for="speed-a" style="display:block; margin-bottom:8px; font-weight:600;">Data Rate (MT/s)</label>
+        <input type="number" id="speed-a" class="rt-input" placeholder="e.g. 3600" value="3600" min="1000" max="15000">
+      </div>
+      <div style="flex:1; min-width:140px;">
+        <label for="cl-a" style="display:block; margin-bottom:8px; font-weight:600;">CAS Latency (CL)</label>
+        <input type="number" id="cl-a" class="rt-input" placeholder="e.g. 16" value="16" min="8" max="60">
+      </div>
+    </div>
+  </div>
+
+  <div class="rt-card" id="kit-b">
+    <div class="storage-section-header">
+      <div class="storage-section-icon" style="color: #60a5fa;">B</div>
+      <h3 class="storage-section-title">RAM Kit B (Compare)</h3>
+    </div>
+    <div style="padding: var(--rt-space-4); display:flex; gap:16px; flex-wrap:wrap;">
+      <div style="flex:1; min-width:140px;">
+        <label for="speed-b" style="display:block; margin-bottom:8px; font-weight:600;">Data Rate (MT/s)</label>
+        <input type="number" id="speed-b" class="rt-input" placeholder="e.g. 6000" value="6000" min="1000" max="15000">
+      </div>
+      <div style="flex:1; min-width:140px;">
+        <label for="cl-b" style="display:block; margin-bottom:8px; font-weight:600;">CAS Latency (CL)</label>
+        <input type="number" id="cl-b" class="rt-input" placeholder="e.g. 30" value="30" min="8" max="60">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Right Column: Results/Sidebar -->
+<div class="tool-right rt-sidebar">
+  
+  <div class="rt-card rt-card--result" aria-live="polite" style="padding: 24px;">
+    
+    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--rt-border-default); padding-bottom:16px; margin-bottom:16px;">
+      <div>
+        <div style="font-size:12px; color:var(--rt-text-muted); text-transform:uppercase; font-weight:700;">Kit A Latency</div>
+        <div id="res-a" style="font-size:28px; font-weight:900; color:#4ade80;">8.89 ns</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:12px; color:var(--rt-text-muted); text-transform:uppercase; font-weight:700;">Kit B Latency</div>
+        <div id="res-b" style="font-size:28px; font-weight:900; color:#60a5fa;">10.00 ns</div>
+      </div>
+    </div>
+
+    <div class="u-text-center" style="margin-bottom: 24px;">
+      <div style="font-size:14px; color:var(--rt-text-muted); margin-bottom:8px;">Verdict</div>
+      <div id="verdict" style="font-size:18px; font-weight:700; background:rgba(255,255,255,0.05); padding:12px; border-radius:8px;">
+        Kit A is <span style="color:#4ade80;">1.11 ns faster</span>
+      </div>
+    </div>
+    
+    <div class="u-flex u-flex-col" style="gap: var(--rt-space-3);">
+      <button class="rt-btn rt-btn--primary" id="btn-copy">
+        <span aria-hidden="true">ðŸ“‹</span> Copy Comparison
+      </button>
+      <button class="rt-btn rt-btn--secondary" id="btn-reset">
+        <span aria-hidden="true">â†º</span> Reset
+      </button>
+    </div>
+  </div>
+  
+  <div class="rt-insight">
+    <div class="rt-insight__title">ðŸ’¡ Gaming Tip</div>
+    <div class="rt-insight__body">Lower nanoseconds (ns) is always better. For gaming, try to aim for 10ns or lower. Anything below 9ns is considered excellent high-end RAM.</div>
+  </div>
+
+</div>
+<!-- End Tool Layout -->
+</div>
+
+<!-- SEO Content Section -->
+<section class="rt-content-section" aria-labelledby="guide-title">
+  <h2 id="guide-title">How True RAM Latency Works (And Why It Matters for Gaming)</h2>
+  
+  <p>When buying RAM for a gaming PC, you are usually confronted with two prominent numbers on the box: the <strong>Data Rate (Speed)</strong> (e.g., 3200 MT/s, 3600 MT/s, 6000 MT/s) and the <strong>CAS Latency (CL)</strong> (e.g., CL16, CL30). But looking at just one of these numbers won't tell you how fast the RAM actually responds.</p>
+  
+  <p>Our <strong>True RAM Latency Calculator</strong> solves this by converting these two confusing numbers into a single, universal metric: <strong>Nanoseconds (ns)</strong>. By calculating the actual physical time it takes for the RAM to respond to a command from your CPU, you can easily compare any two RAM kits side-by-side.</p>
+
+  <div style="background:var(--rt-surface-variant); padding:var(--rt-space-5); border-radius:12px; margin:var(--rt-space-6) 0;">
+    <h3 style="margin-top:0;">The True Latency Formula</h3>
+    <p style="margin-bottom:0;"><code>True Latency (ns) = (CAS Latency Ã— 2000) Ã· Data Rate (MT/s)</code></p>
+    <p style="margin-top:8px; font-size:14px; color:var(--rt-text-muted);">Example for DDR4-3200 CL16: <code>(16 Ã— 2000) Ã· 3200 = 10.00 ns</code></p>
+  </div>
+
+  <h3>DDR4 vs DDR5: The Latency Illusion</h3>
+  <p>A common misconception when upgrading from a DDR4 system to a DDR5 system is that DDR5 is "slower" because the CAS Latency numbers are much higher. A standard DDR4 kit might be CL16, while a standard DDR5 kit is CL30.</p>
+  <p>However, latency is a factor of both CL <em>and</em> Speed. Because DDR5 operates at significantly higher frequencies, those clock cycles happen much faster. A DDR5-6000 CL30 kit has exactly the same true latency (10.00 ns) as a DDR4-3200 CL16 kit, but the DDR5 kit provides vastly more bandwidth, resulting in significantly better overall performance.</p>
+
+  <h3>What is a "Good" Latency for Gaming?</h3>
+  <p>In modern PC gaming (especially at 1080p and 1440p), lower RAM latency can significantly improve your 1% low framerates and reduce micro-stutters. Here is a general guide to what true latency numbers mean:</p>
+  <ul style="line-height:1.8; margin-bottom:var(--rt-space-6);">
+    <li><strong>12+ ns:</strong> Poor (Basic budget RAM, often causes bottlenecking in CPU-heavy games)</li>
+    <li><strong>10 - 11 ns:</strong> Average (Standard sweet-spot RAM, perfectly fine for most users)</li>
+    <li><strong>8.5 - 9.5 ns:</strong> Excellent (High-end enthusiast RAM, great for high-refresh-rate gaming)</li>
+    <li><strong>Under 8.5 ns:</strong> Extreme (Overclocked B-Die or very tight DDR5, maximum performance)</li>
+  </ul>
+
+  <h3>Frequently Asked Questions (FAQ)</h3>
+  
+  <h4 style="margin-bottom:4px;">Is 3600MHz CL18 or 3200MHz CL16 faster?</h4>
+  <p>If you put both into our calculator, you will see they both result in exactly <strong>10.00 ns</strong> of true latency. They will feel identical in terms of responsiveness. However, the 3600MHz kit will provide slightly more total bandwidth, which can give it a tiny edge in specific scenarios like Ryzen Infinity Fabric scaling.</p>
+
+  <h4 style="margin-bottom:4px;">Why does my RAM say MHz instead of MT/s?</h4>
+  <p>Historically, manufacturers marketed Double Data Rate (DDR) memory using "MHz" (Megahertz). However, this is technically incorrect. A DDR4-3200 kit actually runs at a clock frequency of 1600 MHz, but transfers data twice per clock cycle (Double Data Rate), resulting in 3200 MegaTransfers per second (MT/s). Today, MT/s is the correct and more accurate term, though MHz is still widely used in marketing.</p>
+</section>
+
+<!-- End Container -->
+</div>
+</main>
+
+<!-- Footer placeholder -->
+<div id="rt-footer"></div>
+
+<!-- Shared JavaScript -->
+<script src="/shared/js/core.js?v=40"></script>
+<script src="/shared/js/components.js?v=40"></script>
+<!-- Tool-specific script -->
+<script src="tool.js?v=40"></script>
+
+<!-- Dummy body tag to prevent Livereload injection issues -->
+</body>
+</html>
