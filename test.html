@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REDRAG Tools � Diagnostic Test</title>
+<style>
+  body { font-family: Inter, system-ui, sans-serif; background: #0a0a0f; color: #f0f0f5; padding: 40px; line-height: 1.6; }
+  h1 { color: #e63946; }
+  .test { padding: 12px 16px; margin: 8px 0; border-radius: 8px; font-family: monospace; }
+  .pass { background: rgba(34,197,94,0.1); border: 1px solid #22c55e; color: #4ade80; }
+  .fail { background: rgba(239,68,68,0.1); border: 1px solid #ef4444; color: #fca5a5; }
+  .pending { background: rgba(245,158,11,0.1); border: 1px solid #f59e0b; color: #fbbf24; }
+  .summary { margin-top: 30px; padding: 20px; background: #16161f; border-radius: 12px; border: 1px solid #252535; }
+  button { background: #e63946; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-size: 16px; cursor: pointer; margin-top: 20px; }
+  button:hover { background: #c1121f; }
+  #console-output { margin-top: 20px; padding: 16px; background: #111118; border-radius: 8px; font-family: monospace; font-size: 13px; color: #a0a0b0; white-space: pre-wrap; min-height: 100px; }
+</style>
+</head>
+<body>
+
+<h1>ðŸ”§ REDRAG Tools Diagnostic</h1>
+<p>This page tests if all shared framework files are loading correctly.</p>
+
+<div id="tests"></div>
+
+<div class="summary">
+  <h3>How to use:</h3>
+  <ol>
+    <li>Wait for all tests to complete (auto-runs)</li>
+    <li>Check which files show <span style="color:#ef4444">FAIL</span></li>
+    <li>Upload missing files to GitHub</li>
+    <li>Hard refresh (Ctrl+Shift+R) and test again</li>
+  </ol>
+  <button onclick="location.reload()">ðŸ”„ Run Tests Again</button>
+</div>
+
+<h3>Browser Console Output:</h3>
+<div id="console-output">Waiting for tests...</div>
+
+<script>
+const tests = [
+  // CSS Files
+  { name: 'core.css', url: '/shared/css/core.css?v=41', type: 'css' },
+  { name: 'components.css', url: '/shared/css/components.css?v=45', type: 'css' },
+  { name: 'shell.css', url: '/shared/css/shell.css?v=41', type: 'css' },
+
+  // JS Files
+  { name: 'core.js', url: '/shared/js/core.js?v=41', type: 'js' },
+  { name: 'components.js', url: '/shared/js/components.js?v=41', type: 'js' },
+  { name: 'seo.js', url: '/shared/js/seo.js?v=41', type: 'js' },
+
+  // HTML Fragments
+  { name: 'header.html', url: '/shared/html/header.html', type: 'text' },
+  { name: 'footer.html', url: '/shared/html/footer.html', type: 'text' },
+
+  // Data Files
+  { name: 'tools-registry.json', url: '/shared/data/tools-registry.json', type: 'json' },
+  { name: 'storage/games.json', url: '/storage/games.json', type: 'json' },
+
+  // Tool Files
+  { name: 'hub.css', url: '/hub.css?v=41', type: 'css' },
+  { name: 'hub.js', url: '/hub.js?v=41', type: 'js' },
+  { name: 'storage/tool.css', url: '/storage/tool.css?v=41', type: 'css' },
+  { name: 'storage/tool.js', url: '/storage/tool.js?v=41', type: 'js' },
+];
+
+const container = document.getElementById('tests');
+const output = document.getElementById('console-output');
+let results = [];
+
+function log(msg) {
+  output.textContent += msg + '\n';
+}
+
+async function runTest(test) {
+  const div = document.createElement('div');
+  div.className = 'test pending';
+  div.textContent = 'â³ ' + test.name + ' ...';
+  container.appendChild(div);
+
+  try {
+    const res = await fetch(test.url, { method: 'HEAD', cache: 'no-store' });
+    if (res.ok) {
+      div.className = 'test pass';
+      div.textContent = 'âœ… ' + test.name + ' � OK (' + res.status + ')';
+      log('PASS: ' + test.name + ' (' + res.status + ')');
+      results.push({ name: test.name, status: 'PASS', code: res.status });
+    } else {
+      div.className = 'test fail';
+      div.textContent = 'âŒ ' + test.name + ' � FAIL (' + res.status + ' ' + res.statusText + ')';
+      log('FAIL: ' + test.name + ' (' + res.status + ' ' + res.statusText + ') URL: ' + test.url);
+      results.push({ name: test.name, status: 'FAIL', code: res.status });
+    }
+  } catch (err) {
+    div.className = 'test fail';
+    div.textContent = 'âŒ ' + test.name + ' � ERROR (' + err.message + ')';
+    log('ERROR: ' + test.name + ' � ' + err.message + ' URL: ' + test.url);
+    results.push({ name: test.name, status: 'ERROR', error: err.message });
+  }
+}
+
+async function runAll() {
+  output.textContent = 'Starting diagnostic tests...\n\n';
+
+  for (const test of tests) {
+    await runTest(test);
+  }
+
+  // Summary
+  const passed = results.filter(r => r.status === 'PASS').length;
+  const failed = results.filter(r => r.status !== 'PASS').length;
+
+  log('\n--- SUMMARY ---');
+  log('Passed: ' + passed + '/' + results.length);
+  log('Failed: ' + failed + '/' + results.length);
+
+  if (failed > 0) {
+    log('\nâŒ FAILED FILES:');
+    results.filter(r => r.status !== 'PASS').forEach(r => {
+      log('  - ' + r.name);
+    });
+    log('\nðŸ‘‰ Upload these missing files to GitHub and try again.');
+  } else {
+    log('\nâœ… ALL FILES LOADED SUCCESSFULLY!');
+    log('If tools still don\'t work, check browser console (F12) for JS errors.');
+  }
+
+  // Also test if RT namespace loads
+  log('\n--- JS NAMESPACE TEST ---');
+
+  // Load core.js dynamically to test
+  const script = document.createElement('script');
+  script.src = '/shared/js/core.js?v=41';
+  script.onload = () => {
+    log('core.js loaded successfully');
+    if (window.RT) {
+      log('RT namespace exists: v' + RT.version);
+      log('RT.config.brand.name: ' + RT.config.brand.name);
+      log('RT.config.urls.toolsHub: ' + RT.config.urls.toolsHub);
+    } else {
+      log('âŒ RT namespace NOT found after loading core.js');
+    }
+  };
+  script.onerror = () => {
+    log('âŒ Failed to load core.js dynamically');
+  };
+  document.head.appendChild(script);
+}
+
+runAll();
+</script>
+
+</body>
+</html>
