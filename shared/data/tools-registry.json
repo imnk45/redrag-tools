@@ -96,38 +96,25 @@
     "uses": 0
   }
 },
-                  {
-                      "slug":  "ppi",
-                      "name":  "Resolution Scaling Visualizer",
-                      "icon":  "🖥️",
-                      "description":  "See how 1080p, 1440p, and 4K content actually looks on different monitor sizes. Compare pixel density (PPI) and understand resolution scaling before buying a monitor.",
-                      "category":  "Hardware",
-                      "status":  "coming-soon",
-                      "tags":  [
-                                   "Monitor",
-                                   "PPI",
-                                   "1080p",
-                                   "1440p",
-                                   "4K"
-                               ],
-                      "ogImage":  "/assets/images/thumbnails/thumb-ppi.jpg",
-                      "thumbnail":  "/assets/images/thumbnails/thumb-ppi.jpg"
-                  },
-                  {
-                      "slug":  "pc-build",
-                      "name":  "Budget PC Build Configurator (India)",
-                      "icon":  "🔧",
-                      "description":  "Build the perfect gaming PC for your budget. Select your price range (?30K to ?2L), pick your use case, and get component recommendations with India pricing and FPS estimates.",
-                      "category":  "Gaming",
-                      "status":  "coming-soon",
-                      "tags":  [
-                                   "PC Build",
-                                   "India",
-                                   "Budget",
-                                   "Gaming PC"
-                               ],
-                      "ogImage":  "/assets/images/thumbnails/thumb-pcbuild.jpg",
-                      "thumbnail":  "/assets/images/thumbnails/thumb-pcbuild.jpg"
+                 {
+  "slug": "resolution-scaling-visualizer",
+  "name": "Resolution Scaling Visualizer",
+  "description": "Visualize internal render resolutions, performance gains, and VRAM impact of DLSS, FSR, and XeSS scaling modes. Compare pixel counts and estimated FPS in real-time.",
+  "category": "Performance",
+  "status": "live",
+  "url": "/resolution-scaling-visualizer/",
+  "ogImage": "/assets/images/thumbnails/thumb-resolution-scaling-visualizer.jpg",
+  "thumbnail": "/assets/images/thumbnails/thumb-resolution-scaling-visualizer.jpg",
+  "schema": {
+    "@type": "SoftwareApplication",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
                   },
                   {
                       "slug":  "psu",
