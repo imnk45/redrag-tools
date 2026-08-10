@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Preconnect to critical origins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://plausible.io">
+
+<!-- Critical: Inline placeholder styles to prevent FOUC -->
+<style>
+#rt-header { min-height: 72px; }
+#rt-footer { min-height: 120px; }
+</style>
+
+<!-- Preload critical shared CSS -->
+<link rel="preload" href="/shared/css/core.css?v=40" as="style">
+<link rel="preload" href="/shared/css/components.css?v=45" as="style">
+<link rel="preload" href="/shared/css/shell.css?v=40" as="style">
+
+<!-- Title & Meta -->
+<title>VRAM Calculator: How Much GPU Memory for Local LLMs— (2026) | REDRAG Tools</title>
+<meta name="description" content="Free VRAM Calculator: Check if your GPU can run Llama, Mistral, Qwen, DeepSeek locally. Compare FP16, INT8, INT4, GPTQ quantization. 23+ AI models, 23+ GPUs. No signup.">
+<meta name="keywords" content="how much vram for llama, gpu memory calculator, vram calculator ai, llama vram requirements, how much vram for local llm, gpu vram check, ai model vram, quantization vram, local llm gpu requirements, rtx 4090 vram llama">
+<meta name="author" content="REDRAG">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#e63946">
+<meta name="msapplication-TileColor" content="#e63946">
+<meta name="color-scheme" content="dark">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://tools.redrag.in/vram-calculator/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tools.redrag.in/vram-calculator/">
+<meta property="og:title" content="VRAM Calculator: How Much GPU Memory for Local LLMs— (2026)">
+<meta property="og:description" content="Free calculator. Check VRAM for Llama, Mistral, Qwen, DeepSeek. Compare FP16, INT8, INT4, GPTQ. 23+ models, 23+ GPUs.">
+<meta property="og:image" content="https://tools.redrag.in/assets/images/thumbnails/thumb-vram.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="REDRAG VRAM Calculator - Check GPU memory for AI models">
+<meta property="og:site_name" content="REDRAG Tools">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-07-31T00:00:00+05:30">
+<meta property="article:modified_time" content="2026-07-31T00:00:00+05:30">
+<meta property="article:author" content="https://www.redrag.in/">
+<meta property="article:section" content="AI Tools">
+<meta property="article:tag" content="VRAM, GPU, LLM, AI, Quantization, Llama, Mistral">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@redragblog">
+<meta name="twitter:creator" content="@redragblog">
+<meta name="twitter:title" content="VRAM Calculator: How Much GPU Memory for Local LLMs—">
+<meta name="twitter:description" content="Free calculator. Check VRAM for Llama, Mistral, Qwen. Compare FP16, INT8, INT4, GPTQ.">
+<meta name="twitter:image" content="https://tools.redrag.in/assets/images/thumbnails/thumb-vram.jpg">
+<meta name="twitter:image:alt" content="REDRAG VRAM Calculator showing model selection and GPU compatibility">
+<meta name="twitter:label1" content="Models Supported">
+<meta name="twitter:data1" content="23+">
+<meta name="twitter:label2" content="GPUs in Database">
+<meta name="twitter:data2" content="23+">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://www.redrag.in/favicon.ico">
+<link rel="apple-touch-icon" href="https://tools.redrag.in/assets/icons/apple-touch-icon.png">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Shared CSS -->
+<link rel="stylesheet" href="/shared/css/core.css?v=40">
+<link rel="stylesheet" href="/shared/css/components.css?v=45">
+<link rel="stylesheet" href="/shared/css/shell.css?v=40">
+
+<!-- Tool-specific CSS -->
+<link rel="stylesheet" href="tool.css?v=40">
+
+<!-- BreadcrumbList Schema -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.redrag.in/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://tools.redrag.in/"},{"@type":"ListItem","position":3,"name":"VRAM Calculator","item":"https://tools.redrag.in/vram-calculator/"}]}
+</script>
+</head>
+<body>
+
+<!-- Skip to content -->
+<a href="#rt-main" class="rt-skip-link">Skip to main content</a>
+
+<!-- Header placeholder -->
+<div id="rt-header" data-active="tools"></div>
+
+<main id="rt-main" role="main" aria-label="VRAM Calculator for AI Models">
+<div class="rt-container">
+
+<!-- Hero Section -->
+<section class="rt-hero" aria-label="Tool introduction">
+<div class="rt-hero__glow" aria-hidden="true"></div>
+<h1 class="rt-hero__title" fetchpriority="high">VRAM Calculator:<br><span class="rt-highlight">How Much GPU Memory for AI?</span></h1>
+<p class="rt-hero__desc">Select an AI model, choose quantization (FP16/INT8/INT4/GPTQ), and instantly see how much VRAM you need. Check if your GPU can run Llama, Mistral, Qwen, DeepSeek locally.</p>
+</section>
+
+<!-- Tool Interface -->
+<div class="rt-tool-layout">
+
+<!-- Left: Model Selector -->
+<div class="tool-left">
+<div class="rt-card" id="step1">
+<div class="vram-section-header">
+<div class="vram-section-icon">🧠</div>
+<h3 class="vram-section-title">Step 1: Select AI Model</h3>
+</div>
+<div id="model-search-container"></div>
+<div class="vram-model-list" id="model-list" role="list" aria-label="AI model list" aria-live="polite" aria-atomic="false">
+<div class="rt-empty" style="padding:var(--rt-space-6);">
+<div class="rt-spinner rt-spinner--lg" style="margin:0 auto var(--rt-space-4);"></div>
+<p>Loading models...</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Right: Configuration & Results -->
+<div class="tool-right rt-sidebar" role="complementary" aria-label="VRAM calculation results">
+
+<!-- Quantization -->
+<div class="rt-card" id="step2">
+<div class="vram-section-header">
+<div class="vram-section-icon" style="background:linear-gradient(135deg, rgba(59,130,246,0.15), rgba(59,130,246,0.05));border-color:rgba(59,130,246,0.2);">⚙️</div>
+<h3 class="vram-section-title">Step 2: Quantization</h3>
+</div>
+<div class="vram-quant-options" id="quant-options" role="radiogroup" aria-label="Select quantization precision"></div>
+</div>
+
+<!-- Context Length -->
+<div class="rt-card" id="step3">
+<div class="vram-section-header">
+<div class="vram-section-icon" style="background:linear-gradient(135deg, rgba(34,197,94,0.15), rgba(34,197,94,0.05));border-color:rgba(34,197,94,0.2);">📏</div>
+<h3 class="vram-section-title">Step 3: Context Length</h3>
+</div>
+<div class="vram-context-options" id="context-options" role="radiogroup" aria-label="Select context length"></div>
+</div>
+
+<!-- GPU Selector -->
+<div class="rt-card" id="step4">
+<div class="vram-section-header">
+<div class="vram-section-icon" style="background:linear-gradient(135deg, rgba(245,158,11,0.15), rgba(245,158,11,0.05));border-color:rgba(245,158,11,0.2);">🎮</div>
+<h3 class="vram-section-title">Step 4: Your GPU</h3>
+</div>
+<select class="rt-input" id="gpu-select" aria-label="Select your GPU">
+<option value="">Loading GPUs...</option>
+</select>
+<div class="vram-gpu-check" id="gpu-status"></div>
+</div>
+
+<!-- Results -->
+<div class="rt-card vram-result-card" aria-live="polite" aria-atomic="false">
+<div class="u-text-center" style="padding-bottom:var(--rt-space-5);border-bottom:1px solid var(--rt-border-default);margin-bottom:var(--rt-space-5);">
+<div style="font-size:var(--rt-text-xs);color:var(--rt-text-muted);text-transform:uppercase;letter-spacing:1.5px;font-weight:var(--rt-weight-bold);margin-bottom:var(--rt-space-2);">VRAM Required</div>
+<div class="vram-big-number" id="result-vram" aria-label="VRAM required in gigabytes">--</div>
+<div class="vram-big-label" id="result-label">Select a model</div>
+</div>
+
+<div id="result-details" style="margin-bottom:var(--rt-space-4);"></div>
+
+<div class="rt-table-wrap" id="compare-table" style="margin-bottom:var(--rt-space-4);"></div>
+
+<div class="rt-insight" id="insight-box">
+<div class="rt-insight__title">💡 Getting Started</div>
+<div>Select an AI model to see VRAM requirements. Use lower quantization (INT4/GPTQ) to run larger models on consumer GPUs.</div>
+</div>
+
+<div style="display:flex;gap:10px;">
+<button class="rt-btn rt-btn--primary rt-btn--full" id="share-btn" aria-label="Copy VRAM results to clipboard">📋 Copy Results</button>
+<button class="rt-btn rt-btn--secondary rt-btn--full" id="reset-btn" aria-label="Reset all selections">🔄 Reset</button>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- SEO Content Sections -->
+<section class="rt-content-section">
+<h2>How to Use the VRAM Calculator</h2>
+<p>Running AI models locally requires careful VRAM planning. Our <strong>VRAM Calculator</strong> helps you determine exactly how much GPU memory you need before downloading multi-gigabyte models.</p>
+<h3>Why VRAM Matters for Local LLMs</h3>
+<p>VRAM (Video RAM) is the bottleneck for local AI inference. Unlike system RAM, VRAM is physically attached to your GPU and cannot be expanded. A model that needs 16 GB VRAM simply will not run on an 8 GB GPU — no matter how fast your CPU is.</p>
+<p>Our calculator accounts for:</p>
+<ul>
+<li><strong>Model parameters</strong> — Billions of parameters directly translate to VRAM needs</li>
+<li><strong>Quantization level</strong> — FP16 uses 2 bytes per param, INT8 uses 1, INT4 uses 0.5</li>
+<li><strong>Context length overhead</strong> — Longer conversations need more VRAM for attention cache</li>
+<li><strong>GPU compatibility</strong> — Check if your specific GPU can handle the model</li>
+</ul>
+</section>
+
+<section class="rt-content-section">
+<h2>VRAM Requirements by Model Size</h2>
+<p>Here is a quick reference for popular models at different quantization levels:</p>
+<div class="rt-table-wrap">
+<table class="rt-table">
+<thead><tr><th>Model</th><th>FP16</th><th>INT8</th><th>INT4/GPTQ</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td>Llama 3.1 8B</td><td><strong>16 GB</strong></td><td>10 GB</td><td>6 GB</td><td>Consumer GPUs</td></tr>
+<tr><td>Llama 3.1 70B</td><td><strong>140 GB</strong></td><td>70 GB</td><td>35-40 GB</td><td>Multi-GPU / A100</td></tr>
+<tr><td>Mistral 7B</td><td><strong>14 GB</strong></td><td>9 GB</td><td>5-6 GB</td><td>Consumer GPUs</td></tr>
+<tr><td>Mixtral 8x7B</td><td><strong>94 GB</strong></td><td>60 GB</td><td>30-34 GB</td><td>Workstation GPUs</td></tr>
+<tr><td>Qwen 2.5 72B</td><td><strong>144 GB</strong></td><td>90 GB</td><td>45-51 GB</td><td>Data Center GPUs</td></tr>
+<tr><td>DeepSeek V3</td><td><strong>1342 GB</strong></td><td>850 GB</td><td>425-480 GB</td><td>Multi-A100 Cluster</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Note:</strong> These are base VRAM estimates. Add 10-50% overhead for context length, depending on how many tokens you process at once.</p>
+</section>
+
+<section class="rt-content-section">
+<h2>Which GPU Do You Need for Local AI?</h2>
+<p>Your GPU choice depends entirely on which models you want to run. Here is our recommendation matrix:</p>
+<h3>Consumer GPUs (8-24 GB VRAM)</h3>
+<ul>
+<li><strong>RTX 4060 / 4060 Ti (8-16 GB):</strong> 7B-8B models at INT4. Good for chatbots and coding assistants.</li>
+<li><strong>RTX 4070 / 4070 Ti Super (12-16 GB):</strong> 7B-13B models at INT8/INT4. Comfortable for most local AI tasks.</li>
+<li><strong>RTX 4080 / 4090 (16-24 GB):</strong> 8B-13B at FP16, or 70B at INT4. Best consumer option for serious AI work.</li>
+</ul>
+<h3>Workstation GPUs (16-48 GB VRAM)</h3>
+<ul>
+<li><strong>RTX A4000 (16 GB):</strong> Similar to RTX 4070 Ti. Good for 7B-13B models.</li>
+<li><strong>RTX A5000 (24 GB):</strong> 13B-30B models at INT8. Professional AI development.</li>
+<li><strong>RTX A6000 (48 GB):</strong> 70B models at INT4. The gold standard for local AI.</li>
+</ul>
+<h3>Data Center GPUs (40-141 GB VRAM)</h3>
+<ul>
+<li><strong>A100 40/80 GB:</strong> 70B-405B models. Enterprise and research workloads.</li>
+<li><strong>H100 / H200 (80-141 GB):</strong> Largest models, fastest inference. State-of-the-art AI infrastructure.</li>
+</ul>
+</section>
+
+<section class="rt-content-section">
+<h2>What is Quantization and Why Use It?</h2>
+<p><strong>Quantization</strong> reduces the precision of model weights to save VRAM. Think of it as compressing a high-quality image to a smaller file — some detail is lost, but the result is often indistinguishable.</p>
+<h3>FP16 (16-bit Floating Point)</h3>
+<p>The default precision for most models. Uses 2 bytes per parameter. Best quality but highest VRAM usage. Recommended when you have plenty of GPU memory.</p>
+<h3>INT8 (8-bit Integer)</h3>
+<p>Compresses weights to 1 byte each — <strong>50% VRAM savings</strong> with minimal quality loss. The sweet spot for most users. Models like Llama 3.1 8B drop from 16 GB to 10 GB.</p>
+<h3>INT4 / GPTQ 4-bit</h3>
+<p>Maximum compression at 0.5 bytes per parameter — <strong>75% VRAM savings</strong>. GPTQ is a smart algorithm that minimizes quality loss during compression. Lets you run 70B models on 24-40 GB GPUs.</p>
+<p><strong>Bottom line:</strong> Start with INT8 for the best quality/VRAM balance. Use INT4/GPTQ only when VRAM is your primary constraint.</p>
+</section>
+
+<section class="rt-content-section">
+<h2>Frequently Asked Questions About AI VRAM</h2>
+<div id="faq-container"></div>
+</section>
+
+<section class="rt-content-section">
+<h2>Related Guides from REDRAG</h2>
+<p>Deep dive into AI hardware, local LLMs, and GPU buying with our detailed articles:</p>
+<div class="rt-guides-grid">
+<a href="https://www.redrag.in/2026/07/best-gpu-for-local-llm-india.html" class="rt-card rt-card--guide rt-card--hover">
+<h4 style="font-size:17px;font-weight:var(--rt-weight-bold);margin-bottom:8px;color:var(--rt-text-primary);">🧠 Best GPU for Local LLMs in India (2026)</h4>
+<p style="font-size:14px;color:var(--rt-text-secondary);line-height:1.6;">RTX 4090 vs A6000 vs A100 compared for running Llama, Mistral, and Qwen locally with India pricing.</p>
+</a>
+<a href="https://www.redrag.in/2026/07/llama-3-vram-requirements-guide.html" class="rt-card rt-card--guide rt-card--hover">
+<h4 style="font-size:17px;font-weight:var(--rt-weight-bold);margin-bottom:8px;color:var(--rt-text-primary);">🦙 Llama 3.1 VRAM Requirements: Complete Guide</h4>
+<p style="font-size:14px;color:var(--rt-text-secondary);line-height:1.6;">Detailed breakdown of 8B, 70B, and 405B models at FP16, INT8, INT4, and GPTQ quantization levels.</p>
+</a>
+<a href="https://www.redrag.in/2026/07/gptq-vs-gguf-vs-awq-quantization.html" class="rt-card rt-card--guide rt-card--hover">
+<h4 style="font-size:17px;font-weight:var(--rt-weight-bold);margin-bottom:8px;color:var(--rt-text-primary);">⚙️ GPTQ vs GGUF vs AWQ: Which Quantization to Use?</h4>
+<p style="font-size:14px;color:var(--rt-text-secondary);line-height:1.6;">Compare quantization methods for local LLMs. Quality, speed, and compatibility explained.</p>
+</a>
+<a href="https://www.redrag.in/2026/07/run-llm-on-8gb-gpu-guide.html" class="rt-card rt-card--guide rt-card--hover">
+<h4 style="font-size:17px;font-weight:var(--rt-weight-bold);margin-bottom:8px;color:var(--rt-text-primary);">💻 How to Run LLMs on an 8GB GPU</h4>
+<p style="font-size:14px;color:var(--rt-text-secondary);line-height:1.6;">Practical guide for running 7B-8B models on RTX 4060, 3060, and other 8GB cards with optimal settings.</p>
+</a>
+<a href="https://www.redrag.in/2026/07/ollama-vs-lm-studio-vs-text-generation.html" class="rt-card rt-card--guide rt-card--hover">
+<h4 style="font-size:17px;font-weight:var(--rt-weight-bold);margin-bottom:8px;color:var(--rt-text-primary);">🛠️ Ollama vs LM Studio vs Text Generation WebUI</h4>
+<p style="font-size:14px;color:var(--rt-text-secondary);line-height:1.6;">Best tools for running local LLMs compared. Ease of use, features, and performance benchmarks.</p>
+</a>
+<a href="https://www.redrag.in/2026/07/budget-gaming-pc-build-under-50000.html" class="rt-card rt-card--guide rt-card--hover">
+<h4 style="font-size:17px;font-weight:var(--rt-weight-bold);margin-bottom:8px;color:var(--rt-text-primary);">💰 Best Gaming PC Build Under ₹50,000 (2026)</h4>
+<p style="font-size:14px;color:var(--rt-text-secondary);line-height:1.6;">Complete component list with India pricing, FPS estimates, and GPU recommendations for AI workloads.</p>
+</a>
+</div>
+</section>
+
+<section class="rt-content-section">
+<h2>About This Tool</h2>
+<p>The <strong>REDRAG VRAM Calculator</strong> is a free, browser-based utility designed to help AI enthusiasts and developers plan their local inference setup. We maintain a database of 23+ popular AI models with accurate parameter counts and VRAM estimates.</p>
+<p><strong>How we calculate:</strong></p>
+<ul>
+<li>Base VRAM = parameters × bytes_per_param (2 for FP16, 1 for INT8, 0.5 for INT4)</li>
+<li>Context overhead = base × multiplier based on context length (1.0 for 4K, 1.15 for 32K, 1.5 for 128K)</li>
+<li>Activation memory = ~10-20% overhead for intermediate computations</li>
+<li>Results are estimates — actual VRAM may vary by inference framework (Ollama, vLLM, etc.)</li>
+</ul>
+<p><strong>Last updated:</strong> July 31, 2026 | <strong>Models in database:</strong> 23+ | <strong>GPUs in database:</strong> 23+</p>
+<p>Found an incorrect VRAM estimate? Want us to add a model? <a href="https://www.redrag.in/p/contact-us.html">Contact us</a> and we will update within 48 hours.</p>
+</section>
+
+</div>
+</main>
+
+<!-- Footer placeholder -->
+<div id="rt-footer"></div>
+
+<!-- Shared JS -->
+<script src="/shared/js/core.js?v=40"></script>
+<script src="/shared/js/components.js?v=40"></script>
+<script src="/shared/js/seo.js?v=40"></script>
+
+<!-- Tool-specific JS -->
+<script src="tool.js?v=41"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  RT.init();
+  if (typeof RTTool !== 'undefined') {
+    RTTool.init();
+  } else {
+    console.error('[RTTool] Tool script not loaded.');
+  }
+});
+</script>
+
+</body>
+</html>

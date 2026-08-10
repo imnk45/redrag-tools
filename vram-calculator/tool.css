@@ -1,0 +1,104 @@
+/* ============================================
+   REDRAG Tools — VRAM Calculator (Tool-Specific)
+   Version: 2.0.0 (Phase 8)
+   ============================================ */
+
+.vram-section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--rt-space-5);
+}
+
+.vram-section-title {
+  font-size: var(--rt-text-h4);
+  font-weight: var(--rt-weight-extrabold);
+  margin: 0;
+}
+
+.vram-section-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, rgba(230,57,70,0.15), rgba(230,57,70,0.05));
+  border: 1px solid rgba(230,57,70,0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.vram-model-list {
+  max-height: 360px;
+  overflow-y: auto;
+  border: 1px solid var(--rt-border-default);
+  border-radius: var(--rt-radius-sm);
+  background: var(--rt-bg-input);
+}
+
+.vram-model-list::-webkit-scrollbar { width: 5px; }
+.vram-model-list::-webkit-scrollbar-thumb { background: var(--rt-border-hover); border-radius: 3px; }
+
+.vram-model-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--rt-border-default);
+  cursor: pointer;
+  transition: var(--rt-transition);
+  gap: 12px;
+}
+
+.vram-model-item:last-child { border-bottom: none; }
+.vram-model-item:hover { background: rgba(255,255,255,0.02); }
+.vram-model-item.is-selected { background: rgba(230,57,70,0.06); border-left: 3px solid var(--rt-primary); }
+
+.vram-model-info { flex: 1; min-width: 0; }
+.vram-model-name { font-size: 14px; font-weight: var(--rt-weight-semibold); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vram-model-meta { font-size: 12px; color: var(--rt-text-muted); margin-top: 2px; }
+.vram-model-vram { font-size: 14px; font-weight: var(--rt-weight-bold); color: var(--rt-primary-light); flex-shrink: 0; }
+
+.vram-quant-options, .vram-context-options { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.vram-quant-btn, .vram-context-btn {
+  flex: 1;
+  min-width: 80px;
+  padding: 14px 10px;
+  background: var(--rt-bg-input);
+  border: 2px solid var(--rt-border-default);
+  border-radius: var(--rt-radius-sm);
+  color: var(--rt-text-secondary);
+  cursor: pointer;
+  transition: var(--rt-transition);
+  text-align: center;
+  font-family: inherit;
+  font-weight: var(--rt-weight-bold);
+}
+
+.vram-quant-btn:hover, .vram-context-btn:hover { border-color: var(--rt-border-hover); }
+.vram-quant-btn.is-active { border-color: var(--rt-primary); background: rgba(230,57,70,0.1); color: var(--rt-text-primary); }
+.vram-context-btn.is-active { border-color: var(--rt-info); background: rgba(59,130,246,0.1); color: #60a5fa; }
+
+.vram-quant-btn__size { font-size: 16px; font-weight: var(--rt-weight-extrabold); display: block; }
+.vram-quant-btn__label { font-size: 11px; opacity: 0.6; font-weight: var(--rt-weight-medium); }
+
+.vram-big-number { font-size: 48px; font-weight: var(--rt-weight-black); color: var(--rt-primary); line-height: 1; letter-spacing: -2px; }
+.vram-big-label { font-size: var(--rt-text-body); color: var(--rt-text-secondary); margin-top: 6px; font-weight: var(--rt-weight-medium); }
+
+.vram-gpu-check { margin-top: var(--rt-space-4); padding-top: var(--rt-space-4); border-top: 1px solid var(--rt-border-default); }
+.vram-gpu-status { display: flex; align-items: center; gap: 8px; font-weight: var(--rt-weight-bold); }
+.vram-gpu-status--ok { color: var(--rt-success); }
+.vram-gpu-status--warn { color: var(--rt-warning); }
+.vram-gpu-status--fail { color: var(--rt-danger); }
+
+.vram-compare-table { width: 100%; border-collapse: collapse; font-size: var(--rt-text-small); }
+.vram-compare-table th, .vram-compare-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--rt-border-default); }
+.vram-compare-table th { background: var(--rt-bg-input); font-weight: var(--rt-weight-bold); text-transform: uppercase; font-size: var(--rt-text-xs); letter-spacing: 0.8px; }
+.vram-compare-table td { color: var(--rt-text-secondary); }
+.vram-compare-table tr:hover { background: rgba(255,255,255,0.02); }
+
+@media (max-width: 768px) {
+  .vram-big-number { font-size: 38px; }
+  .vram-quant-options, .vram-context-options { gap: 6px; }
+}
