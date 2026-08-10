@@ -1,0 +1,259 @@
+{
+  "last_updated": "2026-08-10",
+  "description": "Reference data for RAM Latency Calculator. Contains common DDR3, DDR4, and DDR5 memory kits with their specifications and pre-calculated true latencies.",
+  "ddr_generations": {
+    "ddr3": {
+      "name": "DDR3 SDRAM",
+      "years": "2007-2014",
+      "voltage": "1.5V",
+      "speed_range": "800-2133 MT/s",
+      "typical_cl_range": "CL5 - CL11",
+      "typical_latency_range": "8.5ns - 13.75ns",
+      "notes": "Older generation, still found in legacy systems. Lower speeds but relatively tight timings."
+    },
+    "ddr4": {
+      "name": "DDR4 SDRAM",
+      "years": "2014-2021",
+      "voltage": "1.2V",
+      "speed_range": "2133-5333 MT/s",
+      "typical_cl_range": "CL14 - CL22",
+      "typical_latency_range": "8.5ns - 13.5ns",
+      "notes": "Most common in modern PCs. Excellent balance of speed, latency, and price. Sweet spot at 3200-3600 MT/s."
+    },
+    "ddr5": {
+      "name": "DDR5 SDRAM",
+      "years": "2021-Present",
+      "voltage": "1.1V",
+      "speed_range": "4800-8400+ MT/s",
+      "typical_cl_range": "CL30 - CL42",
+      "typical_latency_range": "8.5ns - 12.5ns",
+      "notes": "Latest generation with much higher bandwidth. Higher CL numbers are offset by significantly higher speeds."
+    }
+  },
+  "reference_kits": [
+    {
+      "name": "DDR3-1333 CL9",
+      "type": "ddr3",
+      "speed": 1333,
+      "cl": 9,
+      "true_latency_ns": 13.50,
+      "category": "budget",
+      "common_use": "Legacy office PCs, old laptops"
+    },
+    {
+      "name": "DDR3-1600 CL9",
+      "type": "ddr3",
+      "speed": 1600,
+      "cl": 9,
+      "true_latency_ns": 11.25,
+      "category": "standard",
+      "common_use": "Gaming PCs from 2012-2015 era"
+    },
+    {
+      "name": "DDR3-1866 CL10",
+      "type": "ddr3",
+      "speed": 1866,
+      "cl": 10,
+      "true_latency_ns": 10.72,
+      "category": "performance",
+      "common_use": "Enthusiast DDR3 builds"
+    },
+    {
+      "name": "DDR3-2133 CL11",
+      "type": "ddr3",
+      "speed": 2133,
+      "cl": 11,
+      "true_latency_ns": 10.31,
+      "category": "enthusiast",
+      "common_use": "High-end DDR3 overclocking"
+    },
+    {
+      "name": "DDR4-2133 CL15",
+      "type": "ddr4",
+      "speed": 2133,
+      "cl": 15,
+      "true_latency_ns": 14.06,
+      "category": "budget",
+      "common_use": "Entry-level DDR4 systems"
+    },
+    {
+      "name": "DDR4-2400 CL14",
+      "type": "ddr4",
+      "speed": 2400,
+      "cl": 14,
+      "true_latency_ns": 11.67,
+      "category": "budget",
+      "common_use": "Budget prebuilt PCs"
+    },
+    {
+      "name": "DDR4-2666 CL16",
+      "type": "ddr4",
+      "speed": 2666,
+      "cl": 16,
+      "true_latency_ns": 12.00,
+      "category": "standard",
+      "common_use": "Mid-range gaming builds"
+    },
+    {
+      "name": "DDR4-3000 CL15",
+      "type": "ddr4",
+      "speed": 3000,
+      "cl": 15,
+      "true_latency_ns": 10.00,
+      "category": "performance",
+      "common_use": "Popular gaming RAM kit"
+    },
+    {
+      "name": "DDR4-3200 CL14",
+      "type": "ddr4",
+      "speed": 3200,
+      "cl": 14,
+      "true_latency_ns": 8.75,
+      "category": "enthusiast",
+      "common_use": "B-die enthusiast memory"
+    },
+    {
+      "name": "DDR4-3200 CL16",
+      "type": "ddr4",
+      "speed": 3200,
+      "cl": 16,
+      "true_latency_ns": 10.00,
+      "category": "standard",
+      "common_use": "Most common gaming RAM"
+    },
+    {
+      "name": "DDR4-3600 CL16",
+      "type": "ddr4",
+      "speed": 3600,
+      "cl": 16,
+      "true_latency_ns": 8.89,
+      "category": "performance",
+      "common_use": "AMD Ryzen sweet spot"
+    },
+    {
+      "name": "DDR4-3600 CL18",
+      "type": "ddr4",
+      "speed": 3600,
+      "cl": 18,
+      "true_latency_ns": 10.00,
+      "category": "standard",
+      "common_use": "Budget 3600MHz kits"
+    },
+    {
+      "name": "DDR4-4000 CL18",
+      "type": "ddr4",
+      "speed": 4000,
+      "cl": 18,
+      "true_latency_ns": 9.00,
+      "category": "enthusiast",
+      "common_use": "Intel overclocking builds"
+    },
+    {
+      "name": "DDR4-4000 CL19",
+      "type": "ddr4",
+      "speed": 4000,
+      "cl": 19,
+      "true_latency_ns": 9.50,
+      "category": "enthusiast",
+      "common_use": "High-frequency gaming RAM"
+    },
+    {
+      "name": "DDR5-4800 CL40",
+      "type": "ddr5",
+      "speed": 4800,
+      "cl": 40,
+      "true_latency_ns": 16.67,
+      "category": "budget",
+      "common_use": "Entry-level DDR5, JEDEC standard"
+    },
+    {
+      "name": "DDR5-5200 CL36",
+      "type": "ddr5",
+      "speed": 5200,
+      "cl": 36,
+      "true_latency_ns": 13.85,
+      "category": "budget",
+      "common_use": "Budget DDR5 kits"
+    },
+    {
+      "name": "DDR5-5600 CL36",
+      "type": "ddr5",
+      "speed": 5600,
+      "cl": 36,
+      "true_latency_ns": 12.86,
+      "category": "standard",
+      "common_use": "Mid-range DDR5"
+    },
+    {
+      "name": "DDR5-6000 CL30",
+      "type": "ddr5",
+      "speed": 6000,
+      "cl": 30,
+      "true_latency_ns": 10.00,
+      "category": "performance",
+      "common_use": "AMD AM5 sweet spot, popular gaming kit"
+    },
+    {
+      "name": "DDR5-6000 CL36",
+      "type": "ddr5",
+      "speed": 6000,
+      "cl": 36,
+      "true_latency_ns": 12.00,
+      "category": "standard",
+      "common_use": "Budget 6000MHz DDR5"
+    },
+    {
+      "name": "DDR5-6400 CL32",
+      "type": "ddr5",
+      "speed": 6400,
+      "cl": 32,
+      "true_latency_ns": 10.00,
+      "category": "performance",
+      "common_use": "High-performance DDR5 gaming"
+    },
+    {
+      "name": "DDR5-6800 CL34",
+      "type": "ddr5",
+      "speed": 6800,
+      "cl": 34,
+      "true_latency_ns": 10.00,
+      "category": "enthusiast",
+      "common_use": "Enthusiast overclocking RAM"
+    },
+    {
+      "name": "DDR5-7200 CL34",
+      "type": "ddr5",
+      "speed": 7200,
+      "cl": 34,
+      "true_latency_ns": 9.44,
+      "category": "enthusiast",
+      "common_use": "High-end Intel DDR5 builds"
+    },
+    {
+      "name": "DDR5-7600 CL36",
+      "type": "ddr5",
+      "speed": 7600,
+      "cl": 36,
+      "true_latency_ns": 9.47,
+      "category": "enthusiast",
+      "common_use": "Extreme overclocking"
+    },
+    {
+      "name": "DDR5-8000 CL38",
+      "type": "ddr5",
+      "speed": 8000,
+      "cl": 38,
+      "true_latency_ns": 9.50,
+      "category": "enthusiast",
+      "common_use": "Flagship DDR5 memory"
+    }
+  ],
+  "latency_grades": {
+    "excellent": { "max_ns": 8.0, "label": "Excellent", "description": "Top-tier latency for competitive gaming and high-frequency tasks" },
+    "very_good": { "max_ns": 10.0, "label": "Very Good", "description": "Great performance for gaming and daily use" },
+    "good": { "max_ns": 12.0, "label": "Good", "description": "Solid performance for general computing" },
+    "average": { "max_ns": 14.0, "label": "Average", "description": "Acceptable for basic tasks" },
+    "below_average": { "max_ns": 16.0, "label": "Below Average", "description": "May cause performance bottlenecks" },
+    "poor": { "max_ns": 999.0, "label": "Poor", "description": "Significant bottleneck, upgrade recommended" }
+  }
+}
