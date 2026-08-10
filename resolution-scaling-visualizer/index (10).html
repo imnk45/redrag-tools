@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Preconnect to critical origins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Critical: Inline placeholder styles to prevent FOUC -->
+<style>
+#rt-header { min-height: 72px; }
+#rt-footer { min-height: 120px; }
+</style>
+
+<!-- Preload critical shared CSS -->
+<link rel="preload" href="/shared/css/core.css?v=43" as="style">
+<link rel="preload" href="/shared/css/components.css?v=45" as="style">
+<link rel="preload" href="/shared/css/shell.css?v=43" as="style">
+
+<!-- Title & Meta -->
+<title>Resolution Scaling Visualizer | REDRAG Tools</title>
+<meta name="description" content="Visualize internal render resolutions, performance gains, and VRAM impact of DLSS, FSR, and XeSS scaling modes. Compare pixel counts and estimated FPS in real-time.">
+<meta name="keywords" content="resolution scaling, DLSS, FSR, XeSS, upscaling, gaming resolution, render resolution, pixel count, performance boost, VRAM usage, 1080p, 1440p, 4K, 8K">
+<meta name="author" content="REDRAG">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#e63946">
+<meta name="msapplication-TileColor" content="#e63946">
+<meta name="color-scheme" content="dark">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://tools.redrag.in/resolution-scaling-visualizer/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tools.redrag.in/resolution-scaling-visualizer/">
+<meta property="og:title" content="Resolution Scaling Visualizer — Compare DLSS, FSR & XeSS Performance">
+<meta property="og:description" content="Visualize internal render resolutions, performance gains, and VRAM impact of DLSS, FSR, and XeSS scaling modes. Compare pixel counts and estimated FPS in real-time.">
+<meta property="og:image" content="https://www.redrag.in/assets/og-resolution-scaling-visualizer.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="REDRAG Tools">
+<meta property="og:locale" content="en_US">
+<meta property="article:section" content="Gaming Performance">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@redragblog">
+<meta name="twitter:url" content="https://tools.redrag.in/resolution-scaling-visualizer/">
+<meta name="twitter:title" content="Resolution Scaling Visualizer — Compare DLSS, FSR & XeSS Performance">
+<meta name="twitter:description" content="Visualize internal render resolutions, performance gains, and VRAM impact of DLSS, FSR, and XeSS scaling modes.">
+<meta name="twitter:image" content="https://www.redrag.in/assets/og-resolution-scaling-visualizer.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://www.redrag.in/favicon.ico">
+<link rel="apple-touch-icon" href="https://tools.redrag.in/assets/icons/apple-touch-icon.png">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Shared CSS -->
+<link rel="stylesheet" href="/shared/css/core.css?v=43">
+<link rel="stylesheet" href="/shared/css/components.css?v=45">
+<link rel="stylesheet" href="/shared/css/shell.css?v=43">
+
+<!-- Tool-specific CSS -->
+<link rel="stylesheet" href="tool.css?v=43">
+
+<!-- Structured Data: BreadcrumbList -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.redrag.in/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://tools.redrag.in/"},{"@type":"ListItem","position":3,"name":"Resolution Scaling Visualizer","item":"https://tools.redrag.in/resolution-scaling-visualizer/"}]}
+</script>
+
+<!-- Structured Data: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Resolution Scaling Visualizer",
+  "operatingSystem": "Any",
+  "applicationCategory": "UtilityApplication",
+  "description": "Visualize internal render resolutions, performance gains, and VRAM impact of DLSS, FSR, and XeSS scaling modes. Compare pixel counts and estimated FPS in real-time.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<base target="_blank">
+</head>
+<body>
+
+<!-- Skip to content -->
+<a href="#rt-main" class="rt-skip-link">Skip to main content</a>
+
+<!-- Header placeholder -->
+<div id="rt-header" data-active="tools"></div>
+
+<main id="rt-main" role="main" aria-label="Resolution Scaling Visualizer">
+<div class="rt-container">
+
+<!-- Hero Section -->
+<section class="rt-hero" aria-label="Tool introduction">
+<div class="rt-hero__glow" aria-hidden="true"></div>
+<h1 class="rt-hero__title" fetchpriority="high">Resolution Scaling<br><span class="rt-highlight">Visualizer</span></h1>
+<p class="rt-hero__desc">See exactly what your GPU renders internally with DLSS, FSR, and XeSS. Compare pixel counts, estimated FPS gains, VRAM needs, and image quality — all in real-time.</p>
+</section>
+
+<!-- Tool Interface Grid -->
+<div class="rt-tool-layout">
+
+<!-- Left/Main Column: Inputs -->
+<div class="tool-left">
+  <div class="rt-card">
+    <div class="storage-section-header">
+      <div class="storage-section-icon">🖥️</div>
+      <h3 class="storage-section-title">Configure Scaling</h3>
+    </div>
+
+    <div class="rsv-input-group">
+      <label class="rsv-label" for="base-resolution">Base / Output Resolution</label>
+      <select class="rt-input rsv-select" id="base-resolution"></select>
+      <span class="rsv-hint">The resolution your monitor displays</span>
+    </div>
+
+    <div class="rsv-input-group">
+      <label class="rsv-label" for="scaling-tech">Scaling Technology</label>
+      <select class="rt-input rsv-select" id="scaling-tech"></select>
+      <span class="rsv-hint">DLSS (NVIDIA), FSR (AMD), XeSS (Intel), or Native</span>
+    </div>
+
+    <div class="rsv-input-group">
+      <label class="rsv-label" for="scaling-mode">Scaling Mode</label>
+      <select class="rt-input rsv-select" id="scaling-mode"></select>
+      <span class="rsv-hint">Lower percentage = fewer pixels rendered = higher FPS</span>
+    </div>
+
+    <div class="rsv-input-group">
+      <label class="rsv-label" for="base-fps">Your Current FPS (Optional)</label>
+      <input type="number" class="rt-input" id="base-fps" placeholder="e.g. 60" min="1" max="1000">
+      <span class="rsv-hint">Enter your native FPS to see estimated scaled FPS</span>
+    </div>
+
+    <div class="rsv-input-group">
+      <label class="rsv-label" for="monitor-size">Monitor Size (for PPI)</label>
+      <select class="rt-input rsv-select" id="monitor-size"></select>
+      <span class="rsv-hint">Pixel density calculation for sharpness reference</span>
+    </div>
+  </div>
+</div>
+
+<!-- Right Column: Results/Sidebar -->
+<div class="tool-right rt-sidebar">
+
+  <div class="rt-card rt-card--result" aria-live="polite">
+    <div class="u-text-center" style="padding-bottom:var(--rt-space-5);border-bottom:1px solid var(--rt-border-default);margin-bottom:var(--rt-space-5);">
+      <div style="font-size:var(--rt-text-xs);color:var(--rt-text-muted);text-transform:uppercase;letter-spacing:1.5px;font-weight:var(--rt-weight-bold);margin-bottom:var(--rt-space-2);">Internal Render Resolution</div>
+      <div class="rsv-big-res" id="render-res">2560 × 1440</div>
+      <div class="rsv-subtext" id="render-percent">67% of native pixels (3.69 MP vs 8.29 MP)</div>
+    </div>
+
+    <!-- Pixel Grid Visualization -->
+    <div class="rsv-grid-wrap">
+      <div class="rsv-grid" id="pixel-grid"></div>
+    </div>
+
+    <!-- Visual Bar -->
+    <div class="rsv-visual-section">
+      <div class="rsv-bar-label">
+        <span>Pixel Load</span>
+        <span id="pixel-pct">67%</span>
+      </div>
+      <div class="rsv-bar-track">
+        <div class="rsv-bar-fill" id="pixel-bar" style="width:67%"></div>
+      </div>
+      <div class="rsv-bar-compare">
+        <span id="native-pixels">8.29 MP</span>
+        <span>→</span>
+        <span id="scaled-pixels">3.69 MP</span>
+      </div>
+    </div>
+
+    <!-- Metrics Grid -->
+    <div class="rsv-metric-grid">
+      <div class="rsv-metric">
+        <div class="rsv-metric-label">Perf. Multiplier</div>
+        <div class="rsv-metric-value" id="perf-mult">1.40×</div>
+      </div>
+      <div class="rsv-metric">
+        <div class="rsv-metric-label">Est. FPS</div>
+        <div class="rsv-metric-value" id="est-fps">—</div>
+      </div>
+      <div class="rsv-metric">
+        <div class="rsv-metric-label">VRAM Need</div>
+        <div class="rsv-metric-value" id="vram-need">12 GB</div>
+      </div>
+      <div class="rsv-metric">
+        <div class="rsv-metric-label">Pixel Density</div>
+        <div class="rsv-metric-value" id="ppi-value">163 PPI</div>
+      </div>
+    </div>
+
+    <!-- Quality Badge -->
+    <div style="text-align:center;">
+      <div class="rsv-quality-badge" id="quality-badge">
+        <span class="rsv-quality-dot" id="quality-dot"></span>
+        <span id="quality-text">Excellent — 95/100</span>
+      </div>
+    </div>
+
+    <div class="u-flex u-flex-col" style="gap: var(--rt-space-3); margin-top: var(--rt-space-5);">
+      <button class="rt-btn rt-btn--primary" id="btn-copy">
+        <span aria-hidden="true">📋</span> Copy Result
+      </button>
+      <button class="rt-btn rt-btn--secondary" id="btn-reset">
+        <span aria-hidden="true">🔄</span> Reset
+      </button>
+    </div>
+  </div>
+
+  <div class="rt-insight">
+    <div class="rt-insight__title">💡 Quick Tip</div>
+    <div class="rt-insight__body" id="tip-body">DLSS Quality mode at 4K renders internally at 1440p, giving you ~40% FPS boost with minimal quality loss.</div>
+  </div>
+
+  <!-- Mode Comparison Mini-Card -->
+  <div class="rt-card" style="margin-top: var(--rt-space-4);">
+    <div class="storage-section-header">
+      <div class="storage-section-icon">📊</div>
+      <h3 class="storage-section-title">All Modes Compared</h3>
+    </div>
+    <div class="rsv-compare-table-wrap">
+      <table class="rsv-compare-table" id="compare-table">
+        <tr><th>Mode</th><th>Internal Res</th><th>Est. FPS</th><th>Quality</th></tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+<!-- End Tool Layout -->
+</div>
+
+<!-- SEO Content Section -->
+<section class="rt-content-section" aria-labelledby="guide-title">
+  <h2 id="guide-title">How Resolution Scaling Works in PC Gaming</h2>
+
+  <p>Resolution scaling has become the single most important performance technology in modern PC gaming. As monitors push beyond 1440p into 4K and even 8K territory, the raw pixel count your GPU must render has exploded — <strong>4K packs 8.3 million pixels, nearly four times the 2.1 million of 1080p</strong>. Without upscaling technologies, achieving smooth frame rates at high resolutions demands exponentially more GPU power, often pricing mainstream gamers out of the high-resolution experience entirely.</p>
+
+  <p>This is where <strong>resolution scaling visualizers</strong> become essential. Tools like the REDRAG Resolution Scaling Visualizer demystify exactly what happens under the hood when you enable NVIDIA DLSS, AMD FSR, or Intel XeSS. Instead of guessing whether "Quality" or "Performance" mode is right for your setup, you can see the internal render resolution, pixel workload reduction, estimated FPS multiplier, and even VRAM impact — all updated in real-time as you adjust settings.</p>
+
+  <div style="background:var(--rt-surface-variant); padding:var(--rt-space-5); border-radius:12px; margin:var(--rt-space-6) 0;">
+    <h3 style="margin-top:0;">The Math Behind Scaling</h3>
+    <p style="margin-bottom:0;">When DLSS Quality mode is active at 4K (3840×2160), your GPU does not render 8.3 million pixels. Instead, it renders internally at 2560×1440 — just 3.7 million pixels, or <strong>44% fewer pixels than native</strong>. DLSS\'s AI network then reconstructs the 4K image using motion vectors, depth buffers, and historical frame data. The result? A 30–50% FPS boost with image quality that rivals or even exceeds native 4K in many scenarios, thanks to superior anti-aliasing.</p>
+  </div>
+
+  <h3>DLSS vs FSR vs XeSS: The 2026 Landscape</h3>
+  <p>As of 2026, three major upscaling ecosystems dominate PC gaming, each with distinct strengths:</p>
+  <ul>
+    <li><strong>NVIDIA DLSS 4.5</strong> — The most mature solution with 400+ supported titles. Uses dedicated Tensor Cores on RTX GPUs for AI reconstruction. Offers the highest frame-generation ceiling (up to 6× with Multi Frame Gen on RTX 50-series) and consistently wins blind image-quality tests.</li>
+    <li><strong>AMD FSR 4 (Redstone)</strong> — Now fully ML-powered on RDNA 4 hardware, with legacy spatial upscaling still available for older GPUs. Open-source and cross-platform, powering console upscaling on PS5 and Xbox. The best choice for non-RTX NVIDIA users and AMD builds.</li>
+    <li><strong>Intel XeSS 2/3</strong> — Genuinely cross-vendor and performs best on Arc GPUs with XMX acceleration. Features driver-level multi-frame generation that does not require per-game patches. The smallest game library (~44 titles) but rapidly growing.</li>
+  </ul>
+
+  <h3>Resolution Scaling Comparison Matrix</h3>
+  <p>The table below shows how each technology and mode scales internal resolution from common output resolutions:</p>
+  <div style="overflow-x:auto; margin:var(--rt-space-5) 0;">
+    <table class="rsv-matrix-table">
+      <thead>
+        <tr><th>Mode</th><th>Scale Factor</th><th>1080p Internal</th><th>1440p Internal</th><th>4K Internal</th><th>Est. FPS Boost</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Native</td><td>100%</td><td>1920×1080</td><td>2560×1440</td><td>3840×2160</td><td>1.0×</td></tr>
+        <tr><td>DLSS Quality</td><td>67%</td><td>1280×720</td><td>1706×960</td><td>2560×1440</td><td>~1.4×</td></tr>
+        <tr><td>DLSS Balanced</td><td>59%</td><td>1129×635</td><td>1506×847</td><td>2259×1270</td><td>~1.6×</td></tr>
+        <tr><td>DLSS Performance</td><td>50%</td><td>960×540</td><td>1280×720</td><td>1920×1080</td><td>~1.9×</td></tr>
+        <tr><td>DLSS Ultra Perf.</td><td>33%</td><td>640×360</td><td>853×480</td><td>1280×720</td><td>~2.8×</td></tr>
+        <tr><td>FSR Quality</td><td>77%</td><td>1477×831</td><td>1969×1107</td><td>2954×1662</td><td>~1.3×</td></tr>
+        <tr><td>FSR Balanced</td><td>67%</td><td>1280×720</td><td>1706×960</td><td>2560×1440</td><td>~1.5×</td></tr>
+        <tr><td>FSR Performance</td><td>59%</td><td>1129×635</td><td>1506×847</td><td>2259×1270</td><td>~1.7×</td></tr>
+        <tr><td>FSR Ultra Perf.</td><td>50%</td><td>960×540</td><td>1280×720</td><td>1920×1080</td><td>~2.0×</td></tr>
+        <tr><td>XeSS Quality</td><td>67%</td><td>1280×720</td><td>1706×960</td><td>2560×1440</td><td>~1.35×</td></tr>
+        <tr><td>XeSS Balanced</td><td>59%</td><td>1129×635</td><td>1506×847</td><td>2259×1270</td><td>~1.55×</td></tr>
+        <tr><td>XeSS Performance</td><td>50%</td><td>960×540</td><td>1280×720</td><td>1920×1080</td><td>~1.85×</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>VRAM and Performance: What Actually Changes?</h3>
+  <p>While resolution scaling primarily boosts frame rates by reducing the rasterization workload, it also has a secondary effect on <strong>VRAM consumption</strong>. Frame buffers, render targets, and G-buffers all shrink proportionally with the internal resolution. However, texture memory — often the largest VRAM consumer in modern games — remains largely unchanged because textures are streamed at full resolution regardless of render scale.</p>
+  <p>In practical terms: at 4K, native rendering typically demands 12–16 GB VRAM for AAA titles with high-resolution textures. Switching to DLSS Quality mode may reduce this by only 1–2 GB, while Performance mode can free up 3–4 GB. This means a GPU with 12 GB VRAM can often handle 4K with DLSS Performance where native 4K would stutter due to memory limits. For 1440p gaming, 8 GB is the current floor, but 12 GB provides meaningful headroom when scaling is enabled.</p>
+
+  <h3>Choosing the Right Mode for Your Setup</h3>
+  <p>Not every gamer needs the same scaling approach. Competitive players running 1080p at 240 Hz might stick to native rendering or FSR Quality to preserve every edge-detail. Single-player enthusiasts with 4K OLED monitors often find DLSS Quality or Balanced to be the sweet spot — delivering 60+ FPS in ray-traced titles without visible softness. If you are GPU-bound (your GPU usage sits at 99%), any form of upscaling will yield substantial gains. If you are CPU-bound (common in esports titles at lower resolutions), scaling helps less because the CPU, not the pixel count, is the bottleneck.</p>
+</section>
+
+<section class="rt-content-section">
+  <h2>Frequently Asked Questions About Resolution Scaling</h2>
+  <!-- FAQ will be injected here by RT.components.FAQ.init -->
+  <div id="faq-container"></div>
+</section>
+
+<section class="rt-content-section">
+  <h2>Related Guides from REDRAG</h2>
+  <p>Deep dive into gaming performance, graphics cards, and display technology with our detailed articles:</p>
+  <div class="rt-guides-grid">
+    <a href="https://www.redrag.in/2026/07/best-gpu-1080p-1440p-4k-gaming.html" class="rt-card rt-card--guide rt-card--hover">
+      <h4>🎮 Best GPU for 1080p, 1440p & 4K Gaming in 2026</h4>
+      <p>Find the perfect graphics card for your monitor resolution and refresh rate, from budget 1080p builds to enthusiast 4K setups.</p>
+    </a>
+    <a href="https://www.redrag.in/2026/07/dlss-4-5-vs-fsr-4-vs-xess-complete-comparison.html" class="rt-card rt-card--guide rt-card--hover">
+      <h4>⚔️ DLSS 4.5 vs FSR 4 vs XeSS: Complete Comparison</h4>
+      <p>We break down image quality, performance, hardware requirements, and game support for all three major upscaling technologies.</p>
+    </a>
+    <a href="https://www.redrag.in/2026/06/how-much-vram-gaming-2026-guide.html" class="rt-card rt-card--guide rt-card--hover">
+      <h4>💾 How Much VRAM Do You Need for Gaming?</h4>
+      <p>Understand VRAM requirements at 1080p, 1440p, and 4K. Learn why 8GB is no longer enough and what capacity future-proofs your build.</p>
+    </a>
+    <a href="https://www.redrag.in/2026/05/best-gaming-monitors-1080p-vs-1440p-vs-4k.html" class="rt-card rt-card--guide rt-card--hover">
+      <h4>🖥️ Best Gaming Monitors: 1080p vs 1440p vs 4K</h4>
+      <p>Choose the right monitor size, resolution, and refresh rate for your gaming style, budget, and GPU horsepower.</p>
+    </a>
+    <a href="https://www.redrag.in/2026/04/pc-build-guide-choosing-right-graphics-card.html" class="rt-card rt-card--guide rt-card--hover">
+      <h4>🔧 PC Build Guide: Choosing the Right Graphics Card</h4>
+      <p>Step-by-step guide to matching your GPU with your CPU, monitor, and power supply for a balanced, bottleneck-free build.</p>
+    </a>
+    <a href="https://www.redrag.in/2026/03/optimize-game-settings-maximum-fps.html" class="rt-card rt-card--guide rt-card--hover">
+      <h4>⚡ How to Optimize Game Settings for Maximum FPS</h4>
+      <p>Learn which settings hurt performance most, how to find the visual-quality sweet spot, and when to use upscaling vs lowering settings.</p>
+    </a>
+  </div>
+</section>
+
+<section class="rt-content-section">
+  <h2>About This Tool</h2>
+  <p>The <strong>REDRAG Resolution Scaling Visualizer</strong> is a free, browser-based calculator designed to help gamers understand exactly what happens when they enable DLSS, FSR, or XeSS in their favorite titles.</p>
+  <p><strong>How we calculate:</strong></p>
+  <ul>
+    <li><strong>Internal Render Resolution:</strong> Derived from official scaling factors — DLSS Quality = 1.5× output (66.7% internal), FSR Quality = 1.3× output (76.9% internal), etc.</li>
+    <li><strong>Performance Multiplier:</strong> Based on aggregated 2026 reviewer benchmarks across rasterized and ray-traced titles. Actual gains vary by GPU architecture, game engine, and CPU bottleneck.</li>
+    <li><strong>VRAM Estimate:</strong> Calculated from native resolution VRAM baselines (8GB for 1080p, 12GB for 1440p, 16GB for 4K) adjusted downward for lower internal resolutions, with a 4GB floor.</li>
+    <li><strong>PPI (Pixel Density):</strong> Calculated using the standard formula: diagonal pixels ÷ diagonal inches, where diagonal pixels = √(width² + height²).</li>
+    <li><strong>Quality Score:</strong> Subjective aggregate based on community benchmarks, blind-test results, and temporal stability assessments from major hardware review outlets.</li>
+  </ul>
+  <p>Found a bug? Want to request a feature or add a new resolution? <a href="https://www.redrag.in/p/contact-us.html">Contact us</a> and we\'ll look into it.</p>
+</section>
+
+<!-- End Container -->
+</div>
+</main>
+
+<!-- Footer placeholder -->
+<div id="rt-footer"></div>
+
+<!-- Shared JavaScript -->
+<script src="/shared/js/core.js?v=43"></script>
+<script src="/shared/js/components.js?v=43"></script>
+<!-- Tool-specific script -->
+<script src="tool.js?v=43"></script>
+
+</body>
+</html>
