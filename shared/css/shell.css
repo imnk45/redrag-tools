@@ -1,0 +1,409 @@
+/* ============================================
+   REDRAG Tools — Shell CSS
+   Header, Footer, Navigation, Mobile Menu
+   Version: 2.0.0
+   ============================================ */
+
+/* ------------------------------------------
+   1. HEADER
+   ------------------------------------------ */
+
+.rt-header {
+  background: var(--rt-bg-overlay);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--rt-border-default);
+  position: sticky;
+  top: 0;
+  z-index: var(--rt-z-sticky);
+  min-height: var(--rt-header-height);
+}
+
+.rt-header__inner {
+  max-width: var(--rt-container-max);
+  margin: 0 auto;
+  padding: 16px var(--rt-space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--rt-space-5);
+}
+
+/* ------------------------------------------
+   2. LOGO
+   ------------------------------------------ */
+
+.rt-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: var(--rt-transition);
+  flex-shrink: 0;
+}
+
+.rt-logo:hover {
+  opacity: 0.85;
+}
+
+.rt-logo__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: var(--rt-shadow-sm);
+}
+
+.rt-logo__text {
+  font-size: 22px;
+  font-weight: var(--rt-weight-black);
+  color: var(--rt-text-primary);
+  letter-spacing: -0.5px;
+}
+
+.rt-logo__text span {
+  color: var(--rt-primary);
+}
+
+.rt-logo__sup {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: var(--rt-weight-extrabold);
+  letter-spacing: 1px;
+  color: var(--rt-text-secondary);
+  margin-left: 2px;
+  vertical-align: super;
+  background: var(--rt-bg-elevated);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--rt-border-default);
+}
+
+/* ------------------------------------------
+   3. NAVIGATION
+   ------------------------------------------ */
+
+.rt-nav {
+  display: flex;
+  gap: var(--rt-space-5);
+  list-style: none;
+  align-items: center;
+}
+
+.rt-nav__link {
+  color: var(--rt-text-secondary);
+  text-decoration: none;
+  font-size: var(--rt-text-small);
+  font-weight: var(--rt-weight-semibold);
+  transition: var(--rt-transition);
+  position: relative;
+  padding: 4px 0;
+}
+
+.rt-nav__link:hover {
+  color: var(--rt-text-primary);
+}
+
+/* Animated underline */
+.rt-nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--rt-primary);
+  transition: var(--rt-transition);
+  border-radius: 2px;
+}
+
+.rt-nav__link:hover::after {
+  width: 100%;
+}
+
+.rt-nav__link.is-active {
+  color: var(--rt-primary);
+}
+
+.rt-nav__link.is-active::after {
+  width: 100%;
+}
+
+/* ------------------------------------------
+   4. BUTTONS / MOBILE MENU
+   ------------------------------------------ */
+
+.rt-theme-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--rt-text-secondary);
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--rt-radius-sm);
+  transition: var(--rt-transition);
+}
+
+.rt-theme-toggle-btn:hover {
+  color: var(--rt-primary);
+  background: var(--rt-bg-elevated);
+}
+
+.rt-mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--rt-text-primary);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  line-height: 1;
+}
+
+.rt-mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--rt-bg-base);
+  z-index: calc(var(--rt-z-sticky) + 10);
+  flex-direction: column;
+  padding: var(--rt-space-5);
+  animation: rt-fadeIn 0.2s ease;
+}
+
+.rt-mobile-menu.is-open {
+  display: flex;
+}
+
+.rt-mobile-menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--rt-space-6);
+}
+
+.rt-mobile-menu__close {
+  background: none;
+  border: none;
+  color: var(--rt-text-primary);
+  font-size: 28px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.rt-mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rt-space-4);
+}
+
+.rt-mobile-menu__link {
+  font-size: 20px;
+  font-weight: var(--rt-weight-bold);
+  color: var(--rt-text-secondary);
+  padding: var(--rt-space-3) 0;
+  border-bottom: 1px solid var(--rt-border-default);
+  transition: var(--rt-transition);
+}
+
+.rt-mobile-menu__link:hover,
+.rt-mobile-menu__link.is-active {
+  color: var(--rt-primary);
+}
+
+/* ------------------------------------------
+   5. FOOTER
+   ------------------------------------------ */
+
+.rt-footer-new {
+  background: var(--rt-bg-base);
+  border-top: 1px solid var(--rt-border-default);
+  padding: 64px 24px 24px;
+  position: relative;
+  font-family: inherit;
+  margin-top: 48px;
+}
+
+.rt-footer-new__inner {
+  max-width: var(--rt-container-max);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+/* Left Column */
+.rt-footer-new__brand-col {
+  flex: 0 0 300px;
+}
+
+.rt-footer-new__subtitle {
+  color: var(--rt-text-muted);
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.rt-footer-new__logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.rt-footer-new__logo-img {
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.rt-footer-new__logo-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--rt-text-primary);
+}
+
+.rt-footer-new__tags {
+  font-size: 13px;
+  color: var(--rt-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.rt-footer-new__socials {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.rt-footer-new__socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--rt-border-default);
+  color: var(--rt-text-secondary);
+  background: var(--rt-bg-elevated);
+  transition: var(--rt-transition);
+}
+
+.rt-footer-new__socials a:hover {
+  border-color: var(--rt-primary);
+  color: var(--rt-primary);
+}
+
+.rt-footer-new__bottom {
+  max-width: var(--rt-container-max);
+  margin: 48px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--rt-border-default);
+}
+
+.rt-footer-new__copy {
+  font-size: 13px;
+  color: var(--rt-text-secondary);
+}
+
+.rt-footer-new__copy a {
+  color: var(--rt-primary);
+  text-decoration: none;
+}
+
+/* Right Columns Grid */
+.rt-footer-new__links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  flex: 1;
+}
+
+.rt-footer-new__col {
+  display: flex;
+  flex-direction: column;
+}
+
+.rt-footer-new__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--rt-text-primary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rt-footer-new__title::after {
+  content: '....';
+  color: var(--rt-text-muted);
+  letter-spacing: 2px;
+  opacity: 0.5;
+}
+
+.rt-footer-new__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rt-footer-new__list li {
+  position: relative;
+  padding-left: 12px;
+}
+
+.rt-footer-new__list li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: var(--rt-text-muted);
+}
+
+.rt-footer-new__list a {
+  color: var(--rt-text-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  transition: var(--rt-transition-fast);
+}
+
+.rt-footer-new__list a:hover {
+  color: var(--rt-primary);
+}
+
+/* ------------------------------------------
+   6. RESPONSIVE
+   ------------------------------------------ */
+
+@media (max-width: 992px) {
+  .rt-footer-new__inner {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .rt-footer-new__brand-col {
+    flex: none; /* Reset height in column mode */
+  }
+}
+
+@media (max-width: 768px) {
+  .rt-header__inner {
+    padding: 14px var(--rt-space-4);
+  }
+
+  .rt-nav {
+    display: none;
+  }
+
+  .rt-mobile-menu-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .rt-footer-new__links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 16px;
+  }
+}
