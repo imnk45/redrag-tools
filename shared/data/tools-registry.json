@@ -1,4 +1,4 @@
-﻿{
+{
     "version":  "2026-07-31",
     "last_updated":  "2026-07-31",
     "tools":  [
@@ -162,4 +162,6 @@
     "operatingSystem": "Any",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
+}
+  ]
 }
