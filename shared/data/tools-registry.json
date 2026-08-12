@@ -138,8 +138,8 @@
   "description": "Free PC power supply calculator. Find exact wattage for RTX 5090, RX 9070 XT & more. Unbiased ATX 3.1 PSU recommendations with 80 Plus efficiency analysis.",
   "category": "PC Hardware",
   "status": "live",
-  "ogImage": "/assets/images/thumbnails/thumb-psu-wattage-calculator.jpg",
-  "thumbnail": "/assets/images/thumbnails/thumb-psu-wattage-calculator.jpg",
+  "ogImage": "assets/images/thumbnails/thumb-psu.jpg",
+  "thumbnail": "assets/images/thumbnails/thumb-psu.jpg",
   "schema": {
     "@type": "SoftwareApplication",
     "applicationCategory": "UtilityApplication",
