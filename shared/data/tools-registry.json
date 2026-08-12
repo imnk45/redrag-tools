@@ -117,20 +117,36 @@
   }
                   },
                   {
-                      "slug":  "pc-build",
-                      "name":  "Budget PC Build Configurator (India)",
-                      "icon":  "🔧",
-                      "description":  "Build the perfect gaming PC for your budget. Select your price range (?30K to ?2L), pick your use case, and get component recommendations with India pricing and FPS estimates.",
-                      "category":  "Gaming",
-                      "status":  "coming-soon",
-                      "tags":  [
-                                   "PC Build",
-                                   "India",
-                                   "Budget",
-                                   "Gaming PC"
-                               ],
-                      "ogImage":  "/assets/images/thumbnails/thumb-pcbuild.jpg",
-                      "thumbnail":  "/assets/images/thumbnails/thumb-pcbuild.jpg"
+  "id": "pc-build-configurator",
+  "name": "PC Build Configurator",
+  "slug": "pc-build-configurator",
+  "description": "Free custom PC builder with compatibility checking, wattage calculation, and FPS estimation. Build optimized gaming PCs from $800 to $4000+.",
+  "category": "PC Building",
+  "tags": [
+    "PC Build",
+    "Gaming PC",
+    "Compatibility",
+    "CPU",
+    "GPU",
+    "PSU Calculator"
+  ],
+  "status": "live",
+  "url": "/pc-build-configurator/",
+  "thumbnail": "/assets/images/thumbnails/thumb-pc-build-configurator.jpg",
+  "ogImage": "/assets/images/thumbnails/thumb-pc-build-configurator.jpg",
+  "featured": true,
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PC Build Configurator 2026",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
                   },
                  {
   "slug": "psu-wattage-calculator",
