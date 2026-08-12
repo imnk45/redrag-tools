@@ -133,20 +133,17 @@
                       "thumbnail":  "/assets/images/thumbnails/thumb-pcbuild.jpg"
                   },
                   {
-                      "slug":  "psu",
-                      "name":  "PSU Wattage Calculator",
-                      "icon":  "🔌",
-                      "description":  "Calculate exactly how much power your PC build needs. Select your CPU, GPU, and components to get the recommended PSU wattage with headroom and efficiency rating suggestions.",
-                      "category":  "Hardware",
-                      "status":  "coming-soon",
-                      "tags":  [
-                                   "PSU",
-                                   "Wattage",
-                                   "Power Supply",
-                                   "PC Build"
-                               ],
-                      "ogImage":  "/assets/images/thumbnails/thumb-psu.jpg",
-                      "thumbnail":  "/assets/images/thumbnails/thumb-psu.jpg"
-                  }
-              ]
+  "slug": "psu-wattage-calculator",
+  "title": "PSU Wattage Calculator",
+  "description": "Free PC power supply calculator. Find exact wattage for RTX 5090, RX 9070 XT & more. Unbiased ATX 3.1 PSU recommendations with 80 Plus efficiency analysis.",
+  "category": "PC Hardware",
+  "status": "live",
+  "ogImage": "/assets/images/thumbnails/thumb-psu-wattage-calculator.jpg",
+  "thumbnail": "/assets/images/thumbnails/thumb-psu-wattage-calculator.jpg",
+  "schema": {
+    "@type": "SoftwareApplication",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
 }
