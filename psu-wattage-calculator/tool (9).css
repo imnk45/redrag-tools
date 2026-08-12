@@ -1,0 +1,261 @@
+/* ============================================
+   PSU Wattage Calculator - Specific Styles
+   All shared components use shared/css/components.css
+   ============================================ */
+
+/* Power breakdown bar */
+.psu-breakdown {
+  display: flex;
+  height: 28px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: var(--rt-space-4) 0;
+  background: var(--rt-surface-variant);
+}
+
+.psu-breakdown__segment {
+  height: 100%;
+  transition: width 0.4s ease;
+  position: relative;
+}
+
+.psu-breakdown__segment:hover::after {
+  content: attr(data-label);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--rt-surface-elevated);
+  color: var(--rt-text-primary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: var(--rt-text-xs);
+  white-space: nowrap;
+  z-index: 10;
+  border: 1px solid var(--rt-border-default);
+}
+
+/* Result tiers */
+.psu-tier {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--rt-space-3) var(--rt-space-4);
+  border-radius: 10px;
+  margin-bottom: var(--rt-space-3);
+  border: 1px solid var(--rt-border-default);
+  transition: all 0.2s ease;
+}
+
+.psu-tier--minimum { background: rgba(230, 57, 70, 0.08); border-color: rgba(230, 57, 70, 0.3); }
+.psu-tier--recommended { background: rgba(46, 204, 113, 0.08); border-color: rgba(46, 204, 113, 0.3); }
+.psu-tier--future { background: rgba(52, 152, 219, 0.08); border-color: rgba(52, 152, 219, 0.3); }
+
+.psu-tier__label {
+  font-size: var(--rt-text-sm);
+  font-weight: var(--rt-weight-semibold);
+  color: var(--rt-text-secondary);
+}
+
+.psu-tier__watt {
+  font-size: var(--rt-text-xl);
+  font-weight: var(--rt-weight-bold);
+}
+
+.psu-tier--minimum .psu-tier__watt { color: #e63946; }
+.psu-tier--recommended .psu-tier__watt { color: #2ecc71; }
+.psu-tier--future .psu-tier__watt { color: #3498db; }
+
+/* ATX 3.1 Badge */
+.psu-atx-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: var(--rt-text-xs);
+  font-weight: var(--rt-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.psu-atx-badge--yes {
+  background: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.psu-atx-badge--no {
+  background: rgba(241, 196, 15, 0.15);
+  color: #f1c40f;
+  border: 1px solid rgba(241, 196, 15, 0.3);
+}
+
+/* Efficiency table */
+.psu-eff-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--rt-space-3);
+}
+
+.psu-eff-table th,
+.psu-eff-table td {
+  padding: var(--rt-space-2) var(--rt-space-3);
+  text-align: left;
+  font-size: var(--rt-text-sm);
+  border-bottom: 1px solid var(--rt-border-default);
+}
+
+.psu-eff-table th {
+  color: var(--rt-text-muted);
+  font-weight: var(--rt-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: var(--rt-text-xs);
+}
+
+/* Component grid for inputs */
+.psu-input-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--rt-space-4);
+}
+
+@media (min-width: 640px) {
+  .psu-input-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Section cards within tool */
+.psu-section {
+  margin-bottom: var(--rt-space-5);
+}
+
+.psu-section__header {
+  display: flex;
+  align-items: center;
+  gap: var(--rt-space-2);
+  margin-bottom: var(--rt-space-3);
+  padding-bottom: var(--rt-space-2);
+  border-bottom: 1px solid var(--rt-border-default);
+}
+
+.psu-section__icon {
+  font-size: 1.25rem;
+}
+
+.psu-section__title {
+  font-size: var(--rt-text-base);
+  font-weight: var(--rt-weight-bold);
+  color: var(--rt-text-primary);
+  margin: 0;
+}
+
+/* Toggle switch for overclocking */
+.psu-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--rt-space-3);
+  padding: var(--rt-space-3) var(--rt-space-4);
+  background: var(--rt-surface-variant);
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.psu-toggle:hover {
+  background: var(--rt-surface-elevated);
+}
+
+.psu-toggle__switch {
+  width: 44px;
+  height: 24px;
+  background: var(--rt-border-default);
+  border-radius: 12px;
+  position: relative;
+  transition: background 0.3s;
+  flex-shrink: 0;
+}
+
+.psu-toggle__switch::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.psu-toggle.active .psu-toggle__switch {
+  background: #e63946;
+}
+
+.psu-toggle.active .psu-toggle__switch::after {
+  transform: translateX(20px);
+}
+
+.psu-toggle__label {
+  font-size: var(--rt-text-sm);
+  font-weight: var(--rt-weight-semibold);
+}
+
+/* Number input with +/- */
+.psu-counter {
+  display: flex;
+  align-items: center;
+  gap: var(--rt-space-2);
+}
+
+.psu-counter__btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--rt-border-default);
+  background: var(--rt-surface-variant);
+  color: var(--rt-text-primary);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.psu-counter__btn:hover {
+  background: var(--rt-surface-elevated);
+  border-color: var(--rt-accent);
+}
+
+.psu-counter__value {
+  min-width: 40px;
+  text-align: center;
+  font-weight: var(--rt-weight-bold);
+  font-size: var(--rt-text-base);
+}
+
+/* Legend for breakdown */
+.psu-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--rt-space-3);
+  margin-top: var(--rt-space-3);
+}
+
+.psu-legend__item {
+  display: flex;
+  align-items: center;
+  gap: var(--rt-space-1);
+  font-size: var(--rt-text-xs);
+  color: var(--rt-text-secondary);
+}
+
+.psu-legend__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}

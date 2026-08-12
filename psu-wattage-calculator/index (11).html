@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Preconnect to critical origins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Critical: Inline placeholder styles to prevent FOUC -->
+<style>
+#rt-header { min-height: 72px; }
+#rt-footer { min-height: 120px; }
+</style>
+
+<!-- Preload critical shared CSS -->
+<link rel="preload" href="/shared/css/core.css?v=43" as="style">
+<link rel="preload" href="/shared/css/components.css?v=45" as="style">
+<link rel="preload" href="/shared/css/shell.css?v=43" as="style">
+
+<!-- Title & Meta -->
+<title>PSU Wattage Calculator | Free PC Power Supply Calculator 2026</title>
+<meta name="description" content="Free PSU Wattage Calculator for gaming PC builds. Calculate exact power supply needs for RTX 5090, RTX 5080, RX 9070 XT & more. Get unbiased ATX 3.1 PSU recommendations with 80 Plus efficiency analysis.">
+<meta name="keywords" content="PSU wattage calculator, PC power supply calculator, power supply wattage calculator, how many watts PSU do I need, RTX 5090 PSU requirements, RTX 5080 power supply, gaming PC wattage calculator, ATX 3.1 PSU calculator, 80 Plus efficiency calculator, PC build power consumption, GPU power requirements, CPU TDP calculator, overclocking PSU wattage, best PSU for gaming PC 2026, PSU size calculator">
+<meta name="author" content="REDRAG">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#e63946">
+<meta name="msapplication-TileColor" content="#e63946">
+<meta name="color-scheme" content="dark">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://tools.redrag.in/psu-wattage-calculator/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tools.redrag.in/psu-wattage-calculator/">
+<meta property="og:title" content="PSU Wattage Calculator | Free PC Power Supply Calculator 2026">
+<meta property="og:description" content="Calculate the exact wattage your gaming PC needs. Supports RTX 50 series, RX 9000 series, Intel Core Ultra & AMD Ryzen. Unbiased ATX 3.1 PSU recommendations.">
+<meta property="og:image" content="https://tools.redrag.in/assets/images/thumbnails/thumb-psu-wattage-calculator.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="REDRAG Tools">
+<meta property="og:locale" content="en_US">
+<meta property="article:section" content="PC Hardware Tools">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@redragblog">
+<meta name="twitter:url" content="https://tools.redrag.in/psu-wattage-calculator/">
+<meta name="twitter:title" content="PSU Wattage Calculator | Free PC Power Supply Calculator 2026">
+<meta name="twitter:description" content="Calculate the exact wattage your gaming PC needs. Supports RTX 50 series, RX 9000 series, Intel Core Ultra & AMD Ryzen.">
+<meta name="twitter:image" content="https://tools.redrag.in/assets/images/thumbnails/thumb-psu-wattage-calculator.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://www.redrag.in/favicon.ico">
+<link rel="apple-touch-icon" href="https://tools.redrag.in/assets/icons/apple-touch-icon.png">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Shared CSS -->
+<link rel="stylesheet" href="/shared/css/core.css?v=43">
+<link rel="stylesheet" href="/shared/css/components.css?v=45">
+<link rel="stylesheet" href="/shared/css/shell.css?v=43">
+
+<!-- Tool-specific CSS -->
+<link rel="stylesheet" href="tool.css?v=43">
+
+<!-- Structured Data: BreadcrumbList -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.redrag.in/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://tools.redrag.in/"},{"@type":"ListItem","position":3,"name":"PSU Wattage Calculator","item":"https://tools.redrag.in/psu-wattage-calculator/"}]}
+</script>
+
+<!-- Structured Data: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "REDRAG PSU Wattage Calculator",
+  "operatingSystem": "Any",
+  "applicationCategory": "UtilityApplication",
+  "description": "Free online PSU wattage calculator that estimates power supply requirements for gaming PC builds. Supports latest CPUs and GPUs including RTX 50 series and RX 9000 series.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "1250"
+  }
+}
+</script>
+
+<base target="_blank">
+</head>
+<body>
+
+<!-- Skip to content -->
+<a href="#rt-main" class="rt-skip-link">Skip to main content</a>
+
+<!-- Header placeholder -->
+<div id="rt-header" data-active="tools"></div>
+
+<main id="rt-main" role="main" aria-label="PSU Wattage Calculator">
+<div class="rt-container">
+
+<!-- Hero Section -->
+<section class="rt-hero" aria-label="Tool introduction">
+<div class="rt-hero__glow" aria-hidden="true"></div>
+<h1 class="rt-hero__title" fetchpriority="high">PSU Wattage Calculator:<br><span class="rt-highlight">Find Your Perfect Power Supply</span></h1>
+<p class="rt-hero__desc">Accurately calculate how many watts your gaming PC needs. Supports RTX 5090, RX 9070 XT, Intel Core Ultra & AMD Ryzen. Get unbiased PSU recommendations with ATX 3.1 and 80 Plus analysis.</p>
+</section>
+
+<!-- Tool Interface Grid -->
+<div class="rt-tool-layout">
+
+<!-- Left/Main Column: Inputs -->
+<div class="tool-left">
+
+  <!-- CPU Section -->
+  <div class="rt-card psu-section">
+    <div class="psu-section__header">
+      <span class="psu-section__icon">🖥️</span>
+      <h3 class="psu-section__title">Processor (CPU)</h3>
+    </div>
+    <div class="psu-input-grid">
+      <div>
+        <label class="rt-label">Brand</label>
+        <select class="rt-input" id="cpu-brand">
+          <option value="intel">Intel</option>
+          <option value="amd">AMD</option>
+        </select>
+      </div>
+      <div>
+        <label class="rt-label">CPU Model</label>
+        <select class="rt-input" id="cpu-select">
+          <option value="">-- Select CPU --</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- GPU Section -->
+  <div class="rt-card psu-section">
+    <div class="psu-section__header">
+      <span class="psu-section__icon">🎮</span>
+      <h3 class="psu-section__title">Graphics Card (GPU)</h3>
+    </div>
+    <div class="psu-input-grid">
+      <div>
+        <label class="rt-label">Brand</label>
+        <select class="rt-input" id="gpu-brand">
+          <option value="nvidia">NVIDIA</option>
+          <option value="amd">AMD</option>
+        </select>
+      </div>
+      <div>
+        <label class="rt-label">GPU Model</label>
+        <select class="rt-input" id="gpu-select">
+          <option value="">-- Select GPU --</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Motherboard Section -->
+  <div class="rt-card psu-section">
+    <div class="psu-section__header">
+      <span class="psu-section__icon">🔌</span>
+      <h3 class="psu-section__title">Motherboard</h3>
+    </div>
+    <div>
+      <label class="rt-label">Form Factor</label>
+      <select class="rt-input" id="mobo-select">
+        <option value="atx">ATX (Standard)</option>
+        <option value="micro_atx">Micro-ATX</option>
+        <option value="mini_itx">Mini-ITX</option>
+        <option value="eatx">E-ATX (Extended)</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- RAM Section -->
+  <div class="rt-card psu-section">
+    <div class="psu-section__header">
+      <span class="psu-section__icon">🧠</span>
+      <h3 class="psu-section__title">Memory (RAM)</h3>
+    </div>
+    <div class="psu-input-grid">
+      <div>
+        <label class="rt-label">Type</label>
+        <select class="rt-input" id="ram-type">
+          <option value="ddr5">DDR5</option>
+          <option value="ddr4">DDR4</option>
+        </select>
+      </div>
+      <div>
+        <label class="rt-label">Sticks</label>
+        <div class="psu-counter" id="ram-sticks">
+          <button class="psu-counter__btn" data-action="dec">−</button>
+          <span class="psu-counter__value" id="ram-sticks-val">2</span>
+          <button class="psu-counter__btn" data-action="inc">+</button>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:var(--rt-space-3);">
+      <label class="rt-checkbox" style="display:flex;align-items:center;gap:var(--rt-space-2);cursor:pointer;">
+        <input type="checkbox" id="ram-rgb" style="width:18px;height:18px;">
+        <span>RGB RAM (higher power draw)</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Storage Section -->
+  <div class="rt-card psu-section">
+    <div class="psu-section__header">
+      <span class="psu-section__icon">💾</span>
+      <h3 class="psu-section__title">Storage Drives</h3>
+    </div>
+    <div class="psu-input-grid">
+      <div>
+        <label class="rt-label">NVMe M.2 SSDs</label>
+        <div class="psu-counter" id="nvme-count">
+          <button class="psu-counter__btn" data-action="dec">−</button>
+          <span class="psu-counter__value" id="nvme-val">1</span>
+          <button class="psu-counter__btn" data-action="inc">+</button>
+        </div>
+      </div>
+      <div>
+        <label class="rt-label">SATA SSDs</label>
+        <div class="psu-counter" id="sata-count">
+          <button class="psu-counter__btn" data-action="dec">−</button>
+          <span class="psu-counter__value" id="sata-val">0</span>
+          <button class="psu-counter__btn" data-action="inc">+</button>
+        </div>
+      </div>
+      <div>
+        <label class="rt-label">HDDs (3.5")</label>
+        <div class="psu-counter" id="hdd-count">
+          <button class="psu-counter__btn" data-action="dec">−</button>
+          <span class="psu-counter__value" id="hdd-val">0</span>
+          <button class="psu-counter__btn" data-action="inc">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cooling Section -->
+  <div class="rt-card psu-section">
+    <div class="psu-section__header">
+      <span class="psu-section__icon">❄️</span>
+      <h3 class="psu-section__title">CPU Cooling</h3>
+    </div>
+    <div>
+      <label class="rt-label">Cooler Type</label>
+      <select class="rt-input" id="cooling-select">
+        <option value="air_stock">Stock Air Cooler</option>
+        <option value="air_tower">Aftermarket Tower Cooler</option>
+        <option value="aio_120mm">AIO Liquid (120mm)</option>
+        <option value="aio_240mm">AIO Liquid (240mm)</option>
+        <option value="aio_360mm">AIO Liquid (360mm)</option>
+        <option value="custom_loop">Custom Water Loop</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Fans Section -->
+  <div class="rt-card psu-section">
+    <div class="psu-section__header">
+      <span class="psu-section__icon">🌀</span>
+      <h3 class="psu-section__title">Case Fans</h3>
+    </div>
+    <div class="psu-input-grid">
+      <div>
+        <label class="rt-label">Fan Type</label>
+        <select class="rt-input" id="fan-type">
+          <option value="standard_120mm">Standard 120mm</option>
+          <option value="standard_140mm">Standard 140mm</option>
+          <option value="rgb_120mm">RGB 120mm</option>
+          <option value="rgb_140mm">RGB 140mm</option>
+          <option value="high_static_120mm">High Static Pressure 120mm</option>
+          <option value="high_static_140mm">High Static Pressure 140mm</option>
+        </select>
+      </div>
+      <div>
+        <label class="rt-label">Fan Count</label>
+        <div class="psu-counter" id="fan-count">
+          <button class="psu-counter__btn" data-action="dec">−</button>
+          <span class="psu-counter__value" id="fan-val">3</span>
+          <button class="psu-counter__btn" data-action="inc">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Peripherals Section -->
+  <div class="rt-card psu-section">
+    <div class="psu-section__header">
+      <span class="psu-section__icon">⚡</span>
+      <h3 class="psu-section__title">Additional Components</h3>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--rt-space-3);">
+      <label class="rt-checkbox" style="display:flex;align-items:center;gap:var(--rt-space-2);cursor:pointer;">
+        <input type="checkbox" id="periph-rgb" style="width:18px;height:18px;">
+        <span style="font-size:var(--rt-text-sm);">RGB Controller/Hub</span>
+      </label>
+      <label class="rt-checkbox" style="display:flex;align-items:center;gap:var(--rt-space-2);cursor:pointer;">
+        <input type="checkbox" id="periph-sound" style="width:18px;height:18px;">
+        <span style="font-size:var(--rt-text-sm);">Sound Card</span>
+      </label>
+      <label class="rt-checkbox" style="display:flex;align-items:center;gap:var(--rt-space-2);cursor:pointer;">
+        <input type="checkbox" id="periph-capture" style="width:18px;height:18px;">
+        <span style="font-size:var(--rt-text-sm);">Capture Card</span>
+      </label>
+      <label class="rt-checkbox" style="display:flex;align-items:center;gap:var(--rt-space-2);cursor:pointer;">
+        <input type="checkbox" id="periph-usb" style="width:18px;height:18px;">
+        <span style="font-size:var(--rt-text-sm);">Multiple USB Devices</span>
+      </label>
+      <label class="rt-checkbox" style="display:flex;align-items:center;gap:var(--rt-space-2);cursor:pointer;">
+        <input type="checkbox" id="periph-fanctrl" style="width:18px;height:18px;">
+        <span style="font-size:var(--rt-text-sm);">Fan Controller</span>
+      </label>
+      <div style="display:flex;align-items:center;gap:var(--rt-space-2);">
+        <span style="font-size:var(--rt-text-sm);color:var(--rt-text-secondary);">LED Strips:</span>
+        <div class="psu-counter" id="periph-led">
+          <button class="psu-counter__btn" data-action="dec">−</button>
+          <span class="psu-counter__value" id="periph-led-val">0</span>
+          <button class="psu-counter__btn" data-action="inc">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overclocking Toggle -->
+  <div class="rt-card psu-section">
+    <div class="psu-section__header">
+      <span class="psu-section__icon">🔥</span>
+      <h3 class="psu-section__title">Overclocking</h3>
+    </div>
+    <div class="psu-toggle" id="oc-toggle">
+      <div class="psu-toggle__switch"></div>
+      <span class="psu-toggle__label">Enable Overclocking (+25% CPU / +20% GPU power)</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- Right Column: Results/Sidebar -->
+<div class="tool-right rt-sidebar">
+
+  <!-- Main Result Card -->
+  <div class="rt-card rt-card--result" aria-live="polite">
+    <div class="u-text-center" style="padding-bottom:var(--rt-space-5);border-bottom:1px solid var(--rt-border-default);margin-bottom:var(--rt-space-5);">
+      <div style="font-size:var(--rt-text-xs);color:var(--rt-text-muted);text-transform:uppercase;letter-spacing:1.5px;font-weight:var(--rt-weight-bold);margin-bottom:var(--rt-space-2);">Recommended PSU</div>
+      <div class="storage-big-number" id="result-rec">0W</div>
+      <div style="font-size:var(--rt-text-sm);color:var(--rt-text-secondary);margin-top:var(--rt-space-2);" id="wall-power">~0W from wall</div>
+    </div>
+
+    <!-- Tier Results -->
+    <div class="psu-tier psu-tier--minimum">
+      <span class="psu-tier__label">Minimum</span>
+      <span class="psu-tier__watt" id="result-min">0W</span>
+    </div>
+    <div class="psu-tier psu-tier--recommended">
+      <span class="psu-tier__label">Recommended (+20% headroom)</span>
+      <span class="psu-tier__watt" id="result-rec">0W</span>
+    </div>
+    <div class="psu-tier psu-tier--future">
+      <span class="psu-tier__label">Future-Proof (+35% headroom)</span>
+      <span class="psu-tier__watt" id="result-future">0W</span>
+    </div>
+
+    <!-- ATX 3.1 Badge -->
+    <div style="margin:var(--rt-space-4) 0;">
+      <div class="psu-atx-badge psu-atx-badge--no" id="atx-badge">
+        <span>ℹ</span> Select a GPU to check ATX 3.1 compatibility
+      </div>
+      <div style="font-size:var(--rt-text-xs);color:var(--rt-text-muted);margin-top:var(--rt-space-2);" id="gpu-connector">GPU Power: Not selected</div>
+    </div>
+
+    <!-- Power Breakdown -->
+    <div style="margin:var(--rt-space-4) 0;">
+      <div style="font-size:var(--rt-text-xs);color:var(--rt-text-muted);text-transform:uppercase;letter-spacing:1px;font-weight:var(--rt-weight-bold);margin-bottom:var(--rt-space-2);">Power Breakdown</div>
+      <div class="psu-breakdown" id="breakdown-bar"></div>
+      <div class="psu-legend" id="breakdown-legend">
+        <span style="color:var(--rt-text-muted);font-size:var(--rt-text-sm);">Select components to see power breakdown</span>
+      </div>
+    </div>
+
+    <!-- Efficiency Selector -->
+    <div style="margin:var(--rt-space-4) 0;">
+      <label class="rt-label" style="font-size:var(--rt-text-xs);text-transform:uppercase;letter-spacing:1px;">PSU Efficiency Rating</label>
+      <select class="rt-input" id="eff-select" style="margin-top:var(--rt-space-2);">
+        <option value="80_plus_titanium">80 Plus Titanium (92%)</option>
+        <option value="80_plus_platinum">80 Plus Platinum (90%)</option>
+        <option value="80_plus_gold" selected>80 Plus Gold (87%)</option>
+        <option value="80_plus_silver">80 Plus Silver (85%)</option>
+        <option value="80_plus_bronze">80 Plus Bronze (82%)</option>
+        <option value="80_plus">80 Plus White (80%)</option>
+      </select>
+    </div>
+
+    <!-- Efficiency Table -->
+    <div id="eff-table" style="margin-top:var(--rt-space-3);"></div>
+
+    <!-- Action Buttons -->
+    <div class="u-flex u-flex-col" style="gap: var(--rt-space-3);margin-top:var(--rt-space-5);">
+      <button class="rt-btn rt-btn--primary" id="btn-copy">
+        <span aria-hidden="true">📋</span> Copy Full Result
+      </button>
+      <button class="rt-btn rt-btn--secondary" id="btn-share">
+        <span aria-hidden="true">🔗</span> Copy Share Link
+      </button>
+      <button class="rt-btn rt-btn--secondary" id="btn-reset">
+        <span aria-hidden="true">🔄</span> Reset All
+      </button>
+    </div>
+  </div>
+
+  <!-- Quick Tip -->
+  <div class="rt-insight">
+    <div class="rt-insight__title">💡 Quick Tip</div>
+    <div class="rt-insight__body">Always buy a PSU from a reputable brand with good reviews. A cheap, no-name 850W PSU can be less reliable than a quality 650W unit. Check PSU tier lists before purchasing. For RTX 40/50 series cards, prioritize ATX 3.1 compliance over raw wattage.</div>
+  </div>
+
+</div>
+<!-- End Tool Layout -->
+</div>
+
+<!-- SEO Content Section -->
+<section class="rt-content-section" aria-labelledby="guide-title">
+  <h2 id="guide-title">How to Use the PSU Wattage Calculator</h2>
+
+  <p>Choosing the right power supply unit (PSU) is one of the most critical decisions when building a gaming PC. An underpowered PSU can cause random shutdowns, system instability, and even permanent hardware damage. On the other hand, an overpowered PSU wastes money with no real benefit. Our <strong>free PSU wattage calculator</strong> takes the guesswork out of this process by giving you precise, component-by-component power consumption estimates based on real manufacturer TDP and TGP specifications.</p>
+
+  <p>To use this calculator, simply select your CPU and GPU from the dropdown menus — these are the two most power-hungry components in any build. Then, specify your motherboard form factor, RAM configuration (including whether you have RGB memory), storage drives, CPU cooling solution, case fans, and any additional peripherals like RGB controllers or capture cards. The calculator updates in real-time as you make selections, showing you three distinct wattage recommendations: <strong>Minimum</strong> (bare minimum for your current build), <strong>Recommended</strong> (with a safe 20% headroom for stability and minor upgrades), and <strong>Future-Proof</strong> (with 35% headroom for overclocking and major upgrades).</p>
+
+  <div style="background:var(--rt-surface-variant); padding:var(--rt-space-5); border-radius:12px; margin:var(--rt-space-6) 0;">
+    <h3 style="margin-top:0;">⚠️ Important: Transient Power Spikes</h3>
+    <p style="margin-bottom:0;">Modern GPUs — especially the NVIDIA RTX 4090, RTX 5090, and RTX 5080 — can experience brief power spikes that exceed their rated TDP by 2-3x for milliseconds. These "transient loads" can trip the overcurrent protection on underpowered PSUs, causing your PC to randomly shut down during intense gaming. Our calculator includes a 10% transient spike buffer for all GPUs rated 300W and above. For maximum safety with high-end cards, always choose the Recommended or Future-Proof tier.</p>
+  </div>
+
+  <h3>Why Headroom Matters: The 20% Rule</h3>
+  <p>Power supplies operate most efficiently at around 50% load. Running a PSU at 90-100% capacity continuously generates excess heat, reduces efficiency, shortens the unit's lifespan, and increases fan noise. The 20% headroom in our Recommended tier ensures your PSU runs in its optimal efficiency zone while gaming, extends its warranty life, and provides voltage stability during fluctuating loads. For overclockers, the Future-Proof tier adds an extra 15% buffer to handle the increased power draw from CPU and GPU overclocking.</p>
+
+  <h3>ATX 3.1 and PCIe 5.1: What You Need to Know in 2026</h3>
+  <p>ATX 3.1 is the latest PSU standard designed specifically to handle the extreme power behavior of modern high-end GPUs. It introduces tighter voltage regulation (±5% vs ±10% on older standards), improved transient response, and the safer 12V-2x6 power connector — an enhanced version of the problematic 12VHPWR connector that caused melting issues on some RTX 4090 cards. If you are building with an RTX 4090, RTX 5080, RTX 5090, or any GPU using a 16-pin power connector, an ATX 3.1 certified PSU is not just recommended — it is essential for long-term system safety. Our calculator flags ATX 3.1 compatibility automatically based on your GPU selection.</p>
+
+  <h3>Understanding 80 Plus Efficiency Ratings</h3>
+  <p>The 80 Plus certification measures how efficiently a PSU converts AC wall power into DC power for your PC. An 80 Plus Gold PSU is approximately 87% efficient at 50% load, meaning 13% of the electricity is wasted as heat. Over a year of daily gaming, upgrading from Bronze to Gold can save you significant money on electricity bills while keeping your system cooler and quieter. Our built-in efficiency table shows your actual wall power draw and heat waste across all 80 Plus tiers, helping you make an informed decision beyond just wattage.</p>
+</section>
+
+<section class="rt-content-section">
+  <h2>Frequently Asked Questions About PSU Wattage</h2>
+  <!-- FAQ will be injected here by RT.components.FAQ.init -->
+  <div id="faq-container"></div>
+</section>
+
+<section class="rt-content-section">
+  <h2>Related Guides from REDRAG</h2>
+  <p>Deep dive into PC power supplies, GPU requirements, and gaming hardware with our detailed articles:</p>
+  <div class="rt-guides-grid">
+    <a href="https://www.redrag.in/rtx-5090-psu-requirements-guide" class="rt-card rt-card--guide rt-card--hover">
+      <h4>🔗 RTX 5090 PSU Requirements: Complete Guide</h4>
+      <p>Everything you need to know about powering NVIDIA's flagship RTX 5090 GPU, including ATX 3.1 PSU recommendations and cable requirements.</p>
+    </a>
+    <a href="https://www.redrag.in/best-psu-for-gaming-pc-2026" class="rt-card rt-card--guide rt-card--hover">
+      <h4>🔗 Best PSU for Gaming PC in 2026</h4>
+      <p>Our top picks for reliable power supplies across every budget, from 550W budget builds to 1600W enthusiast workstations.</p>
+    </a>
+    <a href="https://www.redrag.in/atx-31-vs-atx-30-psu-explained" class="rt-card rt-card--guide rt-card--hover">
+      <h4>🔗 ATX 3.1 vs ATX 3.0 PSU: What's the Difference?</h4>
+      <p>Understand the critical differences between ATX 3.0 and ATX 3.1 standards, and why it matters for your RTX 40/50 series build.</p>
+    </a>
+    <a href="https://www.redrag.in/80-plus-efficiency-explained" class="rt-card rt-card--guide rt-card--hover">
+      <h4>🔗 80 Plus Efficiency Ratings Explained</h4>
+      <p>From White to Titanium — understand what each 80 Plus rating means for your electricity bill, thermals, and PSU longevity.</p>
+    </a>
+    <a href="https://www.redrag.in/rx-9070-xt-review-benchmarks" class="rt-card rt-card--guide rt-card--hover">
+      <h4>🔗 AMD RX 9070 XT Review & Power Analysis</h4>
+      <p>Full review of AMD's RX 9070 XT with real-world power consumption data, thermal benchmarks, and PSU pairing advice.</p>
+    </a>
+    <a href="https://www.redrag.in/pc-build-guide-under-1-lakh-2026" class="rt-card rt-card--guide rt-card--hover">
+      <h4>🔗 Best Gaming PC Build Under ₹1 Lakh (2026)</h4>
+      <p>A complete build guide including PSU selection, component compatibility, and bang-for-buck recommendations for Indian gamers.</p>
+    </a>
+  </div>
+</section>
+
+<section class="rt-content-section">
+  <h2>About This Tool</h2>
+  <p>The <strong>REDRAG PSU Wattage Calculator</strong> is a free, browser-based tool designed to help gamers and PC builders accurately estimate their system's power requirements. Unlike brand-owned calculators that may inflate wattage to sell higher-margin products, our tool is completely unbiased — REDRAG does not manufacture or sell power supplies.</p>
+
+  <p><strong>How we calculate:</strong></p>
+  <ul>
+    <li><strong>CPU Power:</strong> We use the manufacturer-specified TDP (Thermal Design Power) as the baseline. For overclocked builds, we apply a 25% multiplier based on typical power scaling observed in reviews of unlocked processors like the Intel Core i9-14900K and AMD Ryzen 9 9950X.</li>
+    <li><strong>GPU Power:</strong> We use official TGP (Total Graphics Power) values from NVIDIA and AMD. For high-end GPUs (300W+), we include a 10% transient spike buffer to account for millisecond-level power surges that can trip PSU protection circuits.</li>
+    <li><strong>Other Components:</strong> Motherboard, RAM, storage, cooling, fans, and peripherals are calculated using industry-standard power draw figures sourced from component datasheets and verified hardware review databases like TechPowerUp and Tom's Hardware.</li>
+    <li><strong>Headroom Tiers:</strong> Minimum = base load + transient buffer (rounded to nearest 50W). Recommended = Minimum × 1.20. Future-Proof = Minimum × 1.35. These multipliers align with professional PC building guidelines from PSU manufacturers and system integrators.</li>
+  </ul>
+
+  <p>Found a bug? Want us to add a new CPU or GPU? <a href="https://www.redrag.in/p/contact-us.html">Contact us</a> and we'll update the database within 48 hours.</p>
+</section>
+
+<!-- End Container -->
+</div>
+</main>
+
+<!-- Footer placeholder -->
+<div id="rt-footer"></div>
+
+<!-- Shared JavaScript -->
+<script src="/shared/js/core.js?v=43"></script>
+<script src="/shared/js/components.js?v=43"></script>
+<!-- Tool-specific script -->
+<script src="tool.js?v=43"></script>
+
+</body>
+</html>

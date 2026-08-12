@@ -1,0 +1,148 @@
+{
+  "last_updated": "2026-08-10",
+  "description": "Comprehensive power consumption data for PC components used by the REDRAG PSU Wattage Calculator. TDP values sourced from manufacturer specs and verified reviews.",
+  "cpus": {
+    "intel": [
+      {"name": "Intel Core Ultra 9 285K", "tdp": 125, "boost": 250, "socket": "LGA1851"},
+      {"name": "Intel Core Ultra 7 265K", "tdp": 125, "boost": 180, "socket": "LGA1851"},
+      {"name": "Intel Core Ultra 5 245K", "tdp": 125, "boost": 150, "socket": "LGA1851"},
+      {"name": "Intel Core i9-14900K", "tdp": 125, "boost": 253, "socket": "LGA1700"},
+      {"name": "Intel Core i7-14700K", "tdp": 125, "boost": 253, "socket": "LGA1700"},
+      {"name": "Intel Core i5-14600K", "tdp": 125, "boost": 181, "socket": "LGA1700"},
+      {"name": "Intel Core i9-13900K", "tdp": 125, "boost": 253, "socket": "LGA1700"},
+      {"name": "Intel Core i7-13700K", "tdp": 125, "boost": 253, "socket": "LGA1700"},
+      {"name": "Intel Core i5-13600K", "tdp": 125, "boost": 181, "socket": "LGA1700"},
+      {"name": "Intel Core i9-12900K", "tdp": 125, "boost": 241, "socket": "LGA1700"},
+      {"name": "Intel Core i7-12700K", "tdp": 125, "boost": 190, "socket": "LGA1700"},
+      {"name": "Intel Core i5-12600K", "tdp": 125, "boost": 150, "socket": "LGA1700"},
+      {"name": "Intel Core i5-12400F", "tdp": 65, "boost": 117, "socket": "LGA1700"},
+      {"name": "Intel Core i3-12100F", "tdp": 58, "boost": 89, "socket": "LGA1700"}
+    ],
+    "amd": [
+      {"name": "AMD Ryzen 9 9950X3D", "tdp": 170, "boost": 220, "socket": "AM5"},
+      {"name": "AMD Ryzen 9 9950X", "tdp": 170, "boost": 220, "socket": "AM5"},
+      {"name": "AMD Ryzen 9 9900X", "tdp": 120, "boost": 160, "socket": "AM5"},
+      {"name": "AMD Ryzen 7 9800X3D", "tdp": 120, "boost": 162, "socket": "AM5"},
+      {"name": "AMD Ryzen 7 9700X", "tdp": 65, "boost": 120, "socket": "AM5"},
+      {"name": "AMD Ryzen 5 9600X", "tdp": 65, "boost": 105, "socket": "AM5"},
+      {"name": "AMD Ryzen 9 7950X3D", "tdp": 120, "boost": 162, "socket": "AM5"},
+      {"name": "AMD Ryzen 9 7950X", "tdp": 170, "boost": 220, "socket": "AM5"},
+      {"name": "AMD Ryzen 7 7700X", "tdp": 105, "boost": 140, "socket": "AM5"},
+      {"name": "AMD Ryzen 5 7600X", "tdp": 105, "boost": 130, "socket": "AM5"},
+      {"name": "AMD Ryzen 5 7500F", "tdp": 65, "boost": 90, "socket": "AM5"},
+      {"name": "AMD Ryzen 9 5950X", "tdp": 105, "boost": 140, "socket": "AM4"},
+      {"name": "AMD Ryzen 7 5800X3D", "tdp": 105, "boost": 130, "socket": "AM4"},
+      {"name": "AMD Ryzen 5 5600X", "tdp": 65, "boost": 90, "socket": "AM4"},
+      {"name": "AMD Ryzen 5 5600", "tdp": 65, "boost": 88, "socket": "AM4"}
+    ]
+  },
+  "gpus": {
+    "nvidia": [
+      {"name": "NVIDIA RTX 5090", "tdp": 575, "connector": "12V-2x6", "atx31": true, "psu_rec": 1000},
+      {"name": "NVIDIA RTX 5080", "tdp": 360, "connector": "12V-2x6", "atx31": true, "psu_rec": 850},
+      {"name": "NVIDIA RTX 5070 Ti", "tdp": 300, "connector": "12V-2x6", "atx31": true, "psu_rec": 750},
+      {"name": "NVIDIA RTX 5070", "tdp": 250, "connector": "12V-2x6", "atx31": true, "psu_rec": 650},
+      {"name": "NVIDIA RTX 5060 Ti", "tdp": 180, "connector": "8-pin", "atx31": false, "psu_rec": 550},
+      {"name": "NVIDIA RTX 5060", "tdp": 150, "connector": "8-pin", "atx31": false, "psu_rec": 500},
+      {"name": "NVIDIA RTX 4090", "tdp": 450, "connector": "12VHPWR", "atx31": true, "psu_rec": 850},
+      {"name": "NVIDIA RTX 4080 SUPER", "tdp": 320, "connector": "12VHPWR", "atx31": true, "psu_rec": 750},
+      {"name": "NVIDIA RTX 4080", "tdp": 320, "connector": "12VHPWR", "atx31": true, "psu_rec": 750},
+      {"name": "NVIDIA RTX 4070 Ti SUPER", "tdp": 285, "connector": "12VHPWR", "atx31": true, "psu_rec": 700},
+      {"name": "NVIDIA RTX 4070 Ti", "tdp": 285, "connector": "12VHPWR", "atx31": true, "psu_rec": 700},
+      {"name": "NVIDIA RTX 4070 SUPER", "tdp": 220, "connector": "8-pin", "atx31": false, "psu_rec": 650},
+      {"name": "NVIDIA RTX 4070", "tdp": 200, "connector": "8-pin", "atx31": false, "psu_rec": 600},
+      {"name": "NVIDIA RTX 4060 Ti", "tdp": 160, "connector": "8-pin", "atx31": false, "psu_rec": 550},
+      {"name": "NVIDIA RTX 4060", "tdp": 115, "connector": "8-pin", "atx31": false, "psu_rec": 500},
+      {"name": "NVIDIA RTX 3090 Ti", "tdp": 450, "connector": "12VHPWR", "atx31": false, "psu_rec": 850},
+      {"name": "NVIDIA RTX 3090", "tdp": 350, "connector": "8-pin", "atx31": false, "psu_rec": 750},
+      {"name": "NVIDIA RTX 3080 Ti", "tdp": 350, "connector": "8-pin", "atx31": false, "psu_rec": 750},
+      {"name": "NVIDIA RTX 3080", "tdp": 320, "connector": "8-pin", "atx31": false, "psu_rec": 750},
+      {"name": "NVIDIA RTX 3070 Ti", "tdp": 290, "connector": "8-pin", "atx31": false, "psu_rec": 650},
+      {"name": "NVIDIA RTX 3070", "tdp": 220, "connector": "8-pin", "atx31": false, "psu_rec": 600},
+      {"name": "NVIDIA RTX 3060 Ti", "tdp": 200, "connector": "8-pin", "atx31": false, "psu_rec": 550},
+      {"name": "NVIDIA RTX 3060", "tdp": 170, "connector": "8-pin", "atx31": false, "psu_rec": 500},
+      {"name": "NVIDIA RTX 3050", "tdp": 130, "connector": "8-pin", "atx31": false, "psu_rec": 450}
+    ],
+    "amd": [
+      {"name": "AMD RX 9070 XT", "tdp": 304, "connector": "8-pin", "atx31": false, "psu_rec": 750},
+      {"name": "AMD RX 9070", "tdp": 220, "connector": "8-pin", "atx31": false, "psu_rec": 650},
+      {"name": "AMD RX 7900 XTX", "tdp": 355, "connector": "8-pin", "atx31": false, "psu_rec": 850},
+      {"name": "AMD RX 7900 XT", "tdp": 300, "connector": "8-pin", "atx31": false, "psu_rec": 750},
+      {"name": "AMD RX 7900 GRE", "tdp": 260, "connector": "8-pin", "atx31": false, "psu_rec": 700},
+      {"name": "AMD RX 7800 XT", "tdp": 263, "connector": "8-pin", "atx31": false, "psu_rec": 700},
+      {"name": "AMD RX 7700 XT", "tdp": 245, "connector": "8-pin", "atx31": false, "psu_rec": 650},
+      {"name": "AMD RX 7600 XT", "tdp": 190, "connector": "8-pin", "atx31": false, "psu_rec": 550},
+      {"name": "AMD RX 7600", "tdp": 165, "connector": "8-pin", "atx31": false, "psu_rec": 500},
+      {"name": "AMD RX 6950 XT", "tdp": 335, "connector": "8-pin", "atx31": false, "psu_rec": 850},
+      {"name": "AMD RX 6900 XT", "tdp": 300, "connector": "8-pin", "atx31": false, "psu_rec": 800},
+      {"name": "AMD RX 6800 XT", "tdp": 300, "connector": "8-pin", "atx31": false, "psu_rec": 750},
+      {"name": "AMD RX 6800", "tdp": 250, "connector": "8-pin", "atx31": false, "psu_rec": 650},
+      {"name": "AMD RX 6700 XT", "tdp": 230, "connector": "8-pin", "atx31": false, "psu_rec": 600},
+      {"name": "AMD RX 6650 XT", "tdp": 180, "connector": "8-pin", "atx31": false, "psu_rec": 500},
+      {"name": "AMD RX 6600 XT", "tdp": 160, "connector": "8-pin", "atx31": false, "psu_rec": 500},
+      {"name": "AMD RX 6600", "tdp": 132, "connector": "8-pin", "atx31": false, "psu_rec": 450},
+      {"name": "AMD RX 6500 XT", "tdp": 107, "connector": "6-pin", "atx31": false, "psu_rec": 400},
+      {"name": "AMD RX 6400", "tdp": 53, "connector": "None", "atx31": false, "psu_rec": 350}
+    ]
+  },
+  "motherboards": {
+    "atx": 70,
+    "micro_atx": 60,
+    "mini_itx": 50,
+    "eatx": 80
+  },
+  "ram": {
+    "ddr5_stick": 6,
+    "ddr4_stick": 4,
+    "ddr5_rgb_stick": 8,
+    "ddr4_rgb_stick": 6
+  },
+  "storage": {
+    "nvme_m2": 7,
+    "sata_ssd": 3,
+    "hdd_7200rpm": 10,
+    "hdd_5400rpm": 7
+  },
+  "cooling": {
+    "air_stock": 5,
+    "air_tower": 8,
+    "aio_120mm": 15,
+    "aio_240mm": 20,
+    "aio_360mm": 25,
+    "custom_loop": 50
+  },
+  "fans": {
+    "standard_120mm": 2,
+    "standard_140mm": 3,
+    "rgb_120mm": 4,
+    "rgb_140mm": 5,
+    "high_static_120mm": 3,
+    "high_static_140mm": 4
+  },
+  "peripherals": {
+    "case_rgb_controller": 15,
+    "sound_card": 20,
+    "capture_card": 15,
+    "usb_devices": 10,
+    "fan_controller": 10,
+    "led_strips": 5
+  },
+  "overclocking": {
+    "cpu_multiplier": 1.25,
+    "gpu_multiplier": 1.20,
+    "ram_multiplier": 1.10
+  },
+  "headroom": {
+    "minimum": 1.0,
+    "recommended": 1.20,
+    "future_proof": 1.35
+  },
+  "efficiency": {
+    "80_plus": 0.80,
+    "80_plus_bronze": 0.82,
+    "80_plus_silver": 0.85,
+    "80_plus_gold": 0.87,
+    "80_plus_platinum": 0.90,
+    "80_plus_titanium": 0.92
+  }
+}
