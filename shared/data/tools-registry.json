@@ -117,20 +117,34 @@
   }
                   },
                   {
-                      "slug":  "psu",
-                      "name":  "PSU Wattage Calculator",
-                      "icon":  "🔌",
-                      "description":  "Calculate exactly how much power your PC build needs. Select your CPU, GPU, and components to get the recommended PSU wattage with headroom and efficiency rating suggestions.",
-                      "category":  "Hardware",
-                      "status":  "coming-soon",
-                      "tags":  [
-                                   "PSU",
-                                   "Wattage",
-                                   "Power Supply",
-                                   "PC Build"
-                               ],
-                      "ogImage":  "/assets/images/thumbnails/thumb-psu.jpg",
-                      "thumbnail":  "/assets/images/thumbnails/thumb-psu.jpg"
-                  }
-              ]
+      "slug": "pc-build",
+      "name": "Budget PC Build Configurator (India)",
+      "icon": "\ud83d\udd27",
+      "description": "Build the perfect gaming PC for your budget. Select your price range (\u20b930K to \u20b92L), pick your use case, and get component recommendations with India pricing and FPS estimates.",
+      "category": "Gaming",
+      "status": "coming-soon",
+      "tags": [
+        "PC Build",
+        "India",
+        "Budget",
+        "Gaming PC"
+      ],
+      "ogImage": "/assets/images/og-pc-build.jpg"
+    },
+    {
+      "slug": "psu",
+      "name": "PSU Wattage Calculator",
+      "icon": "\ud83d\udd0c",
+      "description": "Calculate exactly how much power your PC build needs. Select your CPU, GPU, and components to get the recommended PSU wattage with headroom and efficiency rating suggestions.",
+      "category": "Hardware",
+      "status": "coming-soon",
+      "tags": [
+        "PSU",
+        "Wattage",
+        "Power Supply",
+        "PC Build"
+      ],
+      "ogImage": "/assets/images/og-psu.jpg"
+    }
+  ]
 }
