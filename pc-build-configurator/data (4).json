@@ -1,0 +1,1361 @@
+{
+  "last_updated": "2026-08-10",
+  "description": "PC Build Configurator component database with compatibility data, TDP values, and performance metrics for 2026 builds.",
+  "cpus": [
+    {
+      "id": "r5_5600",
+      "brand": "AMD",
+      "name": "Ryzen 5 5600",
+      "socket": "AM4",
+      "tdp": 65,
+      "cores": 6,
+      "threads": 12,
+      "tier": "budget",
+      "gaming_score": 65,
+      "productivity_score": 60,
+      "price": 110,
+      "ddr_type": [
+        "DDR4"
+      ],
+      "pcie": "4.0"
+    },
+    {
+      "id": "r5_5600x",
+      "brand": "AMD",
+      "name": "Ryzen 5 5600X",
+      "socket": "AM4",
+      "tdp": 65,
+      "cores": 6,
+      "threads": 12,
+      "tier": "budget",
+      "gaming_score": 70,
+      "productivity_score": 65,
+      "price": 130,
+      "ddr_type": [
+        "DDR4"
+      ],
+      "pcie": "4.0"
+    },
+    {
+      "id": "r5_7500f",
+      "brand": "AMD",
+      "name": "Ryzen 5 7500F",
+      "socket": "AM5",
+      "tdp": 65,
+      "cores": 6,
+      "threads": 12,
+      "tier": "budget",
+      "gaming_score": 78,
+      "productivity_score": 72,
+      "price": 160,
+      "ddr_type": [
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "r5_7600",
+      "brand": "AMD",
+      "name": "Ryzen 5 7600",
+      "socket": "AM5",
+      "tdp": 65,
+      "cores": 6,
+      "threads": 12,
+      "tier": "budget",
+      "gaming_score": 80,
+      "productivity_score": 75,
+      "price": 190,
+      "ddr_type": [
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "r5_7600x",
+      "brand": "AMD",
+      "name": "Ryzen 5 7600X",
+      "socket": "AM5",
+      "tdp": 105,
+      "cores": 6,
+      "threads": 12,
+      "tier": "mid",
+      "gaming_score": 82,
+      "productivity_score": 78,
+      "price": 210,
+      "ddr_type": [
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "r5_7600x3d",
+      "brand": "AMD",
+      "name": "Ryzen 5 7600X3D",
+      "socket": "AM5",
+      "tdp": 65,
+      "cores": 6,
+      "threads": 12,
+      "tier": "mid",
+      "gaming_score": 88,
+      "productivity_score": 68,
+      "price": 240,
+      "ddr_type": [
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "r7_5700x3d",
+      "brand": "AMD",
+      "name": "Ryzen 7 5700X3D",
+      "socket": "AM4",
+      "tdp": 105,
+      "cores": 8,
+      "threads": 16,
+      "tier": "mid",
+      "gaming_score": 85,
+      "productivity_score": 75,
+      "price": 200,
+      "ddr_type": [
+        "DDR4"
+      ],
+      "pcie": "4.0"
+    },
+    {
+      "id": "r7_7700x",
+      "brand": "AMD",
+      "name": "Ryzen 7 7700X",
+      "socket": "AM5",
+      "tdp": 105,
+      "cores": 8,
+      "threads": 16,
+      "tier": "mid",
+      "gaming_score": 86,
+      "productivity_score": 85,
+      "price": 280,
+      "ddr_type": [
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "r7_7800x3d",
+      "brand": "AMD",
+      "name": "Ryzen 7 7800X3D",
+      "socket": "AM5",
+      "tdp": 120,
+      "cores": 8,
+      "threads": 16,
+      "tier": "high",
+      "gaming_score": 95,
+      "productivity_score": 82,
+      "price": 360,
+      "ddr_type": [
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "r7_9800x3d",
+      "brand": "AMD",
+      "name": "Ryzen 7 9800X3D",
+      "socket": "AM5",
+      "tdp": 120,
+      "cores": 8,
+      "threads": 16,
+      "tier": "high",
+      "gaming_score": 98,
+      "productivity_score": 88,
+      "price": 450,
+      "ddr_type": [
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "r7_9850x3d",
+      "brand": "AMD",
+      "name": "Ryzen 7 9850X3D",
+      "socket": "AM5",
+      "tdp": 120,
+      "cores": 8,
+      "threads": 16,
+      "tier": "high",
+      "gaming_score": 99,
+      "productivity_score": 90,
+      "price": 480,
+      "ddr_type": [
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "r9_9950x3d",
+      "brand": "AMD",
+      "name": "Ryzen 9 9950X3D",
+      "socket": "AM5",
+      "tdp": 170,
+      "cores": 16,
+      "threads": 32,
+      "tier": "enthusiast",
+      "gaming_score": 97,
+      "productivity_score": 99,
+      "price": 650,
+      "ddr_type": [
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "i3_12100f",
+      "brand": "Intel",
+      "name": "Core i3-12100F",
+      "socket": "LGA1700",
+      "tdp": 58,
+      "cores": 4,
+      "threads": 8,
+      "tier": "budget",
+      "gaming_score": 55,
+      "productivity_score": 50,
+      "price": 90,
+      "ddr_type": [
+        "DDR4",
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "i5_12400f",
+      "brand": "Intel",
+      "name": "Core i5-12400F",
+      "socket": "LGA1700",
+      "tdp": 65,
+      "cores": 6,
+      "threads": 12,
+      "tier": "budget",
+      "gaming_score": 68,
+      "productivity_score": 65,
+      "price": 140,
+      "ddr_type": [
+        "DDR4",
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "i5_13400f",
+      "brand": "Intel",
+      "name": "Core i5-13400F",
+      "socket": "LGA1700",
+      "tdp": 65,
+      "cores": 10,
+      "threads": 16,
+      "tier": "budget",
+      "gaming_score": 72,
+      "productivity_score": 75,
+      "price": 170,
+      "ddr_type": [
+        "DDR4",
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "i5_14400f",
+      "brand": "Intel",
+      "name": "Core i5-14400F",
+      "socket": "LGA1700",
+      "tdp": 65,
+      "cores": 10,
+      "threads": 16,
+      "tier": "mid",
+      "gaming_score": 74,
+      "productivity_score": 78,
+      "price": 190,
+      "ddr_type": [
+        "DDR4",
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "i5_14600kf",
+      "brand": "Intel",
+      "name": "Core i5-14600KF",
+      "socket": "LGA1700",
+      "tdp": 125,
+      "cores": 14,
+      "threads": 20,
+      "tier": "mid",
+      "gaming_score": 82,
+      "productivity_score": 88,
+      "price": 260,
+      "ddr_type": [
+        "DDR4",
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "i7_14700kf",
+      "brand": "Intel",
+      "name": "Core i7-14700KF",
+      "socket": "LGA1700",
+      "tdp": 125,
+      "cores": 20,
+      "threads": 28,
+      "tier": "high",
+      "gaming_score": 85,
+      "productivity_score": 92,
+      "price": 350,
+      "ddr_type": [
+        "DDR4",
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "u5_250k",
+      "brand": "Intel",
+      "name": "Core Ultra 5 250K",
+      "socket": "LGA1851",
+      "tdp": 125,
+      "cores": 14,
+      "threads": 14,
+      "tier": "mid",
+      "gaming_score": 80,
+      "productivity_score": 85,
+      "price": 280,
+      "ddr_type": [
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "u7_265k",
+      "brand": "Intel",
+      "name": "Core Ultra 7 265K",
+      "socket": "LGA1851",
+      "tdp": 125,
+      "cores": 20,
+      "threads": 20,
+      "tier": "high",
+      "gaming_score": 86,
+      "productivity_score": 92,
+      "price": 400,
+      "ddr_type": [
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    },
+    {
+      "id": "u9_285k",
+      "brand": "Intel",
+      "name": "Core Ultra 9 285K",
+      "socket": "LGA1851",
+      "tdp": 125,
+      "cores": 24,
+      "threads": 24,
+      "tier": "enthusiast",
+      "gaming_score": 88,
+      "productivity_score": 98,
+      "price": 560,
+      "ddr_type": [
+        "DDR5"
+      ],
+      "pcie": "5.0"
+    }
+  ],
+  "gpus": [
+    {
+      "id": "gtx_1650",
+      "brand": "NVIDIA",
+      "name": "GTX 1650",
+      "tdp": 75,
+      "vram": 4,
+      "tier": "entry",
+      "gaming_1080p": 35,
+      "gaming_1440p": 15,
+      "gaming_4k": 5,
+      "ray_tracing": false,
+      "price": 130,
+      "length": 170
+    },
+    {
+      "id": "rtx_3050",
+      "brand": "NVIDIA",
+      "name": "RTX 3050",
+      "tdp": 130,
+      "vram": 8,
+      "tier": "entry",
+      "gaming_1080p": 50,
+      "gaming_1440p": 25,
+      "gaming_4k": 10,
+      "ray_tracing": true,
+      "price": 180,
+      "length": 220
+    },
+    {
+      "id": "rx_6600",
+      "brand": "AMD",
+      "name": "RX 6600",
+      "tdp": 132,
+      "vram": 8,
+      "tier": "entry",
+      "gaming_1080p": 60,
+      "gaming_1440p": 35,
+      "gaming_4k": 15,
+      "ray_tracing": true,
+      "price": 190,
+      "length": 240
+    },
+    {
+      "id": "rtx_4060",
+      "brand": "NVIDIA",
+      "name": "RTX 4060",
+      "tdp": 115,
+      "vram": 8,
+      "tier": "budget",
+      "gaming_1080p": 75,
+      "gaming_1440p": 50,
+      "gaming_4k": 22,
+      "ray_tracing": true,
+      "price": 280,
+      "length": 240
+    },
+    {
+      "id": "rx_7600",
+      "brand": "AMD",
+      "name": "RX 7600",
+      "tdp": 165,
+      "vram": 8,
+      "tier": "budget",
+      "gaming_1080p": 80,
+      "gaming_1440p": 52,
+      "gaming_4k": 23,
+      "ray_tracing": true,
+      "price": 250,
+      "length": 220
+    },
+    {
+      "id": "rtx_5060",
+      "brand": "NVIDIA",
+      "name": "RTX 5060",
+      "tdp": 150,
+      "vram": 8,
+      "tier": "budget",
+      "gaming_1080p": 88,
+      "gaming_1440p": 58,
+      "gaming_4k": 28,
+      "ray_tracing": true,
+      "price": 300,
+      "length": 240
+    },
+    {
+      "id": "rx_9060xt_8",
+      "brand": "AMD",
+      "name": "RX 9060 XT 8GB",
+      "tdp": 170,
+      "vram": 8,
+      "tier": "budget",
+      "gaming_1080p": 90,
+      "gaming_1440p": 60,
+      "gaming_4k": 30,
+      "ray_tracing": true,
+      "price": 320,
+      "length": 250
+    },
+    {
+      "id": "rx_9060xt_16",
+      "brand": "AMD",
+      "name": "RX 9060 XT 16GB",
+      "tdp": 170,
+      "vram": 16,
+      "tier": "mid",
+      "gaming_1080p": 92,
+      "gaming_1440p": 65,
+      "gaming_4k": 35,
+      "ray_tracing": true,
+      "price": 360,
+      "length": 250
+    },
+    {
+      "id": "rtx_4060ti",
+      "brand": "NVIDIA",
+      "name": "RTX 4060 Ti",
+      "tdp": 160,
+      "vram": 8,
+      "tier": "mid",
+      "gaming_1080p": 90,
+      "gaming_1440p": 65,
+      "gaming_4k": 30,
+      "ray_tracing": true,
+      "price": 360,
+      "length": 240
+    },
+    {
+      "id": "rtx_5060ti_16",
+      "brand": "NVIDIA",
+      "name": "RTX 5060 Ti 16GB",
+      "tdp": 180,
+      "vram": 16,
+      "tier": "mid",
+      "gaming_1080p": 100,
+      "gaming_1440p": 72,
+      "gaming_4k": 38,
+      "ray_tracing": true,
+      "price": 400,
+      "length": 250
+    },
+    {
+      "id": "rx_7700xt",
+      "brand": "AMD",
+      "name": "RX 7700 XT",
+      "tdp": 245,
+      "vram": 12,
+      "tier": "mid",
+      "gaming_1080p": 105,
+      "gaming_1440p": 75,
+      "gaming_4k": 40,
+      "ray_tracing": true,
+      "price": 380,
+      "length": 270
+    },
+    {
+      "id": "rtx_4070",
+      "brand": "NVIDIA",
+      "name": "RTX 4070",
+      "tdp": 200,
+      "vram": 12,
+      "tier": "mid",
+      "gaming_1080p": 115,
+      "gaming_1440p": 80,
+      "gaming_4k": 45,
+      "ray_tracing": true,
+      "price": 520,
+      "length": 260
+    },
+    {
+      "id": "rx_7800xt",
+      "brand": "AMD",
+      "name": "RX 7800 XT",
+      "tdp": 263,
+      "vram": 16,
+      "tier": "mid",
+      "gaming_1080p": 118,
+      "gaming_1440p": 85,
+      "gaming_4k": 48,
+      "ray_tracing": true,
+      "price": 470,
+      "length": 280
+    },
+    {
+      "id": "rtx_5070",
+      "brand": "NVIDIA",
+      "name": "RTX 5070",
+      "tdp": 250,
+      "vram": 12,
+      "tier": "high",
+      "gaming_1080p": 130,
+      "gaming_1440p": 100,
+      "gaming_4k": 60,
+      "ray_tracing": true,
+      "price": 550,
+      "length": 280
+    },
+    {
+      "id": "rtx_5070ti",
+      "brand": "NVIDIA",
+      "name": "RTX 5070 Ti",
+      "tdp": 300,
+      "vram": 16,
+      "tier": "high",
+      "gaming_1080p": 145,
+      "gaming_1440p": 115,
+      "gaming_4k": 72,
+      "ray_tracing": true,
+      "price": 750,
+      "length": 300
+    },
+    {
+      "id": "rx_9070",
+      "brand": "AMD",
+      "name": "RX 9070",
+      "tdp": 220,
+      "vram": 16,
+      "tier": "high",
+      "gaming_1080p": 135,
+      "gaming_1440p": 105,
+      "gaming_4k": 62,
+      "ray_tracing": true,
+      "price": 580,
+      "length": 280
+    },
+    {
+      "id": "rx_9070xt",
+      "brand": "AMD",
+      "name": "RX 9070 XT",
+      "tdp": 304,
+      "vram": 16,
+      "tier": "high",
+      "gaming_1080p": 150,
+      "gaming_1440p": 120,
+      "gaming_4k": 75,
+      "ray_tracing": true,
+      "price": 600,
+      "length": 300
+    },
+    {
+      "id": "rtx_5080",
+      "brand": "NVIDIA",
+      "name": "RTX 5080",
+      "tdp": 360,
+      "vram": 16,
+      "tier": "high",
+      "gaming_1080p": 165,
+      "gaming_1440p": 140,
+      "gaming_4k": 95,
+      "ray_tracing": true,
+      "price": 1000,
+      "length": 320
+    },
+    {
+      "id": "rtx_5090",
+      "brand": "NVIDIA",
+      "name": "RTX 5090",
+      "tdp": 575,
+      "vram": 32,
+      "tier": "enthusiast",
+      "gaming_1080p": 200,
+      "gaming_1440p": 180,
+      "gaming_4k": 140,
+      "ray_tracing": true,
+      "price": 2000,
+      "length": 340
+    }
+  ],
+  "motherboards": [
+    {
+      "id": "b450",
+      "brand": "AMD",
+      "name": "B450 Motherboard",
+      "socket": "AM4",
+      "chipset": "B450",
+      "form_factor": "ATX",
+      "ddr_type": "DDR4",
+      "max_ram_speed": 3200,
+      "price": 80,
+      "wifi": false
+    },
+    {
+      "id": "b550",
+      "brand": "AMD",
+      "name": "B550 Motherboard",
+      "socket": "AM4",
+      "chipset": "B550",
+      "form_factor": "ATX",
+      "ddr_type": "DDR4",
+      "max_ram_speed": 3600,
+      "price": 110,
+      "wifi": false
+    },
+    {
+      "id": "x570",
+      "brand": "AMD",
+      "name": "X570 Motherboard",
+      "socket": "AM4",
+      "chipset": "X570",
+      "form_factor": "ATX",
+      "ddr_type": "DDR4",
+      "max_ram_speed": 4000,
+      "price": 160,
+      "wifi": true
+    },
+    {
+      "id": "a620",
+      "brand": "AMD",
+      "name": "A620 Motherboard",
+      "socket": "AM5",
+      "chipset": "A620",
+      "form_factor": "ATX",
+      "ddr_type": "DDR5",
+      "max_ram_speed": 5200,
+      "price": 90,
+      "wifi": false
+    },
+    {
+      "id": "b650",
+      "brand": "AMD",
+      "name": "B650 Motherboard",
+      "socket": "AM5",
+      "chipset": "B650",
+      "form_factor": "ATX",
+      "ddr_type": "DDR5",
+      "max_ram_speed": 6000,
+      "price": 130,
+      "wifi": false
+    },
+    {
+      "id": "b650e",
+      "brand": "AMD",
+      "name": "B650E Motherboard",
+      "socket": "AM5",
+      "chipset": "B650E",
+      "form_factor": "ATX",
+      "ddr_type": "DDR5",
+      "max_ram_speed": 6400,
+      "price": 170,
+      "wifi": true
+    },
+    {
+      "id": "x670",
+      "brand": "AMD",
+      "name": "X670 Motherboard",
+      "socket": "AM5",
+      "chipset": "X670",
+      "form_factor": "ATX",
+      "ddr_type": "DDR5",
+      "max_ram_speed": 6400,
+      "price": 240,
+      "wifi": true
+    },
+    {
+      "id": "x870",
+      "brand": "AMD",
+      "name": "X870 Motherboard",
+      "socket": "AM5",
+      "chipset": "X870",
+      "form_factor": "ATX",
+      "ddr_type": "DDR5",
+      "max_ram_speed": 7200,
+      "price": 280,
+      "wifi": true
+    },
+    {
+      "id": "b660",
+      "brand": "Intel",
+      "name": "B660 Motherboard",
+      "socket": "LGA1700",
+      "chipset": "B660",
+      "form_factor": "ATX",
+      "ddr_type": "DDR4",
+      "max_ram_speed": 3200,
+      "price": 100,
+      "wifi": false
+    },
+    {
+      "id": "b760_ddr4",
+      "brand": "Intel",
+      "name": "B760 DDR4 Motherboard",
+      "socket": "LGA1700",
+      "chipset": "B760",
+      "form_factor": "ATX",
+      "ddr_type": "DDR4",
+      "max_ram_speed": 3600,
+      "price": 110,
+      "wifi": false
+    },
+    {
+      "id": "b760_ddr5",
+      "brand": "Intel",
+      "name": "B760 DDR5 Motherboard",
+      "socket": "LGA1700",
+      "chipset": "B760",
+      "form_factor": "ATX",
+      "ddr_type": "DDR5",
+      "max_ram_speed": 5600,
+      "price": 130,
+      "wifi": false
+    },
+    {
+      "id": "z790_ddr4",
+      "brand": "Intel",
+      "name": "Z790 DDR4 Motherboard",
+      "socket": "LGA1700",
+      "chipset": "Z790",
+      "form_factor": "ATX",
+      "ddr_type": "DDR4",
+      "max_ram_speed": 4000,
+      "price": 180,
+      "wifi": true
+    },
+    {
+      "id": "z790_ddr5",
+      "brand": "Intel",
+      "name": "Z790 DDR5 Motherboard",
+      "socket": "LGA1700",
+      "chipset": "Z790",
+      "form_factor": "ATX",
+      "ddr_type": "DDR5",
+      "max_ram_speed": 7200,
+      "price": 220,
+      "wifi": true
+    },
+    {
+      "id": "z890",
+      "brand": "Intel",
+      "name": "Z890 Motherboard",
+      "socket": "LGA1851",
+      "chipset": "Z890",
+      "form_factor": "ATX",
+      "ddr_type": "DDR5",
+      "max_ram_speed": 8000,
+      "price": 280,
+      "wifi": true
+    },
+    {
+      "id": "b860",
+      "brand": "Intel",
+      "name": "B860 Motherboard",
+      "socket": "LGA1851",
+      "chipset": "B860",
+      "form_factor": "ATX",
+      "ddr_type": "DDR5",
+      "max_ram_speed": 6400,
+      "price": 160,
+      "wifi": false
+    }
+  ],
+  "ram": [
+    {
+      "id": "ddr4_16_3200",
+      "type": "DDR4",
+      "capacity": 16,
+      "speed": 3200,
+      "sticks": 2,
+      "price": 35,
+      "tier": "budget"
+    },
+    {
+      "id": "ddr4_32_3200",
+      "type": "DDR4",
+      "capacity": 32,
+      "speed": 3200,
+      "sticks": 2,
+      "price": 55,
+      "tier": "mid"
+    },
+    {
+      "id": "ddr4_32_3600",
+      "type": "DDR4",
+      "capacity": 32,
+      "speed": 3600,
+      "sticks": 2,
+      "price": 65,
+      "tier": "mid"
+    },
+    {
+      "id": "ddr5_16_5200",
+      "type": "DDR5",
+      "capacity": 16,
+      "speed": 5200,
+      "sticks": 2,
+      "price": 45,
+      "tier": "budget"
+    },
+    {
+      "id": "ddr5_32_5600",
+      "type": "DDR5",
+      "capacity": 32,
+      "speed": 5600,
+      "sticks": 2,
+      "price": 70,
+      "tier": "mid"
+    },
+    {
+      "id": "ddr5_32_6000",
+      "type": "DDR5",
+      "capacity": 32,
+      "speed": 6000,
+      "sticks": 2,
+      "price": 80,
+      "tier": "mid"
+    },
+    {
+      "id": "ddr5_32_6400",
+      "type": "DDR5",
+      "capacity": 32,
+      "speed": 6400,
+      "sticks": 2,
+      "price": 95,
+      "tier": "high"
+    },
+    {
+      "id": "ddr5_64_6000",
+      "type": "DDR5",
+      "capacity": 64,
+      "speed": 6000,
+      "sticks": 2,
+      "price": 150,
+      "tier": "enthusiast"
+    }
+  ],
+  "storage": [
+    {
+      "id": "ssd_500_sata",
+      "type": "SATA SSD",
+      "capacity": 500,
+      "speed": "SATA III",
+      "price": 35,
+      "tier": "budget"
+    },
+    {
+      "id": "ssd_1tb_nvme4",
+      "type": "NVMe PCIe 4.0",
+      "capacity": 1000,
+      "speed": "5000 MB/s",
+      "price": 55,
+      "tier": "budget"
+    },
+    {
+      "id": "ssd_1tb_nvme4_fast",
+      "type": "NVMe PCIe 4.0",
+      "capacity": 1000,
+      "speed": "7000 MB/s",
+      "price": 75,
+      "tier": "mid"
+    },
+    {
+      "id": "ssd_2tb_nvme4",
+      "type": "NVMe PCIe 4.0",
+      "capacity": 2000,
+      "speed": "7000 MB/s",
+      "price": 110,
+      "tier": "mid"
+    },
+    {
+      "id": "ssd_2tb_nvme5",
+      "type": "NVMe PCIe 5.0",
+      "capacity": 2000,
+      "speed": "12000 MB/s",
+      "price": 180,
+      "tier": "high"
+    },
+    {
+      "id": "ssd_4tb_nvme4",
+      "type": "NVMe PCIe 4.0",
+      "capacity": 4000,
+      "speed": "7000 MB/s",
+      "price": 220,
+      "tier": "enthusiast"
+    }
+  ],
+  "psus": [
+    {
+      "id": "psu_450_bronze",
+      "wattage": 450,
+      "efficiency": "80+ Bronze",
+      "modular": false,
+      "atx_version": "ATX 2.4",
+      "price": 35,
+      "tier": "budget"
+    },
+    {
+      "id": "psu_550_bronze",
+      "wattage": 550,
+      "efficiency": "80+ Bronze",
+      "modular": false,
+      "atx_version": "ATX 2.4",
+      "price": 45,
+      "tier": "budget"
+    },
+    {
+      "id": "psu_650_bronze",
+      "wattage": 650,
+      "efficiency": "80+ Bronze",
+      "modular": false,
+      "atx_version": "ATX 2.4",
+      "price": 55,
+      "tier": "budget"
+    },
+    {
+      "id": "psu_650_gold",
+      "wattage": 650,
+      "efficiency": "80+ Gold",
+      "modular": true,
+      "atx_version": "ATX 3.0",
+      "price": 80,
+      "tier": "mid"
+    },
+    {
+      "id": "psu_750_gold",
+      "wattage": 750,
+      "efficiency": "80+ Gold",
+      "modular": true,
+      "atx_version": "ATX 3.0",
+      "price": 95,
+      "tier": "mid"
+    },
+    {
+      "id": "psu_850_gold",
+      "wattage": 850,
+      "efficiency": "80+ Gold",
+      "modular": true,
+      "atx_version": "ATX 3.1",
+      "price": 120,
+      "tier": "high"
+    },
+    {
+      "id": "psu_850_platinum",
+      "wattage": 850,
+      "efficiency": "80+ Platinum",
+      "modular": true,
+      "atx_version": "ATX 3.1",
+      "price": 150,
+      "tier": "high"
+    },
+    {
+      "id": "psu_1000_platinum",
+      "wattage": 1000,
+      "efficiency": "80+ Platinum",
+      "modular": true,
+      "atx_version": "ATX 3.1",
+      "price": 190,
+      "tier": "enthusiast"
+    },
+    {
+      "id": "psu_1200_platinum",
+      "wattage": 1200,
+      "efficiency": "80+ Platinum",
+      "modular": true,
+      "atx_version": "ATX 3.1",
+      "price": 250,
+      "tier": "enthusiast"
+    }
+  ],
+  "cases": [
+    {
+      "id": "case_budget_matx",
+      "name": "Budget mATX Case",
+      "form_factor": "Micro-ATX",
+      "max_gpu_length": 330,
+      "price": 40,
+      "tier": "budget",
+      "cooling_support": "240mm AIO"
+    },
+    {
+      "id": "case_budget_atx",
+      "name": "Budget ATX Case",
+      "form_factor": "ATX",
+      "max_gpu_length": 350,
+      "price": 55,
+      "tier": "budget",
+      "cooling_support": "360mm AIO"
+    },
+    {
+      "id": "case_mid_atx",
+      "name": "Mid-Tower ATX Case",
+      "form_factor": "ATX",
+      "max_gpu_length": 380,
+      "price": 80,
+      "tier": "mid",
+      "cooling_support": "360mm AIO"
+    },
+    {
+      "id": "case_premium_atx",
+      "name": "Premium ATX Case",
+      "form_factor": "ATX",
+      "max_gpu_length": 420,
+      "price": 120,
+      "tier": "high",
+      "cooling_support": "420mm AIO"
+    },
+    {
+      "id": "case_full_atx",
+      "name": "Full-Tower Case",
+      "form_factor": "ATX",
+      "max_gpu_length": 450,
+      "price": 160,
+      "tier": "enthusiast",
+      "cooling_support": "420mm AIO"
+    }
+  ],
+  "coolers": [
+    {
+      "id": "stock",
+      "type": "Stock Cooler",
+      "tdp_support": 65,
+      "cooling_type": "Air",
+      "price": 0,
+      "tier": "budget"
+    },
+    {
+      "id": "air_budget",
+      "name": "Budget Air Cooler",
+      "type": "Aftermarket Air",
+      "tdp_support": 150,
+      "cooling_type": "Air",
+      "price": 25,
+      "tier": "budget"
+    },
+    {
+      "id": "air_premium",
+      "name": "Premium Air Cooler",
+      "type": "Aftermarket Air",
+      "tdp_support": 220,
+      "cooling_type": "Air",
+      "price": 50,
+      "tier": "mid"
+    },
+    {
+      "id": "aio_240",
+      "name": "240mm AIO Liquid Cooler",
+      "type": "AIO",
+      "tdp_support": 200,
+      "cooling_type": "Liquid",
+      "price": 70,
+      "tier": "mid"
+    },
+    {
+      "id": "aio_360",
+      "name": "360mm AIO Liquid Cooler",
+      "type": "AIO",
+      "tdp_support": 280,
+      "cooling_type": "Liquid",
+      "price": 100,
+      "tier": "high"
+    },
+    {
+      "id": "aio_360_premium",
+      "name": "Premium 360mm AIO",
+      "type": "AIO",
+      "tdp_support": 300,
+      "cooling_type": "Liquid",
+      "price": 140,
+      "tier": "enthusiast"
+    }
+  ],
+  "prebuilt_configs": [
+    {
+      "id": "budget_800",
+      "name": "$800 Budget Gaming PC",
+      "budget": 800,
+      "use_case": "gaming",
+      "description": "Solid 1080p gaming performance for esports and AAA titles at medium-high settings.",
+      "components": {
+        "cpu": "r5_5600",
+        "gpu": "rx_7600",
+        "motherboard": "b550",
+        "ram": "ddr4_16_3200",
+        "storage": "ssd_1tb_nvme4",
+        "psu": "psu_550_bronze",
+        "case": "case_budget_atx",
+        "cooler": "stock"
+      },
+      "estimated_fps": {
+        "1080p": 85,
+        "1440p": 55,
+        "4k": 25
+      },
+      "target_res": "1080p"
+    },
+    {
+      "id": "sweet_1000",
+      "name": "$1,000 Sweet Spot Build",
+      "budget": 1000,
+      "use_case": "gaming",
+      "description": "Excellent 1080p and entry 1440p gaming. Great for high-refresh monitors.",
+      "components": {
+        "cpu": "r5_7500f",
+        "gpu": "rx_7700xt",
+        "motherboard": "b650",
+        "ram": "ddr5_32_5600",
+        "storage": "ssd_1tb_nvme4_fast",
+        "psu": "psu_650_gold",
+        "case": "case_mid_atx",
+        "cooler": "air_budget"
+      },
+      "estimated_fps": {
+        "1080p": 110,
+        "1440p": 75,
+        "4k": 35
+      },
+      "target_res": "1440p"
+    },
+    {
+      "id": "mid_1500",
+      "name": "$1,500 1440p Gaming Beast",
+      "budget": 1500,
+      "use_case": "gaming",
+      "description": "High-refresh 1440p gaming with ray tracing support. Perfect for competitive and AAA titles.",
+      "components": {
+        "cpu": "r5_7600x",
+        "gpu": "rtx_4070",
+        "motherboard": "b650",
+        "ram": "ddr5_32_6000",
+        "storage": "ssd_2tb_nvme4",
+        "psu": "psu_750_gold",
+        "case": "case_mid_atx",
+        "cooler": "aio_240"
+      },
+      "estimated_fps": {
+        "1080p": 140,
+        "1440p": 95,
+        "4k": 50
+      },
+      "target_res": "1440p"
+    },
+    {
+      "id": "high_2000",
+      "name": "$2,000 High-End 4K Ready",
+      "budget": 2000,
+      "use_case": "gaming",
+      "description": "4K gaming capable with excellent 1440p high-refresh performance. Premium components throughout.",
+      "components": {
+        "cpu": "r7_7800x3d",
+        "gpu": "rx_9070xt",
+        "motherboard": "x670",
+        "ram": "ddr5_32_6400",
+        "storage": "ssd_2tb_nvme4",
+        "psu": "psu_850_gold",
+        "case": "case_premium_atx",
+        "cooler": "aio_360"
+      },
+      "estimated_fps": {
+        "1080p": 180,
+        "1440p": 140,
+        "4k": 80
+      },
+      "target_res": "4K"
+    },
+    {
+      "id": "enthusiast_3000",
+      "name": "$3,000 Enthusiast Dream Build",
+      "budget": 3000,
+      "use_case": "gaming",
+      "description": "Top-tier 4K gaming with maximum settings. Also excellent for streaming and content creation.",
+      "components": {
+        "cpu": "r7_9800x3d",
+        "gpu": "rtx_5080",
+        "motherboard": "x870",
+        "ram": "ddr5_32_6400",
+        "storage": "ssd_2tb_nvme5",
+        "psu": "psu_1000_platinum",
+        "case": "case_full_atx",
+        "cooler": "aio_360_premium"
+      },
+      "estimated_fps": {
+        "1080p": 220,
+        "1440p": 180,
+        "4k": 110
+      },
+      "target_res": "4K"
+    },
+    {
+      "id": "extreme_4000",
+      "name": "$4,000+ Ultimate PC Build",
+      "budget": 4000,
+      "use_case": "gaming",
+      "description": "The absolute best money can buy. 4K Ultra, 8K capable, and future-proof for years.",
+      "components": {
+        "cpu": "r9_9950x3d",
+        "gpu": "rtx_5090",
+        "motherboard": "x870",
+        "ram": "ddr5_64_6000",
+        "storage": "ssd_4tb_nvme4",
+        "psu": "psu_1200_platinum",
+        "case": "case_full_atx",
+        "cooler": "aio_360_premium"
+      },
+      "estimated_fps": {
+        "1080p": 280,
+        "1440p": 240,
+        "4k": 160
+      },
+      "target_res": "4K"
+    },
+    {
+      "id": "workstation_2500",
+      "name": "$2,500 Workstation Build",
+      "budget": 2500,
+      "use_case": "workstation",
+      "description": "Optimized for video editing, 3D rendering, and heavy multitasking.",
+      "components": {
+        "cpu": "u7_265k",
+        "gpu": "rtx_4070",
+        "motherboard": "z890",
+        "ram": "ddr5_64_6000",
+        "storage": "ssd_2tb_nvme4",
+        "psu": "psu_850_platinum",
+        "case": "case_premium_atx",
+        "cooler": "aio_360"
+      },
+      "estimated_fps": {
+        "1080p": 120,
+        "1440p": 90,
+        "4k": 45
+      },
+      "target_res": "1440p"
+    },
+    {
+      "id": "streaming_1800",
+      "name": "$1,800 Streaming & Gaming PC",
+      "budget": 1800,
+      "use_case": "streaming",
+      "description": "Built for gamers who stream. NVENC encoding and strong multitasking performance.",
+      "components": {
+        "cpu": "i5_14600kf",
+        "gpu": "rtx_5070",
+        "motherboard": "z790_ddr5",
+        "ram": "ddr5_32_6000",
+        "storage": "ssd_2tb_nvme4",
+        "psu": "psu_750_gold",
+        "case": "case_premium_atx",
+        "cooler": "aio_240"
+      },
+      "estimated_fps": {
+        "1080p": 150,
+        "1440p": 110,
+        "4k": 55
+      },
+      "target_res": "1440p"
+    }
+  ],
+  "compatibility_rules": {
+    "socket_matching": {
+      "AM4": [
+        "B450",
+        "B550",
+        "X570"
+      ],
+      "AM5": [
+        "A620",
+        "B650",
+        "B650E",
+        "X670",
+        "X870"
+      ],
+      "LGA1700": [
+        "B660",
+        "B760",
+        "Z790"
+      ],
+      "LGA1851": [
+        "B860",
+        "Z890"
+      ]
+    },
+    "ddr_matching": {
+      "DDR4": [
+        "B450",
+        "B550",
+        "X570",
+        "B660",
+        "B760"
+      ],
+      "DDR5": [
+        "A620",
+        "B650",
+        "B650E",
+        "X670",
+        "X870",
+        "B760",
+        "Z790",
+        "B860",
+        "Z890"
+      ]
+    },
+    "psu_headroom_percent": 25,
+    "gpu_clearance_buffer": 10
+  }
+}
