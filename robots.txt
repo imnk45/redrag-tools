@@ -4,12 +4,6 @@ Allow: /
 # Sitemap location
 Sitemap: https://tools.redrag.in/sitemap.xml
 
-User-agent: *
-Allow: /
-
-# Sitemap location
-Sitemap: https://tools.redrag.in/sitemap.xml
-
 # Crawl delay for polite bots
 Crawl-delay: 1
 
