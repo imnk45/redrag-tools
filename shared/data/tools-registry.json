@@ -52,116 +52,130 @@
                       "thumbnail":  "/assets/images/thumbnails/thumb-vram.jpg"
                   },
                   {
-  "slug": "ram-latency-calculator",
-  "name": "RAM Latency Calculator",
-  "shortName": "RAM Latency",
-  "description": "Calculate true RAM latency in nanoseconds from CAS Latency and memory speed. Compare DDR3, DDR4, and DDR5 kits instantly.",
-  "shortDescription": "Calculate true memory latency in nanoseconds",
-  "category": "PC Hardware",
-  "tags": ["ram", "memory", "latency", "ddr4", "ddr5", "cas latency", "pc build", "gaming"],
-  "status": "live",
-  "version": "1.0.0",
-  "path": "/ram-latency-calculator/",
-  "url": "https://tools.redrag.in/ram-latency-calculator/",
-  "thumbnail": "/assets/images/thumbnails/thumb-ram.jpg",
-  "ogImage": "/assets/images/thumbnails/thumb-ram.jpg",
-  "icon": "⚡",
-  "featured": false,
-  "createdAt": "2026-08-10",
-  "updatedAt": "2026-08-10",
-  "schema": {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "RAM Latency Calculator",
-    "applicationCategory": "UtilityApplication",
-    "operatingSystem": "Any",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "156"
-    }
-  },
-  "seo": {
-    "title": "RAM Latency Calculator | Calculate True RAM Latency in Nanoseconds | REDRAG Tools",
-    "description": "Free RAM Latency Calculator. Calculate true RAM latency in nanoseconds from CAS Latency (CL) and RAM speed (MHz). Compare DDR3, DDR4, and DDR5 memory performance instantly.",
-    "keywords": ["ram latency calculator", "cas latency calculator", "ddr4 latency", "ddr5 latency", "memory timing calculator", "true ram latency", "ns calculator"]
-  },
-  "stats": {
-    "views": 0,
-    "uses": 0
-  }
-},
-                 {
-  "slug": "resolution-scaling-visualizer",
-  "name": "Resolution Scaling Visualizer",
-  "description": "Visualize internal render resolutions, performance gains, and VRAM impact of DLSS, FSR, and XeSS scaling modes. Compare pixel counts and estimated FPS in real-time.",
-  "category": "Performance",
-  "status": "live",
-  "url": "/resolution-scaling-visualizer/",
-  "ogImage": "/assets/images/thumbnails/thumb-resolution-scaling-visualizer.jpg",
-  "thumbnail": "/assets/images/thumbnails/thumb-resolution-scaling-visualizer.jpg",
-  "schema": {
-    "@type": "SoftwareApplication",
-    "applicationCategory": "UtilityApplication",
-    "operatingSystem": "Any",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
-  }
+                      "slug": "ram-latency-calculator",
+                      "name": "RAM Latency Calculator",
+                      "shortName": "RAM Latency",
+                      "description": "Calculate true RAM latency in nanoseconds from CAS Latency and memory speed. Compare DDR3, DDR4, and DDR5 kits instantly.",
+                      "shortDescription": "Calculate true memory latency in nanoseconds",
+                      "category": "PC Hardware",
+                      "tags": ["ram", "memory", "latency", "ddr4", "ddr5", "cas latency", "pc build", "gaming"],
+                      "status": "live",
+                      "version": "1.0.0",
+                      "path": "/ram-latency-calculator/",
+                      "url": "https://tools.redrag.in/ram-latency-calculator/",
+                      "thumbnail": "/assets/images/thumbnails/thumb-ram.jpg",
+                      "ogImage": "/assets/images/thumbnails/thumb-ram.jpg",
+                      "icon": "⚡",
+                      "featured": false,
+                      "createdAt": "2026-08-10",
+                      "updatedAt": "2026-08-10",
+                      "schema": {
+                        "@context": "https://schema.org",
+                        "@type": "SoftwareApplication",
+                        "name": "RAM Latency Calculator",
+                        "applicationCategory": "UtilityApplication",
+                        "operatingSystem": "Any",
+                        "offers": {
+                          "@type": "Offer",
+                          "price": "0",
+                          "priceCurrency": "USD"
+                        },
+                        "aggregateRating": {
+                          "@type": "AggregateRating",
+                          "ratingValue": "4.8",
+                          "ratingCount": "156"
+                        }
+                      },
+                      "seo": {
+                        "title": "RAM Latency Calculator | Calculate True RAM Latency in Nanoseconds | REDRAG Tools",
+                        "description": "Free RAM Latency Calculator. Calculate true RAM latency in nanoseconds from CAS Latency (CL) and RAM speed (MHz). Compare DDR3, DDR4, and DDR5 memory performance instantly.",
+                        "keywords": ["ram latency calculator", "cas latency calculator", "ddr4 latency", "ddr5 latency", "memory timing calculator", "true ram latency", "ns calculator"]
+                      },
+                      "stats": {
+                        "views": 0,
+                        "uses": 0
+                      }
                   },
                   {
-  "id": "pc-build-configurator",
-  "name": "PC Build Configurator",
-  "slug": "pc-build-configurator",
-  "description": "Free custom PC builder with compatibility checking, wattage calculation, and FPS estimation. Build optimized gaming PCs from $800 to $4000+.",
-  "category": "PC Building",
-  "tags": [
-    "PC Build",
-    "Gaming PC",
-    "Compatibility",
-    "CPU",
-    "GPU",
-    "PSU Calculator"
-  ],
-  "status": "live",
-  "url": "/pc-build-configurator/",
-  "thumbnail": "/assets/images/thumbnails/thumb-pc-build-configurator.jpg",
-  "ogImage": "/assets/images/thumbnails/thumb-pc-build-configurator.jpg",
-  "featured": true,
-  "schema": {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "PC Build Configurator 2026",
-    "applicationCategory": "UtilityApplication",
-    "operatingSystem": "Any",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
-  }
+                      "slug": "resolution-scaling-visualizer",
+                      "name": "Resolution Scaling Visualizer",
+                      "description": "Visualize internal render resolutions, performance gains, and VRAM impact of DLSS, FSR, and XeSS scaling modes. Compare pixel counts and estimated FPS in real-time.",
+                      "category": "Performance",
+                      "tags": [
+                        "DLSS",
+                        "FSR",
+                        "Resolution",
+                        "FPS",
+                        "Gaming"
+                      ],
+                      "status": "live",
+                      "url": "/resolution-scaling-visualizer/",
+                      "ogImage": "/assets/images/thumbnails/thumb-resolution-scaling-visualizer.jpg",
+                      "thumbnail": "/assets/images/thumbnails/thumb-resolution-scaling-visualizer.jpg",
+                      "schema": {
+                        "@type": "SoftwareApplication",
+                        "applicationCategory": "UtilityApplication",
+                        "operatingSystem": "Any",
+                        "offers": {
+                          "@type": "Offer",
+                          "price": "0",
+                          "priceCurrency": "USD"
+                        }
+                      }
                   },
-                 {
-  "slug": "psu-wattage-calculator",
-  "title": "PSU Wattage Calculator",
-  "description": "Free PC power supply calculator. Find exact wattage for RTX 5090, RX 9070 XT & more. Unbiased ATX 3.1 PSU recommendations with 80 Plus efficiency analysis.",
-  "category": "PC Hardware",
-  "status": "live",
-  "ogImage": "/assets/images/thumbnails/thumb-psu-wattage-calculator.jpg",
-  "thumbnail": "/assets/images/thumbnails/thumb-psu-wattage-calculator.jpg",
-  "schema": {
-    "@type": "SoftwareApplication",
-    "applicationCategory": "UtilityApplication",
-    "operatingSystem": "Any",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-  }
-}
-  ]
+                  {
+                      "id": "pc-build-configurator",
+                      "name": "PC Build Configurator",
+                      "slug": "pc-build-configurator",
+                      "description": "Free custom PC builder with compatibility checking, wattage calculation, and FPS estimation. Build optimized gaming PCs from $800 to $4000+.",
+                      "category": "PC Building",
+                      "tags": [
+                        "PC Build",
+                        "Gaming PC",
+                        "Compatibility",
+                        "CPU",
+                        "GPU",
+                        "PSU Calculator"
+                      ],
+                      "status": "live",
+                      "url": "/pc-build-configurator/",
+                      "thumbnail": "/assets/images/thumbnails/thumb-pc-build-configurator.jpg",
+                      "ogImage": "/assets/images/thumbnails/thumb-pc-build-configurator.jpg",
+                      "featured": true,
+                      "schema": {
+                        "@context": "https://schema.org",
+                        "@type": "SoftwareApplication",
+                        "name": "PC Build Configurator 2026",
+                        "applicationCategory": "UtilityApplication",
+                        "operatingSystem": "Any",
+                        "offers": {
+                          "@type": "Offer",
+                          "price": "0",
+                          "priceCurrency": "USD"
+                        }
+                      }
+                  },
+                  {
+                      "slug": "psu-wattage-calculator",
+                      "name": "PSU Wattage Calculator",
+                      "description": "Free PC power supply calculator. Find exact wattage for RTX 5090, RX 9070 XT & more. Unbiased ATX 3.1 PSU recommendations with 80 Plus efficiency analysis.",
+                      "category": "PC Hardware",
+                      "tags": [
+                        "PSU",
+                        "Power Supply",
+                        "PC Build",
+                        "Hardware",
+                        "Wattage"
+                      ],
+                      "status": "live",
+                      "ogImage": "/assets/images/thumbnails/thumb-psu-wattage-calculator.jpg",
+                      "thumbnail": "/assets/images/thumbnails/thumb-psu-wattage-calculator.jpg",
+                      "schema": {
+                        "@type": "SoftwareApplication",
+                        "applicationCategory": "UtilityApplication",
+                        "operatingSystem": "Any",
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+                      }
+                  }
+    ]
 }
