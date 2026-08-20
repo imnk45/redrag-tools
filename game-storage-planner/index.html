@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Preconnect to critical origins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://plausible.io">
+
+<!-- Critical: Inline placeholder styles to prevent FOUC -->
+<style>
+#rt-header { min-height: 72px; }
+#rt-footer { min-height: 120px; }
+</style>
+
+<!-- Preload critical shared CSS -->
+<link rel="preload" href="/shared/css/core.css?v=40" as="style">
+<link rel="preload" href="/shared/css/components.css?v=45" as="style">
+<link rel="preload" href="/shared/css/shell.css?v=40" as="style">
+
+<!-- Title & Meta -->
+<title>Game Storage Planner: How Many Games Fit on Your SSD— (2026) | REDRAG Tools</title>
+<meta name="description" content="Free Game Storage Calculator: Select games, pick your SSD size (500GB/1TB/2TB/4TB), and see exactly how many games fit. Updated 2026 game install sizes for PC, PS5 & Xbox. Plan your storage before you buy.">
+<meta name="keywords" content="how many games fit in 1TB SSD, game storage calculator, SSD game planner, 1TB SSD how many games, game install size list, how many games can 1TB hold, SSD storage for gaming, game size calculator, PC game storage, PS5 storage calculator">
+<meta name="author" content="REDRAG">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#e63946">
+<meta name="msapplication-TileColor" content="#e63946">
+<meta name="color-scheme" content="dark">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://tools.redrag.in/game-storage-planner/">
+
+<!-- Open Graph (enhanced with image dimensions for faster rendering) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tools.redrag.in/game-storage-planner/">
+<meta property="og:title" content="Game Storage Planner: How Many Games Fit on Your SSD— (2026)">
+<meta property="og:description" content="Free calculator. Select games, pick SSD size, see exact space left. Updated 2026 game install sizes for PC, PS5 & Xbox.">
+<meta property="og:image" content="https://tools.redrag.in/assets/images/thumbnails/thumb-storage.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="REDRAG Game Storage Planner - Calculate how many games fit on your SSD">
+<meta property="og:site_name" content="REDRAG Tools">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-07-30T00:00:00+05:30">
+<meta property="article:modified_time" content="2026-07-30T00:00:00+05:30">
+<meta property="article:author" content="https://www.redrag.in/">
+<meta property="article:section" content="Gaming Tools">
+<meta property="article:tag" content="SSD, Storage, Gaming, PC, PS5, Xbox">
+
+<!-- Twitter Card (enhanced) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@redragblog">
+<meta name="twitter:creator" content="@redragblog">
+<meta name="twitter:url" content="https://tools.redrag.in/game-storage-planner/">
+<meta name="twitter:title" content="Game Storage Planner: How Many Games Fit on Your SSD—">
+<meta name="twitter:description" content="Free calculator. Select games, pick SSD size, see exact space left. Updated 2026 sizes.">
+<meta name="twitter:image" content="https://tools.redrag.in/assets/images/thumbnails/thumb-storage.jpg">
+<meta name="twitter:image:alt" content="REDRAG Game Storage Planner interface showing game selection and SSD size options">
+<meta name="twitter:label1" content="Games in Database">
+<meta name="twitter:data1" content="100+">
+<meta name="twitter:label2" content="Platforms Supported">
+<meta name="twitter:data2" content="PC, PS5, Xbox">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://www.redrag.in/favicon.ico">
+<link rel="apple-touch-icon" href="https://tools.redrag.in/assets/icons/apple-touch-icon.png">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Shared CSS (render-blocking, cached after first visit) -->
+<link rel="stylesheet" href="/shared/css/core.css?v=40">
+<link rel="stylesheet" href="/shared/css/components.css?v=45">
+<link rel="stylesheet" href="/shared/css/shell.css?v=40">
+
+<!-- Tool-specific CSS -->
+<link rel="stylesheet" href="tool.css?v=40">
+
+<!-- Structured Data: BreadcrumbList (injected early for Google discovery) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.redrag.in/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://tools.redrag.in/"},{"@type":"ListItem","position":3,"name":"Game Storage Planner","item":"https://tools.redrag.in/game-storage-planner/"}]}
+</script>
+<base target="_blank">
+</head>
+<body>
+
+<!-- Skip to content (accessibility) -->
+<a href="#rt-main" class="rt-skip-link">Skip to main content</a>
+
+<!-- Header placeholder (injected by RT.shell) -->
+<div id="rt-header" data-active="tools"></div>
+
+<main id="rt-main" role="main" aria-label="Game Storage Calculator">
+<div class="rt-container">
+
+<!-- Hero Section -->
+<section class="rt-hero" aria-label="Tool introduction">
+<div class="rt-hero__glow" aria-hidden="true"></div>
+<h1 class="rt-hero__title" fetchpriority="high">Game Storage Planner:<br><span class="rt-highlight">How Many Games Fit on Your SSD?</span></h1>
+<p class="rt-hero__desc">Select your games, choose your SSD size, and instantly see exactly how much storage you need. Updated with 2026 game install sizes for PC, PS5 & Xbox.</p>
+</section>
+
+<!-- Tool Interface -->
+<div class="rt-tool-layout">
+
+<!-- Left: Game Selector -->
+<div class="tool-left">
+<div class="rt-card" id="step1">
+<div class="storage-section-header">
+<div class="storage-section-icon">🎮</div>
+<h3 class="storage-section-title">Step 1: Select Your Games</h3>
+</div>
+<div id="game-search-container"></div>
+<div class="storage-filters" id="category-filters" aria-label="Game category filters"></div>
+<div class="storage-filters" id="platform-filters" aria-label="Platform filters"></div>
+<div class="storage-game-list" id="game-list" role="list" aria-label="Game list" aria-live="polite" aria-atomic="false">
+<div class="rt-empty" style="padding:var(--rt-space-6);">
+<div class="rt-spinner rt-spinner--lg" style="margin:0 auto var(--rt-space-4);"></div>
+<p>Loading games...</p>
+</div>
+</div>
+<div class="u-text-center u-mt-3" style="font-size:var(--rt-text-small);color:var(--rt-text-muted);" id="list-count" aria-live="polite">Loading...</div>
+</div>
+</div>
+
+<!-- Right: Results Panel -->
+<div class="tool-right rt-sidebar" role="complementary" aria-label="Storage calculation results">
+
+<!-- SSD Size -->
+<div class="rt-card" id="step2">
+<div class="storage-section-header">
+<div class="storage-section-icon storage-section-icon--blue">💾</div>
+<h3 class="storage-section-title">Step 2: SSD Size</h3>
+</div>
+<div class="storage-storage-options" id="storage-options" role="radiogroup" aria-label="Select SSD size"></div>
+</div>
+
+<!-- Platform -->
+<div class="rt-card" id="step3">
+<div class="storage-section-header">
+<div class="storage-section-icon storage-section-icon--blue">🖥️</div>
+<h3 class="storage-section-title">Step 3: Platform</h3>
+</div>
+<div class="storage-platform-options" id="platform-options" role="radiogroup" aria-label="Select gaming platform"></div>
+</div>
+
+<!-- Results -->
+<div class="rt-card rt-card--result" id="step4" aria-live="polite" aria-atomic="false">
+<div class="u-text-center" style="padding-bottom:var(--rt-space-5);border-bottom:1px solid var(--rt-border-default);margin-bottom:var(--rt-space-5);">
+<div style="font-size:var(--rt-text-xs);color:var(--rt-text-muted);text-transform:uppercase;letter-spacing:1.5px;font-weight:var(--rt-weight-bold);margin-bottom:var(--rt-space-2);">Storage Used</div>
+<div class="storage-big-number" id="big-number" aria-label="Number of selected games">0</div>
+<div style="font-size:var(--rt-text-body);color:var(--rt-text-secondary);margin-top:6px;font-weight:var(--rt-weight-medium);" id="big-label">Games on 1TB</div>
+</div>
+
+<div class="rt-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Storage usage percentage" id="progress-bar">
+<div class="rt-progress__label">
+<span>Space Used</span>
+<span id="progress-text">0%</span>
+</div>
+<div class="rt-progress__track">
+<div class="rt-progress__fill rt-progress__fill--safe" id="progress-fill" style="width:0%">0%</div>
+</div>
+</div>
+
+<div class="storage-stats-grid" role="region" aria-label="Storage statistics">
+<div class="storage-stat">
+<div class="rt-stat__value" id="selected-count" aria-label="Selected games count">0</div>
+<div class="rt-stat__label">Games Selected</div>
+</div>
+<div class="storage-stat">
+<div class="rt-stat__value" id="total-size" aria-label="Total size in gigabytes">0</div>
+<div class="rt-stat__label">Total Size (GB)</div>
+</div>
+<div class="storage-stat">
+<div class="rt-stat__value" id="space-left" style="color:var(--rt-success);" aria-label="Remaining space">931 GB</div>
+<div class="rt-stat__label">Space Left</div>
+</div>
+<div class="storage-stat">
+<div class="rt-stat__value" id="usable-space" aria-label="Total usable space">931 GB</div>
+<div class="rt-stat__label">Usable Space</div>
+</div>
+</div>
+
+<div style="margin-bottom:var(--rt-space-4);">
+<div style="font-size:var(--rt-text-xs);color:var(--rt-text-muted);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:var(--rt-space-2);font-weight:var(--rt-weight-bold);">Selected Games</div>
+<div class="storage-selected-games" id="selected-games-list" role="list" aria-label="Selected games list">
+<div class="u-text-center" style="color:var(--rt-text-muted);font-size:var(--rt-text-small);padding:10px;">No games selected</div>
+</div>
+</div>
+
+<div class="rt-insight" id="insight-box">
+<div class="rt-insight__title">💡 Start Planning</div>
+<div>Select games from the list to see how they fit on your 1TB PC SSD.</div>
+</div>
+
+<div class="storage-action-btns">
+<button class="rt-btn rt-btn--primary rt-btn--full" id="share-btn" aria-label="Copy storage plan results to clipboard">📋 Copy Results</button>
+<button class="rt-btn rt-btn--secondary rt-btn--full" id="reset-btn" aria-label="Reset all selections">🔄 Reset</button>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- SEO Content Sections -->
+<section class="rt-content-section">
+<h2>How to Use This Game Storage Calculator</h2>
+<p>Planning your game library storage doesn't have to be guesswork. Our <strong>Game Storage Planner</strong> helps you calculate exactly how many games fit on your SSD before you buy or upgrade. Whether you're building a new gaming PC, buying a PS5, or expanding your Xbox Series X storage, this tool gives you precise numbers.</p>
+<h3>Why Use a Game Storage Calculator?</h3>
+<p>Modern games are massive. Call of Duty: Black Ops 6 alone takes <strong>235GB</strong> — that's nearly 25% of a 1TB SSD's usable space. GTA VI is expected to require <strong>150GB</strong>. Without proper planning, you might buy a 1TB SSD thinking it's enough, only to find you can install just 6-7 AAA games.</p>
+<p>Our calculator accounts for:</p>
+<ul>
+<li><strong>Real game install sizes</strong> — Updated for 2026 with 100+ popular titles</li>
+<li><strong>Platform-specific OS overhead</strong> — PS5 reserves ~158GB, Xbox ~198GB, PC ~93GB from a 1TB drive</li>
+<li><strong>Usable vs advertised space</strong> — A "1TB" SSD only has 931GB formatted on PC</li>
+<li><strong>Future updates</strong> — Games grow over time with patches and DLC</li>
+</ul>
+</section>
+
+<section class="rt-content-section">
+<h2>How Many Games Fit on a 1TB SSD?</h2>
+<p>This is the most common question gamers ask when buying storage. The answer depends on three factors: your platform, the types of games you play, and whether you need room for future updates.</p>
+<h3>1TB SSD Usable Space by Platform</h3>
+<div class="rt-table-wrap">
+<table class="rt-table">
+<thead><tr><th>Platform</th><th>Advertised</th><th>Usable Space</th><th>OS Reserved</th></tr></thead>
+<tbody>
+<tr><td>💻 PC</td><td>1TB</td><td><strong>931 GB</strong></td><td>~93 GB (Windows + formatting)</td></tr>
+<tr><td>🎮 PS5</td><td>1TB</td><td><strong>667 GB</strong></td><td>~158 GB (PS5 OS)</td></tr>
+<tr><td>🟢 Xbox Series X/S</td><td>1TB</td><td><strong>802 GB</strong></td><td>~198 GB (Xbox OS)</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Game Capacity Estimates (1TB PC SSD)</h3>
+<div class="rt-table-wrap">
+<table class="rt-table">
+<thead><tr><th>Game Type</th><th>Avg Size</th><th>Games That Fit</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td>AAA Blockbusters</td><td>100-150 GB</td><td><strong>6-9 games</strong></td><td>GTA VI, Starfield, COD, Baldur's Gate 3</td></tr>
+<tr><td>Medium AAA Games</td><td>50-80 GB</td><td><strong>11-18 games</strong></td><td>Elden Ring, Spider-Man 2, God of War</td></tr>
+<tr><td>Competitive / Online</td><td>20-50 GB</td><td><strong>18-46 games</strong></td><td>Valorant, Fortnite, Apex Legends</td></tr>
+<tr><td>Indie Games</td><td>1-15 GB</td><td><strong>60-900+ games</strong></td><td>Minecraft, Stardew Valley, Hades</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Bottom line:</strong> If you play mostly AAA games, a <strong>1TB SSD is the minimum</strong> you should consider. For a comfortable experience with 10-15 AAA titles, <strong>2TB is strongly recommended</strong> in 2026.</p>
+</section>
+
+<section class="rt-content-section">
+<h2>Is 512GB SSD Enough for Gaming in 2026?</h2>
+<p><strong>No — 512GB is no longer enough for most gamers.</strong> Here's the reality:</p>
+<ul>
+<li>A 512GB SSD has only <strong>390-465GB</strong> of usable space depending on platform</li>
+<li>Two modern AAA games (COD: 235GB + GTA VI: 150GB) = <strong>385GB</strong> — your entire drive</li>
+<li>PS5's 512GB model gives only <strong>~390GB</strong> usable after OS reservation</li>
+<li>You'll constantly uninstall and reinstall games, which wears the SSD and wastes time</li>
+</ul>
+<p><strong>Who is 512GB for?</strong> Only casual gamers who play 1-2 competitive games (Valorant, CS2, Fortnite) and nothing else. Even then, future updates will push you to the limit within a year.</p>
+<p><strong>Our recommendation:</strong> Skip 512GB entirely. The price difference to 1TB is usually only ₹1,500-2,500, and the convenience is worth 10x that amount.</p>
+</section>
+
+<section class="rt-content-section">
+<h2>Game Install Sizes List (2026 Updated)</h2>
+<p>Here are the install sizes for the most popular games right now. Use our calculator above to mix and match your own library.</p>
+<h3>Largest Games (100GB+)</h3>
+<div class="rt-table-wrap">
+<table class="rt-table">
+<thead><tr><th>Game</th><th>Size</th><th>Platform</th></tr></thead>
+<tbody>
+<tr><td>Call of Duty: Black Ops 6</td><td><strong>235 GB</strong></td><td>PC, PS5, Xbox</td></tr>
+<tr><td>Call of Duty: Modern Warfare III</td><td><strong>213 GB</strong></td><td>PC, PS5, Xbox</td></tr>
+<tr><td>Final Fantasy VII Rebirth</td><td><strong>150 GB</strong></td><td>PS5</td></tr>
+<tr><td>GTA VI</td><td><strong>150 GB</strong></td><td>PC, PS5, Xbox</td></tr>
+<tr><td>Red Dead Redemption 2</td><td><strong>150 GB</strong></td><td>PC, PS5, Xbox</td></tr>
+<tr><td>ARK 2</td><td><strong>150 GB</strong></td><td>PC, Xbox</td></tr>
+<tr><td>NBA 2K26</td><td><strong>150 GB</strong></td><td>PC, PS5, Xbox</td></tr>
+<tr><td>Microsoft Flight Simulator 2024</td><td><strong>150 GB</strong></td><td>PC, Xbox</td></tr>
+<tr><td>Starfield</td><td><strong>140 GB</strong></td><td>PC, Xbox</td></tr>
+<tr><td>Black Myth: Wukong</td><td><strong>130 GB</strong></td><td>PC, PS5</td></tr>
+<tr><td>Star Wars Jedi: Survivor</td><td><strong>130 GB</strong></td><td>PC, PS5, Xbox</td></tr>
+<tr><td>Forza Motorsport</td><td><strong>130 GB</strong></td><td>PC, Xbox</td></tr>
+<tr><td>Baldur's Gate 3</td><td><strong>122 GB</strong></td><td>PC, PS5, Xbox</td></tr>
+<tr><td>Grand Theft Auto V</td><td><strong>110 GB</strong></td><td>PC, PS5, Xbox</td></tr>
+<tr><td>Forza Horizon 5</td><td><strong>110 GB</strong></td><td>PC, Xbox</td></tr>
+</tbody>
+</table>
+</div>
+<p>Our calculator includes <strong>100+ games</strong> with accurate sizes. We update this list monthly as new games release and existing games receive updates.</p>
+</section>
+
+<section class="rt-content-section">
+<h2>Frequently Asked Questions About Game Storage</h2>
+<div id="faq-container"></div>
+</section>
+
+<section class="rt-content-section">
+<h2>Related Guides from REDRAG</h2>
+<p>Deep dive into storage, SSD buying, and gaming hardware with our detailed articles:</p>
+<div class="rt-guides-grid">
+<a href="https://www.redrag.in/2026/07/best-1tb-ssd-gaming-india.html" class="rt-card rt-card--guide rt-card--hover">
+<h4>💾 Best 1TB SSD for Gaming in India (2026)</h4>
+<p>Top NVMe and SATA SSDs compared with Indian pricing, performance benchmarks, and buying recommendations.</p>
+</a>
+<a href="https://www.redrag.in/2026/07/ps5-ssd-upgrade-guide.html" class="rt-card rt-card--guide rt-card--hover">
+<h4>🎮 PS5 SSD Upgrade Guide: Which NVMe to Buy</h4>
+<p>Compatible PCIe 4.0 SSDs for PS5, installation steps, and performance comparison after upgrade.</p>
+</a>
+<a href="https://www.redrag.in/2026/07/gta-6-system-requirements-pc.html" class="rt-card rt-card--guide rt-card--hover">
+<h4>🌴 GTA 6 System Requirements & Storage Needs</h4>
+<p>Expected PC specs, PS5/Xbox performance, and how much storage you need for Rockstar's biggest game.</p>
+</a>
+<a href="https://www.redrag.in/2026/07/budget-gaming-pc-build-under-50000.html" class="rt-card rt-card--guide rt-card--hover">
+<h4>💰 Best Gaming PC Build Under ₹50,000 (2026)</h4>
+<p>Complete component list with India pricing, FPS estimates, and storage recommendations for budget builds.</p>
+</a>
+<a href="https://www.redrag.in/2026/07/xbox-series-x-storage-expansion.html" class="rt-card rt-card--guide rt-card--hover">
+<h4>🟢 Xbox Series X Storage Expansion Guide</h4>
+<p>Seagate Expansion Card vs external SSD vs internal options compared for Xbox Series X/S.</p>
+</a>
+<a href="https://www.redrag.in/2026/07/ssd-vs-hdd-gaming-performance.html" class="rt-card rt-card--guide rt-card--hover">
+<h4>⚡ SSD vs HDD for Gaming: Is the Upgrade Worth It?</h4>
+<p>Load time comparisons, FPS impact, and why every gamer should switch to SSD in 2026.</p>
+</a>
+</div>
+</section>
+
+<section class="rt-content-section">
+<h2>About This Tool</h2>
+<p>The <strong>REDRAG Game Storage Planner</strong> is a free, browser-based calculator designed to help gamers make informed storage decisions. We maintain a database of 100+ popular games with accurate install sizes updated regularly.</p>
+<p><strong>How we calculate:</strong></p>
+<ul>
+<li>Game sizes sourced from official store pages, Steam, PlayStation Store, and Xbox Store</li>
+<li>Platform OS overhead based on official manufacturer documentation</li>
+<li>Usable space calculated using standard binary conversion (1TB = 1,024GB)</li>
+<li>Results are estimates — actual sizes may vary slightly with updates and DLC</li>
+</ul>
+<p><strong>Last updated:</strong> July 27, 2026 | <strong>Games in database:</strong> 100+ | <strong>Platforms supported:</strong> PC, PS5, Xbox Series X/S</p>
+<p>Found an incorrect game size? Want us to add a game? <a href="https://www.redrag.in/p/contact-us.html">Contact us</a> and we'll update within 48 hours.</p>
+</section>
+
+</div>
+</main>
+
+<!-- Footer placeholder (injected by RT.shell) -->
+<div id="rt-footer"></div>
+
+<!-- Shared JS (async where possible) -->
+<script src="/shared/js/core.js?v=40"></script>
+<script src="/shared/js/components.js?v=40"></script>
+<script src="/shared/js/seo.js?v=40"></script>
+
+<!-- Tool-specific JS -->
+<script src="tool.js?v=40"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  RT.init();
+  if (typeof RTTool !== 'undefined') {
+    RTTool.init();
+  } else {
+    console.error('[RTTool] Tool script not loaded.');
+  }
+});
+</script>
+
+</body>
+</html>
