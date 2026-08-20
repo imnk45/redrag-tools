@@ -3,7 +3,7 @@
     "last_updated":  "2026-07-31",
     "tools":  [
                   {
-                      "slug":  "storage",
+                      "slug":  "game-storage-planner",
                       "name":  "Game Storage Planner",
                       "icon":  "💾",
                       "description":  "Select your games, pick your SSD size, and instantly see how many games fit on 500GB, 1TB, 2TB, or 4TB. Supports PC, PS5, and Xbox with real 2026 game install sizes.",
