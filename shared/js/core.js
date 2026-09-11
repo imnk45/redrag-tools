@@ -58,7 +58,7 @@
     // Google AdSense
     adsense: {
       enabled: true,
-      publisherId: 'ca-pub-XXXXXXXXXXXXXXXX'
+      publisherId: 'ca-pub-4432632205405421'
     }
   };
 
