@@ -52,7 +52,7 @@
     // Google Analytics
     googleAnalytics: {
       enabled: true,
-      measurementId: 'G-XXXXXXXXXX'
+      measurementId: 'G-9T7WF2HYKQ'
     },
 
     // Google AdSense
@@ -771,13 +771,3 @@
 });
 
 })(window);
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9T7WF2HYKQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9T7WF2HYKQ');
-</script>
