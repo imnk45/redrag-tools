@@ -1,0 +1,89 @@
+/* ============================================
+   Mouse Sensitivity Converter Specific Styles
+   Shared components come from /shared/css/components.css
+   ============================================ */
+
+.msc-form { padding: var(--rt-space-4); display: flex; flex-direction: column; gap: var(--rt-space-4); }
+
+.msc-field { display: flex; flex-direction: column; gap: var(--rt-space-2); }
+
+.msc-label {
+  font-size: var(--rt-text-xs);
+  font-weight: var(--rt-weight-bold);
+  color: var(--rt-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.msc-hint { font-weight: 400; text-transform: none; letter-spacing: 0; opacity: 0.7; }
+
+.msc-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.msc-2col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--rt-space-4); }
+
+.msc-swap-row { display: flex; justify-content: center; }
+.msc-swap-btn { padding: var(--rt-space-2) var(--rt-space-5); font-size: var(--rt-text-sm); }
+
+/* Mode toggle */
+.msc-mode-toggle {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4px;
+  background: var(--rt-surface-variant, #1a1f2b);
+  border: 1px solid var(--rt-border-default);
+  border-radius: 10px; padding: 4px;
+}
+.msc-mode-btn {
+  border: 0; border-radius: 7px; padding: 10px 6px;
+  background: transparent; color: var(--rt-text-secondary);
+  font: inherit; font-size: var(--rt-text-sm); font-weight: var(--rt-weight-bold);
+  cursor: pointer; transition: background 0.15s ease, color 0.15s ease;
+}
+.msc-mode-btn.is-active { background: var(--rt-accent, #e63946); color: #fff; }
+
+.msc-fov-panel {
+  background: var(--rt-surface-variant, #1a1f2b);
+  border: 1px solid var(--rt-border-default);
+  border-radius: 12px; padding: var(--rt-space-4);
+  display: flex; flex-direction: column; gap: var(--rt-space-3);
+}
+.msc-fov-note { margin: 0; font-size: var(--rt-text-sm); color: var(--rt-text-muted); line-height: 1.5; }
+
+.msc-note { margin: 0; font-size: var(--rt-text-sm); color: var(--rt-text-muted); line-height: 1.5; }
+
+/* Results */
+.msc-res-sub { font-size: var(--rt-text-sm); color: var(--rt-text-muted); margin-top: var(--rt-space-2); }
+
+.msc-badge {
+  display: inline-block; margin-top: var(--rt-space-3);
+  background: rgba(230, 57, 70, 0.15); color: var(--rt-accent, #e63946);
+  border: 1px solid rgba(230, 57, 70, 0.4);
+  font-size: var(--rt-text-xs); font-weight: var(--rt-weight-bold);
+  padding: 4px 10px; border-radius: 999px;
+}
+
+.msc-stat-grid { display: flex; flex-direction: column; gap: var(--rt-space-3); }
+.msc-stat {
+  display: flex; justify-content: space-between; align-items: baseline; gap: var(--rt-space-3);
+  padding-bottom: var(--rt-space-2); border-bottom: 1px dashed var(--rt-border-default);
+}
+.msc-stat-k { font-size: var(--rt-text-sm); color: var(--rt-text-muted); }
+.msc-stat-v { font-size: var(--rt-text-base); font-weight: var(--rt-weight-bold); color: var(--rt-text-primary); font-variant-numeric: tabular-nums; }
+
+/* Yaw table */
+.msc-table-wrap { overflow-x: auto; margin: var(--rt-space-4) 0; }
+.msc-table { width: 100%; border-collapse: collapse; font-size: var(--rt-text-sm); min-width: 560px; }
+.msc-table th, .msc-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--rt-border-default); }
+.msc-table th { color: var(--rt-text-secondary); text-transform: uppercase; font-size: var(--rt-text-xs); letter-spacing: 1px; }
+.msc-table td { color: var(--rt-text-primary); }
+.msc-table td:nth-child(2) { font-variant-numeric: tabular-nums; font-weight: 600; }
+
+@media (max-width: 520px) {
+  .msc-2col { grid-template-columns: 1fr; }
+}

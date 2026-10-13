@@ -1,0 +1,171 @@
+{
+  "last_updated": "2026-10-13",
+  "description": "Verified yaw values (degrees of rotation per mouse count at sensitivity 1.0) and default horizontal FOVs for the REDRAG Mouse Sensitivity Converter. Yaw values cross-checked against Mouse-Sensitivity.com, MouseTester.io and community testing.",
+  "games": [
+    {
+      "id": "valorant",
+      "name": "Valorant",
+      "yaw": 0.07,
+      "fov": 103,
+      "fov_locked": true,
+      "min": 0.1,
+      "max": 10,
+      "approx": false,
+      "note": "Locked 103\u00b0 horizontal FOV. Sens accepts 3 decimals in GameSettings.ini."
+    },
+    {
+      "id": "cs2",
+      "name": "Counter-Strike 2",
+      "yaw": 0.022,
+      "fov": 90,
+      "fov_locked": false,
+      "min": 0.1,
+      "max": 10,
+      "approx": false,
+      "note": "Source 2 engine (m_yaw 0.022). Identical scale to CS:GO and CS 1.6."
+    },
+    {
+      "id": "apex",
+      "name": "Apex Legends",
+      "yaw": 0.022,
+      "fov": 110,
+      "fov_locked": false,
+      "min": 0.1,
+      "max": 20,
+      "approx": false,
+      "note": "Respawn Source branch \u2014 sensitivity transfers 1:1 with CS2."
+    },
+    {
+      "id": "overwatch2",
+      "name": "Overwatch 2",
+      "yaw": 0.0066,
+      "fov": 103,
+      "fov_locked": false,
+      "min": 0.1,
+      "max": 100,
+      "approx": false,
+      "note": "Blizzard engine. Overwatch sens x 0.3 \u2248 CS2 sens."
+    },
+    {
+      "id": "warzone",
+      "name": "Call of Duty: Warzone",
+      "yaw": 0.0066,
+      "fov": 100,
+      "fov_locked": false,
+      "min": 0.01,
+      "max": 20,
+      "approx": false,
+      "note": "IW engine standard at 1.00 ADS multiplier (legacy ADS mode)."
+    },
+    {
+      "id": "destiny2",
+      "name": "Destiny 2",
+      "yaw": 0.0066,
+      "fov": 105,
+      "fov_locked": false,
+      "min": 1,
+      "max": 100,
+      "approx": false,
+      "note": "Shares the Overwatch-family yaw constant."
+    },
+    {
+      "id": "marvelrivals",
+      "name": "Marvel Rivals",
+      "yaw": 0.0175,
+      "fov": 100,
+      "fov_locked": false,
+      "min": 0.01,
+      "max": 100,
+      "approx": false,
+      "note": "Per-hero ADS/scope multipliers are separate and not converted here."
+    },
+    {
+      "id": "titanfall2",
+      "name": "Titanfall 2",
+      "yaw": 0.022,
+      "fov": 90,
+      "fov_locked": false,
+      "min": 0.1,
+      "max": 20,
+      "approx": false,
+      "note": "Same Respawn Source branch as Apex Legends."
+    },
+    {
+      "id": "tf2",
+      "name": "Team Fortress 2",
+      "yaw": 0.022,
+      "fov": 90,
+      "fov_locked": false,
+      "min": 0.1,
+      "max": 20,
+      "approx": false,
+      "note": "Standard Source m_yaw."
+    },
+    {
+      "id": "quake",
+      "name": "Quake Champions",
+      "yaw": 0.022,
+      "fov": 100,
+      "fov_locked": false,
+      "min": 0.1,
+      "max": 20,
+      "approx": false,
+      "note": "Quake set the 0.022 convention Source inherited."
+    },
+    {
+      "id": "rust",
+      "name": "Rust",
+      "yaw": 0.1125,
+      "fov": 90,
+      "fov_locked": false,
+      "min": 0.1,
+      "max": 5,
+      "approx": false,
+      "note": "High yaw \u2014 sensitivity numbers are low for the same turn speed."
+    },
+    {
+      "id": "tarkov",
+      "name": "Escape from Tarkov",
+      "yaw": 0.125,
+      "fov": 75,
+      "fov_locked": false,
+      "min": 0.1,
+      "max": 5,
+      "approx": false,
+      "note": "Highest yaw in the list \u2014 lowest sens numbers."
+    },
+    {
+      "id": "fortnite",
+      "name": "Fortnite",
+      "yaw": 0.005555,
+      "fov": 80,
+      "fov_locked": false,
+      "min": 0.01,
+      "max": 100,
+      "approx": true,
+      "note": "APPROXIMATE: percentage-based slider; build/edit modes and seasonal changes affect feel. Converted value may exceed the in-game slider \u2014 use cm/360 to verify."
+    },
+    {
+      "id": "r6siege",
+      "name": "Rainbow Six Siege",
+      "yaw": 0.00573,
+      "fov": 60,
+      "fov_locked": false,
+      "min": 1,
+      "max": 100,
+      "approx": true,
+      "note": "APPROXIMATE: hipfire baseline only. Sens interacts with FOV and the relationship has changed across patches. Set your FOV first, then convert."
+    },
+    {
+      "id": "pubg",
+      "name": "PUBG: Battlegrounds",
+      "yaw": 0.002222,
+      "fov": 90,
+      "fov_locked": false,
+      "min": 1,
+      "max": 100,
+      "approx": true,
+      "note": "APPROXIMATE: general-sensitivity slider is non-linear and per-scope multipliers scale differently. Treat the output as a starting point."
+    }
+  ]
+}
