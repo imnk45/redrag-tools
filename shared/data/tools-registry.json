@@ -179,3 +179,34 @@
                   }
     ]
 }
+{
+  "name": "Mouse Sensitivity Converter",
+  "slug": "mouse-sensitivity-converter",
+  "url": "/mouse-sensitivity-converter/",
+  "description": "Convert your mouse sensitivity between Valorant, CS2, Apex Legends, Overwatch 2, Warzone and 10 more games. Exact cm/360 matching with eDPI, in/360 and optional FOV-aware mode.",
+  "category": "Gaming",
+  "tags": [
+    "sensitivity",
+    "mouse",
+    "valorant",
+    "cs2",
+    "aim",
+    "dpi",
+    "edpi",
+    "cm/360"
+  ],
+  "status": "live",
+  "thumbnail": "/assets/images/thumbnails/thumb-mouse-sensitivity-converter.jpg",
+  "ogImage": "/assets/images/thumbnails/thumb-mouse-sensitivity-converter.jpg",
+  "schema": {
+    "@type": "WebApplication",
+    "name": "Mouse Sensitivity Converter",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+}
