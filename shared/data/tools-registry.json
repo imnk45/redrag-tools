@@ -207,6 +207,44 @@
                           "priceCurrency": "USD"
                         }
                       }
+                  },
+                  {
+                      "slug": "game-download-time-calculator",
+                      "name": "Game Download Time Calculator",
+                      "icon": "⏱️",
+                      "description": "Calculate exactly how long any game takes to download on your internet speed — 40+ real game sizes, real-world accuracy, MB/s & Mbps support.",
+                      "category": "Gaming",
+                      "tags": [
+                        "Gaming",
+                        "Download",
+                        "Internet Speed",
+                        "Steam",
+                        "PS5",
+                        "Xbox"
+                      ],
+                      "keywords": [
+                        "download time",
+                        "internet speed",
+                        "steam",
+                        "ps5",
+                        "xbox"
+                      ],
+                      "status": "live",
+                      "url": "/game-download-time-calculator/",
+                      "thumbnail": "/assets/images/thumbnails/Game-Download-Time-Calculator.webp",
+                      "ogImage": "/assets/images/thumbnails/Game-Download-Time-Calculator.webp",
+                      "schema": {
+                        "@context": "https://schema.org",
+                        "@type": "SoftwareApplication",
+                        "name": "Game Download Time Calculator",
+                        "applicationCategory": "UtilityApplication",
+                        "operatingSystem": "Any",
+                        "offers": {
+                          "@type": "Offer",
+                          "price": "0",
+                          "priceCurrency": "USD"
+                        }
+                      }
                   }
     ]
 }
