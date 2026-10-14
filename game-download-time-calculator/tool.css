@@ -1,0 +1,48 @@
+/* ============================================
+   Game Download Time Calculator Specific Styles
+   Shared components use shared/css/components.css
+   ============================================ */
+.dtc-form { padding: var(--rt-space-4); display: flex; flex-direction: column; gap: var(--rt-space-3); }
+.dtc-label { font-size: var(--rt-text-sm, 0.875rem); font-weight: var(--rt-weight-semibold, 600); color: var(--rt-text-primary); margin-bottom: calc(var(--rt-space-1, 4px) * -1); }
+.dtc-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--rt-space-3); }
+.dtc-note { font-size: var(--rt-text-xs, 0.75rem); color: var(--rt-text-muted); line-height: 1.5; margin: 0; }
+
+.dtc-result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--rt-space-3); }
+.dtc-result-item { background: var(--rt-surface-variant, rgba(255,255,255,0.04)); border-radius: 10px; padding: var(--rt-space-3); display: flex; flex-direction: column; gap: 2px; }
+.dtc-result-label { font-size: var(--rt-text-xs, 0.75rem); color: var(--rt-text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.dtc-result-value { font-size: var(--rt-text-sm, 0.875rem); font-weight: var(--rt-weight-semibold, 600); color: var(--rt-text-primary); word-break: break-word; }
+
+.dtc-compare-card { margin-top: var(--rt-space-5); }
+.dtc-table-wrap { overflow-x: auto; padding: 0 var(--rt-space-4) var(--rt-space-4); }
+.dtc-table { width: 100%; border-collapse: collapse; font-size: var(--rt-text-sm, 0.875rem); }
+.dtc-table th { text-align: left; color: var(--rt-text-muted); font-weight: var(--rt-weight-semibold, 600); padding: var(--rt-space-2) var(--rt-space-3); border-bottom: 1px solid var(--rt-border-default); white-space: nowrap; }
+.dtc-table td { padding: var(--rt-space-2) var(--rt-space-3); border-bottom: 1px solid var(--rt-border-default); color: var(--rt-text-secondary); white-space: nowrap; }
+.dtc-table tbody tr:last-child td { border-bottom: none; }
+.dtc-table .row-active td { color: var(--rt-text-primary); font-weight: var(--rt-weight-bold, 700); background: rgba(230, 57, 70, 0.08); }
+
+.you-badge { display: inline-block; font-size: 0.625rem; font-weight: 800; letter-spacing: 1px; color: #fff; background: #e63946; border-radius: 4px; padding: 1px 6px; margin-left: 6px; vertical-align: middle; }
+
+@media (max-width: 640px) {
+  .dtc-grid-2, .dtc-result-grid { grid-template-columns: 1fr; }
+}
+
+/* Speed test box (inside inputs card) */
+.dtc-speedtest-box { display: flex; align-items: center; justify-content: space-between; gap: var(--rt-space-3); background: rgba(230,57,70,0.07); border: 1px dashed rgba(230,57,70,0.4); border-radius: 10px; padding: var(--rt-space-3); margin-top: var(--rt-space-2); flex-wrap: wrap; }
+.dtc-speedtest-text { display: flex; flex-direction: column; gap: 2px; font-size: var(--rt-text-xs, 0.75rem); color: var(--rt-text-secondary); min-width: 180px; }
+.dtc-speedtest-text strong { color: var(--rt-text-primary); font-size: var(--rt-text-sm, 0.875rem); }
+.dtc-speedtest-box .rt-btn { white-space: nowrap; }
+
+/* Speed test modal */
+.dtc-modal { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: var(--rt-space-4); }
+.dtc-modal[hidden] { display: none; }
+.dtc-modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); }
+.dtc-modal__panel { position: relative; background: var(--rt-surface, #14161c); border: 1px solid var(--rt-border-default); border-radius: 16px; padding: var(--rt-space-6); width: 100%; max-width: 400px; box-shadow: 0 24px 64px rgba(0,0,0,0.5); }
+.dtc-gauge { display: flex; align-items: baseline; justify-content: center; gap: 6px; margin: var(--rt-space-4) 0; }
+.dtc-gauge__num { font-size: 3rem; font-weight: 900; color: #e63946; font-variant-numeric: tabular-nums; line-height: 1; }
+.dtc-gauge__unit { font-size: var(--rt-text-sm); color: var(--rt-text-muted); font-weight: 700; }
+.dtc-progress { height: 8px; background: var(--rt-surface-variant, rgba(255,255,255,0.06)); border-radius: 99px; overflow: hidden; margin-bottom: var(--rt-space-3); }
+.dtc-progress__fill { height: 100%; width: 0%; background: linear-gradient(90deg, #e63946, #ff7a59); border-radius: 99px; transition: width 0.3s ease; }
+
+@media (max-width: 480px) {
+  .dtc-speedtest-box { flex-direction: column; align-items: stretch; text-align: center; }
+}
