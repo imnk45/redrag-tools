@@ -1,7 +1,7 @@
 {
   "last_updated": "2026-07-27",
   "games": [
-    {"name": "GTA V", "size_gb": 150, "platform": ["PC", "PS5", "Xbox"], "category": "AAA"},
+    {"name": "GTA VI", "size_gb": 150, "platform": ["PC", "PS5", "Xbox"], "category": "AAA"},
     {"name": "Call of Duty: Black Ops 6", "size_gb": 235, "platform": ["PC", "PS5", "Xbox"], "category": "AAA"},
     {"name": "Call of Duty: Modern Warfare III", "size_gb": 213, "platform": ["PC", "PS5", "Xbox"], "category": "AAA"},
     {"name": "Hogwarts Legacy", "size_gb": 85, "platform": ["PC", "PS5", "Xbox"], "category": "AAA"},
