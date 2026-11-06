@@ -1,0 +1,187 @@
+{
+  "_note": "Synced copy of the price data in tool.js (tool.js GPU_DATA is the master). Verified November 2026 — see the REDRAG data sheet. Never invent prices.",
+  "last_updated": "2026-11-06",
+  "next_update": "2026-12-06",
+  "cards": [
+    {
+      "id": "rtx-3060-12gb",
+      "name": "RTX 3060 12GB",
+      "brand": "NVIDIA",
+      "verified": true,
+      "entry": "22000-24000",
+      "mid": "24000-26000",
+      "premium": "26000-28000",
+      "scam_line": 20000
+    },
+    {
+      "id": "rtx-3060-ti-8gb",
+      "name": "RTX 3060 Ti 8GB",
+      "brand": "NVIDIA",
+      "verified": true,
+      "entry": "19000-21000",
+      "mid": "21000-23500",
+      "premium": "23500-25500",
+      "scam_line": 17000
+    },
+    {
+      "id": "rtx-3090-24gb",
+      "name": "RTX 3090 24GB",
+      "brand": "NVIDIA",
+      "verified": true,
+      "entry": "60000-75000",
+      "mid": "75000-90000",
+      "premium": "90000-100000",
+      "scam_line": 60000
+    },
+    {
+      "id": "gtx-1660-super",
+      "name": "GTX 1660 Super",
+      "brand": "NVIDIA",
+      "verified": true,
+      "entry": "11500-14000",
+      "mid": "11500-14000",
+      "premium": "11500-14000",
+      "scam_line": 9000
+    },
+    {
+      "id": "rtx-2060",
+      "name": "RTX 2060",
+      "brand": "NVIDIA",
+      "verified": true,
+      "entry": "12500-14500",
+      "mid": "12500-14500",
+      "premium": "12500-14500",
+      "scam_line": 10000
+    },
+    {
+      "id": "rtx-2060-super",
+      "name": "RTX 2060 Super",
+      "brand": "NVIDIA",
+      "verified": true,
+      "entry": "14000-16000",
+      "mid": "14000-16000",
+      "premium": "14000-16000",
+      "scam_line": 11000
+    },
+    {
+      "id": "rtx-2070-super",
+      "name": "RTX 2070 Super",
+      "brand": "NVIDIA",
+      "verified": true,
+      "entry": "16000-18000",
+      "mid": "16000-18000",
+      "premium": "19000-21000",
+      "scam_line": 12500
+    },
+    {
+      "id": "rtx-3060-8gb",
+      "name": "RTX 3060 8GB",
+      "brand": "NVIDIA",
+      "verified": true,
+      "entry": "15000-17500",
+      "mid": "15000-17500",
+      "premium": "15000-17500",
+      "scam_line": 12000
+    },
+    {
+      "id": "rtx-3070",
+      "name": "RTX 3070",
+      "brand": "NVIDIA",
+      "verified": true,
+      "entry": "20000-22000",
+      "mid": "21000-23000",
+      "premium": "23000-25000",
+      "scam_line": 16000
+    },
+    {
+      "id": "rtx-3070-ti",
+      "name": "RTX 3070 Ti",
+      "brand": "NVIDIA",
+      "verified": true,
+      "entry": "24000-28000",
+      "mid": "24000-28000",
+      "premium": "24000-28000",
+      "scam_line": 19000
+    },
+    {
+      "id": "rtx-3080-10gb",
+      "name": "RTX 3080 10GB",
+      "brand": "NVIDIA",
+      "verified": true,
+      "entry": "30000-33000",
+      "mid": "32000-35000",
+      "premium": "36000-40000",
+      "scam_line": 24000
+    },
+    {
+      "id": "rx-6600",
+      "name": "RX 6600",
+      "brand": "AMD",
+      "verified": true,
+      "entry": "14000-16500",
+      "mid": "14000-16500",
+      "premium": "14000-16500",
+      "scam_line": 11000
+    },
+    {
+      "id": "rx-6600-xt",
+      "name": "RX 6600 XT",
+      "brand": "AMD",
+      "verified": true,
+      "entry": "16000-19000",
+      "mid": "16000-19000",
+      "premium": "19000-20000",
+      "scam_line": 12500
+    },
+    {
+      "id": "rx-6700-xt",
+      "name": "RX 6700 XT",
+      "brand": "AMD",
+      "verified": true,
+      "entry": "21000-24000",
+      "mid": "21000-25000",
+      "premium": "25000-27000",
+      "scam_line": 16500
+    },
+    {
+      "id": "rtx-4060",
+      "name": "RTX 4060",
+      "brand": "NVIDIA",
+      "verified": true,
+      "entry": "23000-27000",
+      "mid": "23000-27000",
+      "premium": "23000-27000",
+      "scam_line": 18000
+    },
+    {
+      "id": "rtx-4060-ti-8gb",
+      "name": "RTX 4060 Ti 8GB",
+      "brand": "NVIDIA",
+      "verified": true,
+      "entry": "27000-31000",
+      "mid": "27000-31000",
+      "premium": "27000-31000",
+      "scam_line": 21500
+    },
+    {
+      "id": "rtx-4060-ti-16gb",
+      "name": "RTX 4060 Ti 16GB",
+      "brand": "NVIDIA",
+      "verified": true,
+      "entry": "35000-38000",
+      "mid": "35000-38000",
+      "premium": "35000-38000",
+      "scam_line": 28000
+    },
+    {
+      "id": "rtx-4070",
+      "name": "RTX 4070",
+      "brand": "NVIDIA",
+      "verified": true,
+      "entry": "38000-40000",
+      "mid": "40000-43000",
+      "premium": "43000-46000",
+      "scam_line": 30000
+    }
+  ]
+}

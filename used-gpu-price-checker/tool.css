@@ -1,0 +1,49 @@
+/* ============================================
+   Used GPU Fair Price Checker — Specific Styles
+   Shared components come from shared/css/components.css
+   ============================================ */
+
+/* Price range needs slightly smaller type than a single big number */
+#price-range { font-size: clamp(1.4rem, 3.5vw, 2rem); line-height: 1.2; }
+
+.price-verdict { font-weight: var(--rt-weight-bold, 700); color: var(--rt-text-primary); margin-bottom: var(--rt-space-3, 12px); }
+
+.price-line { display: block; padding: var(--rt-space-2, 8px) 0; font-size: var(--rt-text-sm, 0.9rem); border-bottom: 1px dashed var(--rt-border-default, rgba(255,255,255,0.12)); }
+.price-line--deal { color: #4ade80; }
+.price-line--overpay { color: #fbbf24; }
+.price-line--scam { color: #f87171; font-weight: 600; }
+
+/* Special note callout (3060 Ti value alert, 3090 contested market) */
+.price-note { display: none; margin-top: var(--rt-space-4, 16px); padding: var(--rt-space-3, 12px); border-left: 3px solid var(--rt-accent, #e63946); background: var(--rt-surface-variant, rgba(255,255,255,0.05)); border-radius: 0 8px 8px 0; font-size: var(--rt-text-sm, 0.9rem); color: var(--rt-text-secondary); }
+
+/* Pending-verification state */
+.price-pending { display: none; padding: var(--rt-space-4, 16px); text-align: center; }
+
+/* Safety checklist under the result */
+.safety-list { list-style: none; padding: 0; margin: var(--rt-space-3, 12px) 0 0; }
+.safety-list li { position: relative; padding-left: 1.6em; margin-bottom: var(--rt-space-2, 8px); font-size: var(--rt-text-sm, 0.9rem); color: var(--rt-text-secondary); }
+.safety-list li::before { content: "✔"; position: absolute; left: 0; color: #4ade80; }
+
+/* WhatsApp share button (green, distinct from primary red) */
+.rt-btn--whatsapp { background: #1faa53; color: #fff; }
+.rt-btn--whatsapp:hover { background: #178f45; }
+
+/* Static price table — must be readable without JS (progressive enhancement) */
+.rt-table-wrap { overflow-x: auto; margin: var(--rt-space-4, 16px) 0; }
+table.rt-table { width: 100%; border-collapse: collapse; font-size: var(--rt-text-sm, 0.9rem); }
+table.rt-table th, table.rt-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--rt-border-default, rgba(255,255,255,0.1)); white-space: nowrap; }
+table.rt-table th { color: var(--rt-text-muted); text-transform: uppercase; letter-spacing: 1px; font-size: var(--rt-text-xs, 0.75rem); }
+table.rt-table td { color: var(--rt-text-secondary); }
+table.rt-table td.rt-price { color: var(--rt-text-primary); font-weight: 600; }
+table.rt-table td.rt-scam { color: #f87171; font-weight: 600; }
+
+/* Native FAQ accordion — works with JavaScript fully disabled */
+.rt-faq details { border: 1px solid var(--rt-border-default, rgba(255,255,255,0.1)); border-radius: 10px; margin-bottom: var(--rt-space-3, 12px); background: var(--rt-surface-variant, rgba(255,255,255,0.03)); }
+.rt-faq summary { cursor: pointer; padding: var(--rt-space-3, 12px) var(--rt-space-4, 16px); font-weight: 600; color: var(--rt-text-primary); list-style: none; }
+.rt-faq summary::before { content: "＋ "; color: var(--rt-accent, #e63946); }
+.rt-faq details[open] summary::before { content: "－ "; }
+.rt-faq details summary::-webkit-details-marker { display: none; }
+.rt-faq details p { padding: 0 var(--rt-space-4, 16px) var(--rt-space-4, 16px); margin: 0; color: var(--rt-text-secondary); font-size: var(--rt-text-sm, 0.95rem); line-height: 1.6; }
+
+/* Monthly-update stamp */
+.rt-updated-stamp { font-size: var(--rt-text-xs, 0.75rem); color: var(--rt-text-muted); text-align: center; margin-top: var(--rt-space-3, 12px); }
