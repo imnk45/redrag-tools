@@ -1,278 +1,296 @@
 {
-    "version":  "2026-07-31",
-    "last_updated":  "2026-07-31",
-    "tools":  [
-                  {
-                      "slug":  "game-storage-planner",
-                      "name":  "Game Storage Planner",
-                      "icon":  "💾",
-                      "description":  "Select your games, pick your SSD size, and instantly see how many games fit on 500GB, 1TB, 2TB, or 4TB. Supports PC, PS5, and Xbox with real 2026 game install sizes.",
-                      "category":  "Gaming",
-                      "status":  "live",
-                      "tags":  [
-                                   "PC",
-                                   "PS5",
-                                   "Xbox",
-                                   "SSD",
-                                   "Storage"
-                               ],
-                      "ogImage":  "/assets/images/thumbnails/thumb-storage.jpg",
-                      "schema":  {
-                                     "applicationCategory":  "UtilityApplication",
-                                     "keywords":  [
-                                                      "game storage calculator",
-                                                      "SSD planner",
-                                                      "how many games fit in 1TB"
-                                                  ]
-                                 },
-                      "thumbnail":  "/assets/images/thumbnails/thumb-storage.jpg"
-                  },
-                  {
-                      "slug":  "vram-calculator",
-                      "name":  "VRAM Calculator for AI/LLMs",
-                      "icon":  "🧠",
-                      "description":  "Find out how much VRAM you need to run Llama, Mistral, Qwen, and other local AI models. Check if your GPU can handle different quantization levels.",
-                      "category":  "AI",
-                      "status":  "live",
-                      "tags":  [
-                                   "AI",
-                                   "GPU",
-                                   "LLM",
-                                   "VRAM"
-                               ],
-                      "ogImage":  "/assets/images/thumbnails/thumb-vram.jpg",
-                      "schema":  {
-                                     "applicationCategory":  "UtilityApplication",
-                                     "keywords":  [
-                                                      "vram calculator",
-                                                      "gpu memory for llm",
-                                                      "local ai vram"
-                                                  ]
-                                 },
-                      "thumbnail":  "/assets/images/thumbnails/thumb-vram.jpg"
-                  },
-                  {
-                      "slug": "ram-latency-calculator",
-                      "name": "RAM Latency Calculator",
-                      "shortName": "RAM Latency",
-                      "description": "Calculate true RAM latency in nanoseconds from CAS Latency and memory speed. Compare DDR3, DDR4, and DDR5 kits instantly.",
-                      "shortDescription": "Calculate true memory latency in nanoseconds",
-                      "category": "PC Hardware",
-                      "tags": ["ram", "memory", "latency", "ddr4", "ddr5", "cas latency", "pc build", "gaming"],
-                      "status": "live",
-                      "version": "1.0.0",
-                      "path": "/ram-latency-calculator/",
-                      "url": "https://tools.redrag.in/ram-latency-calculator/",
-                      "thumbnail": "/assets/images/thumbnails/thumb-ram.jpg",
-                      "ogImage": "/assets/images/thumbnails/thumb-ram.jpg",
-                      "icon": "⚡",
-                      "featured": false,
-                      "createdAt": "2026-08-10",
-                      "updatedAt": "2026-08-10",
-                      "schema": {
-                        "@context": "https://schema.org",
-                        "@type": "SoftwareApplication",
-                        "name": "RAM Latency Calculator",
-                        "applicationCategory": "UtilityApplication",
-                        "operatingSystem": "Any",
-                        "offers": {
-                          "@type": "Offer",
-                          "price": "0",
-                          "priceCurrency": "USD"
-                        },
-                        "aggregateRating": {
-                          "@type": "AggregateRating",
-                          "ratingValue": "4.8",
-                          "ratingCount": "156"
-                        }
-                      },
-                      "seo": {
-                        "title": "RAM Latency Calculator | Calculate True RAM Latency in Nanoseconds | REDRAG Tools",
-                        "description": "Free RAM Latency Calculator. Calculate true RAM latency in nanoseconds from CAS Latency (CL) and RAM speed (MHz). Compare DDR3, DDR4, and DDR5 memory performance instantly.",
-                        "keywords": ["ram latency calculator", "cas latency calculator", "ddr4 latency", "ddr5 latency", "memory timing calculator", "true ram latency", "ns calculator"]
-                      },
-                      "stats": {
-                        "views": 0,
-                        "uses": 0
-                      }
-                  },
-                  {
-                      "slug": "resolution-scaling-visualizer",
-                      "name": "Resolution Scaling Visualizer",
-                      "description": "Visualize internal render resolutions, performance gains, and VRAM impact of DLSS, FSR, and XeSS scaling modes. Compare pixel counts and estimated FPS in real-time.",
-                      "category": "Performance",
-                      "tags": [
-                        "DLSS",
-                        "FSR",
-                        "Resolution",
-                        "FPS",
-                        "Gaming"
-                      ],
-                      "status": "live",
-                      "url": "/resolution-scaling-visualizer/",
-                      "ogImage": "/assets/images/thumbnails/thumb-resolution-scaling-visualizer.jpg",
-                      "thumbnail": "/assets/images/thumbnails/thumb-resolution-scaling-visualizer.jpg",
-                      "schema": {
-                        "@type": "SoftwareApplication",
-                        "applicationCategory": "UtilityApplication",
-                        "operatingSystem": "Any",
-                        "offers": {
-                          "@type": "Offer",
-                          "price": "0",
-                          "priceCurrency": "USD"
-                        }
-                      }
-                  },
-                  {
-                      "id": "pc-build-configurator",
-                      "name": "PC Build Configurator",
-                      "slug": "pc-build-configurator",
-                      "description": "Free custom PC builder with compatibility checking, wattage calculation, and FPS estimation. Build optimized gaming PCs from $800 to $4000+.",
-                      "category": "PC Building",
-                      "tags": [
-                        "PC Build",
-                        "Gaming PC",
-                        "Compatibility",
-                        "CPU",
-                        "GPU",
-                        "PSU Calculator"
-                      ],
-                      "status": "live",
-                      "url": "/pc-build-configurator/",
-                      "thumbnail": "/assets/images/thumbnails/thumb-pc-build-configurator.jpg",
-                      "ogImage": "/assets/images/thumbnails/thumb-pc-build-configurator.jpg",
-                      "featured": true,
-                      "schema": {
-                        "@context": "https://schema.org",
-                        "@type": "SoftwareApplication",
-                        "name": "PC Build Configurator 2026",
-                        "applicationCategory": "UtilityApplication",
-                        "operatingSystem": "Any",
-                        "offers": {
-                          "@type": "Offer",
-                          "price": "0",
-                          "priceCurrency": "USD"
-                        }
-                      }
-                  },
-                  {
-                      "slug": "psu-wattage-calculator",
-                      "name": "PSU Wattage Calculator",
-                      "description": "Free PC power supply calculator. Find exact wattage for RTX 5090, RX 9070 XT & more. Unbiased ATX 3.1 PSU recommendations with 80 Plus efficiency analysis.",
-                      "category": "PC Hardware",
-                      "tags": [
-                        "PSU",
-                        "Power Supply",
-                        "PC Build",
-                        "Hardware",
-                        "Wattage"
-                      ],
-                      "status": "live",
-                      "ogImage": "/assets/images/thumbnails/thumb-psu-wattage-calculator.jpg",
-                      "thumbnail": "/assets/images/thumbnails/thumb-psu-wattage-calculator.jpg",
-                      "schema": {
-                        "@type": "SoftwareApplication",
-                        "applicationCategory": "UtilityApplication",
-                        "operatingSystem": "Any",
-                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-                      }
-                  },
-                  {
-                      "slug": "mouse-sensitivity-converter",
-                      "name": "Mouse Sensitivity Converter",
-                      "icon": "🎯",
-                      "description": "Convert your mouse sensitivity between Valorant, CS2, Apex Legends, Overwatch 2, Warzone and 10 more games. Exact cm/360 matching with eDPI, in/360 and optional FOV-aware mode.",
-                      "category": "Gaming",
-                      "tags": [
-                        "Gaming",
-                        "FPS",
-                        "Sensitivity",
-                        "Mouse",
-                        "Valorant",
-                        "CS2",
-                        "Aim"
-                      ],
-                      "status": "live",
-                      "url": "/mouse-sensitivity-converter/",
-                      "thumbnail": "/assets/images/thumbnails/thumb-mouse-sensitivity-converter.jpg",
-                      "ogImage": "/assets/images/thumbnails/thumb-mouse-sensitivity-converter.jpg",
-                      "schema": {
-                        "@type": "WebApplication",
-                        "name": "Mouse Sensitivity Converter",
-                        "applicationCategory": "GameApplication",
-                        "operatingSystem": "Any",
-                        "offers": {
-                          "@type": "Offer",
-                          "price": "0",
-                          "priceCurrency": "USD"
-                        }
-                      }
-                  },
-                  {
-                      "slug": "game-download-time-calculator",
-                      "name": "Game Download Time Calculator",
-                      "icon": "⏱️",
-                      "description": "Calculate exactly how long any game takes to download on your internet speed — 40+ real game sizes, real-world accuracy, MB/s & Mbps support.",
-                      "category": "Gaming",
-                      "tags": [
-                        "Gaming",
-                        "Download",
-                        "Internet Speed",
-                        "Steam",
-                        "PS5",
-                        "Xbox"
-                      ],
-                      "keywords": [
-                        "download time",
-                        "internet speed",
-                        "steam",
-                        "ps5",
-                        "xbox"
-                      ],
-                      "status": "live",
-                      "url": "/game-download-time-calculator/",
-                      "thumbnail": "/assets/images/thumbnails/Game-Download-Time-Calculator.webp",
-                      "ogImage": "/assets/images/thumbnails/Game-Download-Time-Calculator.webp",
-                      "schema": {
-                        "@context": "https://schema.org",
-                        "@type": "SoftwareApplication",
-                        "name": "Game Download Time Calculator",
-                        "applicationCategory": "UtilityApplication",
-                        "operatingSystem": "Any",
-                        "offers": {
-                          "@type": "Offer",
-                          "price": "0",
-                          "priceCurrency": "USD"
-                        }
-                      }
-                  }
+    "version": "2026-11-06",
+    "last_updated": "2026-11-06",
+    "tools": [
+        {
+            "slug": "game-storage-planner",
+            "name": "Game Storage Planner",
+            "icon": "💾",
+            "description": "Select your games, pick your SSD size, and instantly see how many games fit on 500GB, 1TB, 2TB, or 4TB. Supports PC, PS5, and Xbox with real 2026 game install sizes.",
+            "category": "Gaming",
+            "status": "live",
+            "tags": [
+                "PC",
+                "PS5",
+                "Xbox",
+                "SSD",
+                "Storage"
+            ],
+            "ogImage": "/assets/images/thumbnails/thumb-storage.jpg",
+            "schema": {
+                "applicationCategory": "UtilityApplication",
+                "keywords": [
+                    "game storage calculator",
+                    "SSD planner",
+                    "how many games fit in 1TB"
+                ]
+            },
+            "thumbnail": "/assets/images/thumbnails/thumb-storage.jpg"
+        },
+        {
+            "slug": "vram-calculator",
+            "name": "VRAM Calculator for AI/LLMs",
+            "icon": "🧠",
+            "description": "Find out how much VRAM you need to run Llama, Mistral, Qwen, and other local AI models. Check if your GPU can handle different quantization levels.",
+            "category": "AI",
+            "status": "live",
+            "tags": [
+                "AI",
+                "GPU",
+                "LLM",
+                "VRAM"
+            ],
+            "ogImage": "/assets/images/thumbnails/thumb-vram.jpg",
+            "schema": {
+                "applicationCategory": "UtilityApplication",
+                "keywords": [
+                    "vram calculator",
+                    "gpu memory for llm",
+                    "local ai vram"
+                ]
+            },
+            "thumbnail": "/assets/images/thumbnails/thumb-vram.jpg"
+        },
+        {
+            "slug": "ram-latency-calculator",
+            "name": "RAM Latency Calculator",
+            "shortName": "RAM Latency",
+            "description": "Calculate true RAM latency in nanoseconds from CAS Latency and memory speed. Compare DDR3, DDR4, and DDR5 kits instantly.",
+            "shortDescription": "Calculate true memory latency in nanoseconds",
+            "category": "PC Hardware",
+            "tags": [
+                "ram",
+                "memory",
+                "latency",
+                "ddr4",
+                "ddr5",
+                "cas latency",
+                "pc build",
+                "gaming"
+            ],
+            "status": "live",
+            "version": "1.0.0",
+            "path": "/ram-latency-calculator/",
+            "url": "https://tools.redrag.in/ram-latency-calculator/",
+            "thumbnail": "/assets/images/thumbnails/thumb-ram.jpg",
+            "ogImage": "/assets/images/thumbnails/thumb-ram.jpg",
+            "icon": "⚡",
+            "featured": false,
+            "createdAt": "2026-08-10",
+            "updatedAt": "2026-08-10",
+            "schema": {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": "RAM Latency Calculator",
+                "applicationCategory": "UtilityApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.8",
+                    "ratingCount": "156"
+                }
+            },
+            "seo": {
+                "title": "RAM Latency Calculator | Calculate True RAM Latency in Nanoseconds | REDRAG Tools",
+                "description": "Free RAM Latency Calculator. Calculate true RAM latency in nanoseconds from CAS Latency (CL) and RAM speed (MHz). Compare DDR3, DDR4, and DDR5 memory performance instantly.",
+                "keywords": [
+                    "ram latency calculator",
+                    "cas latency calculator",
+                    "ddr4 latency",
+                    "ddr5 latency",
+                    "memory timing calculator",
+                    "true ram latency",
+                    "ns calculator"
+                ]
+            },
+            "stats": {
+                "views": 0,
+                "uses": 0
+            }
+        },
+        {
+            "slug": "resolution-scaling-visualizer",
+            "name": "Resolution Scaling Visualizer",
+            "description": "Visualize internal render resolutions, performance gains, and VRAM impact of DLSS, FSR, and XeSS scaling modes. Compare pixel counts and estimated FPS in real-time.",
+            "category": "Performance",
+            "tags": [
+                "DLSS",
+                "FSR",
+                "Resolution",
+                "FPS",
+                "Gaming"
+            ],
+            "status": "live",
+            "url": "/resolution-scaling-visualizer/",
+            "ogImage": "/assets/images/thumbnails/thumb-resolution-scaling-visualizer.jpg",
+            "thumbnail": "/assets/images/thumbnails/thumb-resolution-scaling-visualizer.jpg",
+            "schema": {
+                "@type": "SoftwareApplication",
+                "applicationCategory": "UtilityApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            }
+        },
+        {
+            "id": "pc-build-configurator",
+            "name": "PC Build Configurator",
+            "slug": "pc-build-configurator",
+            "description": "Free custom PC builder with compatibility checking, wattage calculation, and FPS estimation. Build optimized gaming PCs from $800 to $4000+.",
+            "category": "PC Building",
+            "tags": [
+                "PC Build",
+                "Gaming PC",
+                "Compatibility",
+                "CPU",
+                "GPU",
+                "PSU Calculator"
+            ],
+            "status": "live",
+            "url": "/pc-build-configurator/",
+            "thumbnail": "/assets/images/thumbnails/thumb-pc-build-configurator.jpg",
+            "ogImage": "/assets/images/thumbnails/thumb-pc-build-configurator.jpg",
+            "featured": true,
+            "schema": {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": "PC Build Configurator 2026",
+                "applicationCategory": "UtilityApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            }
+        },
+        {
+            "slug": "psu-wattage-calculator",
+            "name": "PSU Wattage Calculator",
+            "description": "Free PC power supply calculator. Find exact wattage for RTX 5090, RX 9070 XT & more. Unbiased ATX 3.1 PSU recommendations with 80 Plus efficiency analysis.",
+            "category": "PC Hardware",
+            "tags": [
+                "PSU",
+                "Power Supply",
+                "PC Build",
+                "Hardware",
+                "Wattage"
+            ],
+            "status": "live",
+            "ogImage": "/assets/images/thumbnails/thumb-psu-wattage-calculator.jpg",
+            "thumbnail": "/assets/images/thumbnails/thumb-psu-wattage-calculator.jpg",
+            "schema": {
+                "@type": "SoftwareApplication",
+                "applicationCategory": "UtilityApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            }
+        },
+        {
+            "slug": "mouse-sensitivity-converter",
+            "name": "Mouse Sensitivity Converter",
+            "icon": "🎯",
+            "description": "Convert your mouse sensitivity between Valorant, CS2, Apex Legends, Overwatch 2, Warzone and 10 more games. Exact cm/360 matching with eDPI, in/360 and optional FOV-aware mode.",
+            "category": "Gaming",
+            "tags": [
+                "Gaming",
+                "FPS",
+                "Sensitivity",
+                "Mouse",
+                "Valorant",
+                "CS2",
+                "Aim"
+            ],
+            "status": "live",
+            "url": "/mouse-sensitivity-converter/",
+            "thumbnail": "/assets/images/thumbnails/thumb-mouse-sensitivity-converter.jpg",
+            "ogImage": "/assets/images/thumbnails/thumb-mouse-sensitivity-converter.jpg",
+            "schema": {
+                "@type": "WebApplication",
+                "name": "Mouse Sensitivity Converter",
+                "applicationCategory": "GameApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            }
+        },
+        {
+            "slug": "game-download-time-calculator",
+            "name": "Game Download Time Calculator",
+            "icon": "⏱️",
+            "description": "Calculate exactly how long any game takes to download on your internet speed — 40+ real game sizes, real-world accuracy, MB/s & Mbps support.",
+            "category": "Gaming",
+            "tags": [
+                "Gaming",
+                "Download",
+                "Internet Speed",
+                "Steam",
+                "PS5",
+                "Xbox"
+            ],
+            "keywords": [
+                "download time",
+                "internet speed",
+                "steam",
+                "ps5",
+                "xbox"
+            ],
+            "status": "live",
+            "url": "/game-download-time-calculator/",
+            "thumbnail": "/assets/images/thumbnails/Game-Download-Time-Calculator.webp",
+            "ogImage": "/assets/images/thumbnails/Game-Download-Time-Calculator.webp",
+            "schema": {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": "Game Download Time Calculator",
+                "applicationCategory": "UtilityApplication",
+                "operatingSystem": "Any",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            }
+        },
+        {
+            "slug": "used-gpu-price-checker",
+            "name": "Used GPU Price Checker",
+            "icon": "🏷️",
+            "description": "Check the fair price of a used graphics card in India — verified November 2026 price bands for 18 cards, with a good-deal line, an overpay line and a scam-risk warning for each.",
+            "category": "PC Hardware",
+            "status": "live",
+            "tags": [
+                "GPU",
+                "Used GPU",
+                "Price Checker",
+                "India"
+            ],
+            "ogImage": "/assets/images/thumbnails/thumb-used-gpu-price-checker.jpg",
+            "schema": {
+                "applicationCategory": "UtilityApplication",
+                "keywords": [
+                    "used GPU price in India",
+                    "used GPU price checker",
+                    "second hand GPU price in India",
+                    "used RTX 3060 price in India"
+                ]
+            },
+            "thumbnail": "/assets/images/thumbnails/thumb-used-gpu-price-checker.jpg"
+        }
     ]
 }
-{
-  "slug": "used-gpu-price-checker",
-  "name": "Used GPU Price Checker",
-  "tagline": "Check the fair used GPU price in India — verified 2026 price bands + scam-risk warnings.",
-  "category": "pc-hardware",
-  "status": "live",
-  "url": "/used-gpu-price-checker/",
-  "thumbnail": "/assets/images/thumbnails/thumb-used-gpu-price-checker.jpg",
-  "ogImage": "/assets/images/thumbnails/thumb-used-gpu-price-checker.jpg",
-  "updated": "2026-11-06",
-  "keywords": [
-    "used GPU price in India",
-    "used GPU price checker",
-    "second hand GPU price in India",
-    "used RTX 3060 price in India"
-  ],
-  "schema": {
-    "@type": "SoftwareApplication",
-    "name": "Used GPU Price Checker India",
-    "applicationCategory": "UtilitiesApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
-  }
-}
-
