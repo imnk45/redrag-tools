@@ -248,4 +248,31 @@
                   }
     ]
 }
+{
+  "slug": "used-gpu-price-checker",
+  "name": "Used GPU Price Checker",
+  "tagline": "Check the fair used GPU price in India — verified 2026 price bands + scam-risk warnings.",
+  "category": "pc-hardware",
+  "status": "live",
+  "url": "/used-gpu-price-checker/",
+  "thumbnail": "/assets/images/thumbnails/thumb-used-gpu-price-checker.jpg",
+  "ogImage": "/assets/images/thumbnails/thumb-used-gpu-price-checker.jpg",
+  "updated": "2026-11-06",
+  "keywords": [
+    "used GPU price in India",
+    "used GPU price checker",
+    "second hand GPU price in India",
+    "used RTX 3060 price in India"
+  ],
+  "schema": {
+    "@type": "SoftwareApplication",
+    "name": "Used GPU Price Checker India",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+}
 
