@@ -605,7 +605,7 @@
         '@type': 'Organization',
         name: 'REDRAG',
         url: blogUrl,
-        logo: { '@type': 'ImageObject', url: blogUrl + 'assets/logo.png' }
+        logo: { '@type': 'ImageObject', url: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgy5Ra8BbZJcZbr2kpKA8thFd6NkJWyUKQ_Hdl4CfoXoT55zYtt_Vf86HQt2yJykpOhKgkeDrdJPezlxb3qCAC4f-LVc3PZ5Q3SbdElEOhRzZRSuEum7J_0-SJj83z4nUECn6izF6_Zs2ulv4y9It6nHkxP6xiuEHnN9RTAsGA88wYj687RZIIw6f-Ea6Uj/s1600/Redrag%20Logo%2070x70.webp' }
       },
       datePublished: '2026-07-31',
       dateModified: '2026-07-31',
@@ -650,7 +650,7 @@
       publisher: {
         '@type': 'Organization',
         name: 'REDRAG',
-        logo: { '@type': 'ImageObject', url: blogUrl + 'assets/logo.png' }
+        logo: { '@type': 'ImageObject', url: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgy5Ra8BbZJcZbr2kpKA8thFd6NkJWyUKQ_Hdl4CfoXoT55zYtt_Vf86HQt2yJykpOhKgkeDrdJPezlxb3qCAC4f-LVc3PZ5Q3SbdElEOhRzZRSuEum7J_0-SJj83z4nUECn6izF6_Zs2ulv4y9It6nHkxP6xiuEHnN9RTAsGA88wYj687RZIIw6f-Ea6Uj/s1600/Redrag%20Logo%2070x70.webp' }
       },
       datePublished: '2026-07-31',
       dateModified: '2026-07-31',
