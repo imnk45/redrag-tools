@@ -662,7 +662,7 @@
       ],
       screenshot: {
         '@type': 'ImageObject',
-        url: 'https://www.redrag.in/assets/og-game-storage-planner.jpg',
+        url: 'https://tools.redrag.in/assets/images/thumbnails/thumb-storage.jpg',
         width: 1200,
         height: 630
       },
@@ -679,7 +679,7 @@
         url: blogUrl,
         logo: {
           '@type': 'ImageObject',
-          url: blogUrl + 'assets/logo.png'
+          url: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgy5Ra8BbZJcZbr2kpKA8thFd6NkJWyUKQ_Hdl4CfoXoT55zYtt_Vf86HQt2yJykpOhKgkeDrdJPezlxb3qCAC4f-LVc3PZ5Q3SbdElEOhRzZRSuEum7J_0-SJj83z4nUECn6izF6_Zs2ulv4y9It6nHkxP6xiuEHnN9RTAsGA88wYj687RZIIw6f-Ea6Uj/s1600/Redrag%20Logo%2070x70.webp'
         }
       },
       datePublished: '2026-07-30',
@@ -724,7 +724,7 @@
       '@id': url + '#article',
       headline: 'Game Storage Planner: How Many Games Fit on Your SSD? (2026)',
       description: 'Free calculator to plan your game library storage. Select games, pick SSD size, and see exact space requirements for PC, PS5, and Xbox.',
-      image: 'https://www.redrag.in/assets/og-game-storage-planner.jpg',
+      image: 'https://tools.redrag.in/assets/images/thumbnails/thumb-storage.jpg',
       author: {
         '@type': 'Organization',
         name: 'REDRAG',
@@ -735,7 +735,7 @@
         name: 'REDRAG',
         logo: {
           '@type': 'ImageObject',
-          url: blogUrl + 'assets/logo.png'
+          url: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgy5Ra8BbZJcZbr2kpKA8thFd6NkJWyUKQ_Hdl4CfoXoT55zYtt_Vf86HQt2yJykpOhKgkeDrdJPezlxb3qCAC4f-LVc3PZ5Q3SbdElEOhRzZRSuEum7J_0-SJj83z4nUECn6izF6_Zs2ulv4y9It6nHkxP6xiuEHnN9RTAsGA88wYj687RZIIw6f-Ea6Uj/s1600/Redrag%20Logo%2070x70.webp'
         }
       },
       datePublished: '2026-07-30',
