@@ -4,8 +4,6 @@ Allow: /
 # Sitemap location
 Sitemap: https://tools.redrag.in/sitemap.xml
 
-# Crawl delay for polite bots
-Crawl-delay: 1
 
 # Old URL (redirects to new)
 Disallow: /vram/
