@@ -259,3 +259,5 @@
   height: 10px;
   border-radius: 3px;
 }
+
+.rt-updated-stamp { font-size: var(--rt-text-xs, 0.75rem); color: var(--rt-text-muted); text-align: center; margin-top: var(--rt-space-3, 12px); }
