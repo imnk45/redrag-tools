@@ -4,15 +4,7 @@ Allow: /
 # Sitemap location
 Sitemap: https://tools.redrag.in/sitemap.xml
 
-
-# Old URL (redirects to new)
-Disallow: /vram/
-
-# Disallow non-existent tool URLs until they go live
-# (Remove these lines when tools launch)
-
 # Allow static assets
 Allow: /shared/
 Allow: /assets/
 Disallow: /template/
-Disallow: /test.html
