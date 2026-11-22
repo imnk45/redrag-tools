@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-14",
+  "last_updated": "2026-11-22",
   "description": "Install sizes (in GB) of popular PC and console games, used by the REDRAG Game Download Time Calculator. Sizes are approximate and can grow with patches, DLC and high-resolution texture packs. 1 GB = 1024 MB.",
   "items": [
     {"name": "Counter-Strike 2", "size_gb": 85, "category": "FPS", "platform": "Steam", "notes": "Free-to-play; grows with updates"},
@@ -26,6 +26,7 @@
     {"name": "S.T.A.L.K.E.R. 2: Heart of Chornobyl", "size_gb": 150, "category": "RPG", "platform": "Steam / GOG", "notes": "Unreal Engine 5 open world"},
     {"name": "Black Myth: Wukong", "size_gb": 130, "category": "RPG", "platform": "Steam / PS5", "notes": "Action RPG with photoscanned assets"},
     {"name": "Grand Theft Auto V", "size_gb": 110, "category": "Open World & Action", "platform": "Steam / Epic / RGL", "notes": "Includes years of GTA Online updates"},
+    {"name": "Grand Theft Auto VI", "size_gb": 212, "category": "Open World & Action", "platform": "PS5 / Xbox Series X|S", "notes": "Rockstar's official figure: up to 212 GB depending on device"},
     {"name": "Red Dead Redemption 2", "size_gb": 150, "category": "Open World & Action", "platform": "Steam / Rockstar", "notes": "Huge 4K texture footprint"},
     {"name": "Hogwarts Legacy", "size_gb": 85, "category": "Open World & Action", "platform": "Steam / PS5 / Xbox", "notes": "Wizarding-world open world"},
     {"name": "Marvel's Spider-Man Remastered", "size_gb": 75, "category": "Open World & Action", "platform": "Steam / PS5", "notes": "Insomniac's Spider-Man"},
