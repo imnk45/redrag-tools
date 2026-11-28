@@ -20,7 +20,7 @@
      CONFIGURATION
      ========================================== */
   const CONFIG = {
-    registryUrl: '/shared/data/tools-registry.json?v=43',
+    registryUrl: '/shared/data/tools-registry.json?v=44',
     maxTags: 3
   };
 
@@ -101,8 +101,8 @@
       chipsHtml += `<button class="rt-chip" data-filter="${utils.escapeHtml(category)}" aria-selected="false" type="button">${utils.escapeHtml(category)}</button>`;
     });
 
-    // Add Coming Soon special filter
-    chipsHtml += `<button class="rt-chip" data-filter="Coming Soon" aria-selected="false" type="button">Coming Soon</button>`;
+    // Add New special filter
+    chipsHtml += `<button class="rt-chip" data-filter="New" aria-selected="false" type="button">New</button>`;
 
     chipsContainer.innerHTML = chipsHtml;
 
@@ -141,8 +141,8 @@
     const filteredTools = allTools.filter(tool => {
       // 1. Category Filter
       let categoryMatch = true;
-      if (currentCategory === 'Coming Soon') {
-        categoryMatch = (tool.status === 'coming-soon');
+      if (currentCategory === 'New') {
+        categoryMatch = (tool.isNew === true);
       } else if (currentCategory !== 'All') {
         categoryMatch = (tool.category === currentCategory);
       }
@@ -243,7 +243,11 @@
 
     const statusBadge = isLive
       ? '<span class="rt-tag rt-tag--live">● LIVE</span>'
-      : '<span class="rt-tag rt-tag--coming">Coming Soon</span>';
+      : '<span class="rt-tag rt-tag--coming">In Development</span>';
+
+    const newBadge = tool.isNew
+      ? '<span class="rt-tag rt-tag--primary">NEW</span>'
+      : '';
 
     const cardClass = isLive
       ? 'rt-card rt-card--hover rt-card--accent-top rt-tool-card'
@@ -260,12 +264,12 @@
       : `<div style="font-size:32px;margin-bottom:12px;" aria-hidden="true">${tool.icon}</div>`;
 
     return (
-      `<${tagName} ${hrefAttr} class="${cardClass}" ${!isLive ? 'aria-label="' + utils.escapeHtml(tool.name) + ' - Coming Soon"' : ''}>` +
+      `<${tagName} ${hrefAttr} class="${cardClass}" ${!isLive ? 'aria-label="' + utils.escapeHtml(tool.name) + ' - In Development"' : ''}>` +
       arrowHtml +
       imageHtml +
       `<h3 style="font-size:18px;font-weight:var(--rt-weight-extrabold);margin-bottom:8px;letter-spacing:-0.3px;">${utils.escapeHtml(tool.name)}</h3>` +
       `<p style="font-size:14px;color:var(--rt-text-secondary);line-height:1.7;margin-bottom:16px;flex:1;">${utils.escapeHtml(tool.description)}</p>` +
-      `<div style="display:flex;gap:8px;flex-wrap:wrap;">${statusBadge}${tagHtml}</div>` +
+      `<div style="display:flex;gap:8px;flex-wrap:wrap;">${statusBadge}${newBadge}${tagHtml}</div>` +
       `</${tagName}>`
     );
   }
@@ -284,7 +288,7 @@
       },
       {
         question: 'What tools are currently available on REDRAG Tools?',
-        answer: '<p>Currently live: <strong>Game Storage Planner</strong> (calculate how many games fit on your SSD). Coming soon: VRAM Calculator for AI/LLMs, RAM Latency Calculator, Resolution Scaling Visualizer, Budget PC Build Configurator (India), and PSU Wattage Calculator.</p>'
+        answer: '<p>Every tool on this page is live and free to use — including the <strong>Game Storage Planner</strong>, <strong>VRAM Calculator for AI/LLMs</strong>, <strong>PC Build Configurator</strong>, <strong>Used GPU Price Checker</strong> and the <strong>PC Bottleneck Calculator</strong>. Use the search box or the category filters above to find the one you need.</p>'
       },
       {
         question: 'Do I need to download anything to use these tools?',
@@ -296,7 +300,7 @@
       },
       {
         question: 'Will there be more tools added in the future?',
-        answer: '<p>Absolutely! We are actively building new calculators and planners. Next up: VRAM Calculator for AI models, RAM Latency comparison tool, and a full PC Build Configurator with India pricing.</p>'
+        answer: '<p>Absolutely! We keep adding new calculators and planners — the newest addition is the <strong>PC Bottleneck Calculator</strong>, and more are in development. Every new tool is free, just like the existing ones.</p>'
       },
       {
         question: "Is my data private when using these tools?",

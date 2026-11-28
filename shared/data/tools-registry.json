@@ -298,6 +298,7 @@
             "icon": "⚖️",
             "description": "Estimate whether your CPU or GPU is holding back your gaming FPS at 1080p, 1440p or 4K — 48 CPUs and 58 GPUs with India upgrade fixes in ₹.",
             "category": "PC Hardware",
+            "isNew": true,
             "status": "live",
             "tags": [
                 "CPU",
