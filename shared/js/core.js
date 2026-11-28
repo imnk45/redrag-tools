@@ -97,6 +97,7 @@
       const el = document.createElement(tag);
       if (attrs) {
         Object.entries(attrs).forEach(([key, val]) => {
+          if (val === undefined || val === null) return; // Never stringify missing attrs (e.g. value -> "undefined")
           if (key === 'text') {
             el.textContent = val;
           } else if (key === 'html') {
