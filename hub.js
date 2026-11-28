@@ -20,7 +20,7 @@
      CONFIGURATION
      ========================================== */
   const CONFIG = {
-    registryUrl: '/shared/data/tools-registry.json?v=42',
+    registryUrl: '/shared/data/tools-registry.json?v=43',
     maxTags: 3
   };
 
