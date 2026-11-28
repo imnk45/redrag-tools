@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-22",
+  "last_updated": "2026-11-28",
   "games": [
     {"name": "GTA VI", "size_gb": 212, "platform": ["PS5", "Xbox"], "category": "AAA"},
     {"name": "Call of Duty: Black Ops 6", "size_gb": 235, "platform": ["PC", "PS5", "Xbox"], "category": "AAA"},
@@ -125,8 +125,8 @@
     {"name": "Sons of the Forest", "size_gb": 20, "platform": ["PC"], "category": "Survival"},
     {"name": "Subnautica 2", "size_gb": 25, "platform": ["PC", "PS5", "Xbox"], "category": "Survival"},
     {"name": "No Man's Sky", "size_gb": 15, "platform": ["PC", "PS5", "Xbox"], "category": "Survival"},
-    {"name": "Grand Theft Auto V", "size_gb": 110, "platform": ["PC", "PS5", "Xbox"], "category": "AAA"},
-    {"name": "Grand Theft Auto Online", "size_gb": 110, "platform": ["PC", "PS5", "Xbox"], "category": "AAA"},
+    {"name": "Grand Theft Auto V (GTA V)", "size_gb": 110, "platform": ["PC", "PS5", "Xbox"], "category": "AAA"},
+    {"name": "Grand Theft Auto Online (GTA Online)", "size_gb": 110, "platform": ["PC", "PS5", "Xbox"], "category": "AAA"},
     {"name": "Red Dead Online", "size_gb": 150, "platform": ["PC", "PS5", "Xbox"], "category": "AAA"}
   ]
 }
