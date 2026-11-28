@@ -36,6 +36,18 @@
     platformIcons: { 'PC': '💻', 'PS5': '🎮', 'Xbox': '🎯' }
   };
 
+  // Maps the results-panel device key to the platform name used in games.json
+  const TARGET_PLATFORM = { pc: 'PC', ps5: 'PS5', xbox: 'Xbox' };
+
+  // Drop selected games that are not available on the chosen device
+  function pruneSelectionsForTarget() {
+    const target = TARGET_PLATFORM[state.platform];
+    if (!target) return;
+    state.games.forEach(game => {
+      if (!game.platform.includes(target)) state.selected.delete(game.name);
+    });
+  }
+
   /* ==========================================
      STATE
      ========================================== */
@@ -86,6 +98,7 @@
     restoreState();
 
     loadGames().then(() => {
+      pruneSelectionsForTarget();
       setupEventListeners();
       renderFilters();
       renderGameList();
@@ -238,7 +251,9 @@
       els.platformOptions.querySelectorAll('[data-platform]').forEach(btn => {
         btn.addEventListener('click', () => {
           state.platform = btn.dataset.platform;
+          pruneSelectionsForTarget();
           renderFilters();
+          renderGameList();
           updateResults();
           saveState();
         });
@@ -255,8 +270,9 @@
     let filtered = games.filter(game => {
       const matchesSearch = !searchQuery || game.name.toLowerCase().includes(searchQuery);
       const matchesPlatform = platformFilter === 'all' || game.platform.includes(platformFilter);
+      const matchesTarget = game.platform.includes(TARGET_PLATFORM[state.platform]);
       const matchesCategory = category === 'all' || game.category === category;
-      return matchesSearch && matchesPlatform && matchesCategory;
+      return matchesSearch && matchesPlatform && matchesTarget && matchesCategory;
     });
 
     if (filtered.length === 0) {
