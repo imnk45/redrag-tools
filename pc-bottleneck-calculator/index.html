@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Preconnect to critical origins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Critical: Inline placeholder styles to prevent FOUC -->
+<style>
+#rt-header { min-height: 72px; }
+#rt-footer { min-height: 120px; }
+</style>
+
+<!-- Preload critical shared CSS -->
+<link rel="preload" href="/shared/css/core.css?v=40" as="style">
+<link rel="preload" href="/shared/css/components.css?v=45" as="style">
+<link rel="preload" href="/shared/css/shell.css?v=40" as="style">
+
+<!-- Title & Meta -->
+<title>PC Bottleneck Calculator – Check CPU &amp; GPU Bottleneck % Free</title>
+<meta name="description" content="Free PC bottleneck calculator for India. Pick your CPU and GPU, choose 1080p, 1440p or 4K, and see which part is holding your PC back — plus the cheapest fix in ₹.">
+<meta name="keywords" content="bottleneck calculator, pc bottleneck calculator, cpu gpu bottleneck calculator, bottleneck calculator india">
+<meta name="author" content="REDRAG">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#e63946">
+<meta name="msapplication-TileColor" content="#e63946">
+<meta name="color-scheme" content="dark">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://tools.redrag.in/pc-bottleneck-calculator/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tools.redrag.in/pc-bottleneck-calculator/">
+<meta property="og:title" content="PC Bottleneck Calculator – Check CPU &amp; GPU Bottleneck % Free">
+<meta property="og:description" content="Free PC bottleneck calculator for India. Pick your CPU and GPU, choose 1080p, 1440p or 4K, and see which part is holding your PC back — plus the cheapest fix in ₹.">
+<meta property="og:image" content="https://tools.redrag.in/assets/images/og-tools-hub.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="REDRAG Tools">
+<meta property="og:locale" content="en_US">
+<meta property="article:section" content="PC Hardware">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@redragblog">
+<meta name="twitter:url" content="https://tools.redrag.in/pc-bottleneck-calculator/">
+<meta name="twitter:title" content="PC Bottleneck Calculator – Check CPU &amp; GPU Bottleneck % Free">
+<meta name="twitter:description" content="Free PC bottleneck calculator for India. Pick your CPU and GPU, choose 1080p, 1440p or 4K, and see which part is holding your PC back — plus the cheapest fix in ₹.">
+<meta name="twitter:image" content="https://tools.redrag.in/assets/images/og-tools-hub.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://www.redrag.in/favicon.ico">
+<link rel="apple-touch-icon" href="https://tools.redrag.in/assets/icons/apple-touch-icon.png">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Shared CSS -->
+<link rel="stylesheet" href="/shared/css/core.css?v=43">
+<link rel="stylesheet" href="/shared/css/components.css?v=45">
+<link rel="stylesheet" href="/shared/css/shell.css?v=43">
+
+<!-- Tool-specific CSS -->
+<link rel="stylesheet" href="tool.css?v=43">
+
+<!-- Structured Data: BreadcrumbList -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.redrag.in/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://tools.redrag.in/"},{"@type":"ListItem","position":3,"name":"PC Bottleneck Calculator","item":"https://tools.redrag.in/pc-bottleneck-calculator/"}]}
+</script>
+
+<!-- Structured Data: WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PC Bottleneck Calculator",
+  "url": "https://tools.redrag.in/pc-bottleneck-calculator/",
+  "operatingSystem": "Any",
+  "applicationCategory": "UtilityApplication",
+  "description": "Free PC bottleneck calculator for India. Estimate CPU and GPU pairing balance across 1080p, 1440p, and 4K with approximate upgrade fixes in INR.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
+<base target="_blank">
+</head>
+<body>
+
+<!-- Skip to content -->
+<a href="#rt-main" class="rt-skip-link">Skip to main content</a>
+
+<!-- Header placeholder -->
+<div id="rt-header" data-active="tools"></div>
+
+<main id="rt-main" role="main" aria-label="PC Bottleneck Calculator">
+<div class="rt-container">
+
+<!-- Hero Section -->
+<section class="rt-hero" aria-label="Tool introduction">
+<div class="rt-hero__glow" aria-hidden="true"></div>
+<h1 class="rt-hero__title" fetchpriority="high">PC Bottleneck Calculator:<br><span class="rt-highlight">CPU &amp; GPU Balance Estimate</span></h1>
+<p class="rt-hero__desc">Check whether your processor or graphics card limits your gaming FPS at 1080p, 1440p, or 4K — with realistic, India-focused upgrade fixes in ₹.</p>
+</section>
+
+<!-- Tool Interface Grid -->
+<div class="rt-tool-layout">
+
+<!-- Left/Main Column: Inputs -->
+<div class="tool-left">
+  <div class="rt-card">
+    <div class="storage-section-header">
+      <div class="storage-section-icon">⚖️</div>
+      <h3 class="storage-section-title">Select Your PC Parts &amp; Target</h3>
+    </div>
+
+    <div class="pbc-form">
+      <div class="pbc-field">
+        <label class="pbc-label" for="select-cpu">Your CPU</label>
+        <select id="select-cpu" class="rt-input pbc-select" aria-label="Select your CPU"></select>
+        <div class="pbc-meta-row" id="cpu-meta">Loading CPU specs...</div>
+      </div>
+
+      <div class="pbc-field">
+        <label class="pbc-label" for="select-gpu">Your GPU</label>
+        <select id="select-gpu" class="rt-input pbc-select" aria-label="Select your GPU"></select>
+        <div class="pbc-meta-row" id="gpu-meta">Loading GPU specs...</div>
+      </div>
+
+      <div class="pbc-2col">
+        <div class="pbc-field">
+          <label class="pbc-label" for="select-res">Resolution</label>
+          <select id="select-res" class="rt-input pbc-select" aria-label="Select screen resolution">
+            <option value="1080p" selected>1080p (Full HD)</option>
+            <option value="1440p">1440p (QHD / 2K)</option>
+            <option value="4k">4K (UHD)</option>
+          </select>
+        </div>
+
+        <div class="pbc-field">
+          <label class="pbc-label" for="select-workload">Games You Play</label>
+          <select id="select-workload" class="rt-input pbc-select" aria-label="Select game workload type">
+            <option value="balanced" selected>Balanced mix</option>
+            <option value="esports">Esports &amp; high-FPS (CPU matters more)</option>
+            <option value="aaa">AAA story games (GPU matters more)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Right Column: Results/Sidebar -->
+<div class="tool-right rt-sidebar">
+
+  <div class="rt-card rt-card--result" aria-live="polite">
+    <div class="u-text-center pbc-res-header">
+      <div style="font-size:var(--rt-text-xs);color:var(--rt-text-muted);text-transform:uppercase;letter-spacing:1.5px;font-weight:var(--rt-weight-bold);margin-bottom:var(--rt-space-2);">Estimated Result</div>
+      <div class="storage-big-number" id="res-pct">0%</div>
+      <div class="pbc-res-sub" id="res-label">Balanced pairing</div>
+      <span class="pbc-pill pbc-pill--ok" id="res-band">0–5% Excellent match</span>
+    </div>
+
+    <p class="pbc-explain" id="res-explain">Select your CPU and GPU to see an estimated balance breakdown.</p>
+
+    <div class="pbc-fix-box" id="res-fix">
+      <strong>India Fix:</strong> Loading upgrade recommendation...
+    </div>
+
+    <div class="pbc-stat-grid">
+      <div class="pbc-stat">
+        <div class="pbc-stat-k">CPU Score</div>
+        <div class="pbc-stat-v" id="stat-cpu">—</div>
+      </div>
+      <div class="pbc-stat">
+        <div class="pbc-stat-k">GPU Demand</div>
+        <div class="pbc-stat-v" id="stat-gpu">—</div>
+      </div>
+    </div>
+
+    <div class="u-flex u-flex-col" style="gap: var(--rt-space-3);">
+      <button class="rt-btn rt-btn--primary" id="btn-copy" type="button">
+        <span aria-hidden="true">📋</span> Copy Result
+      </button>
+      <button class="rt-btn rt-btn--secondary" id="btn-reset" type="button">
+        <span aria-hidden="true">🔄</span> Reset
+      </button>
+    </div>
+  </div>
+
+  <div class="rt-insight">
+    <div class="rt-insight__title">💡 Reality Check</div>
+    <div class="rt-insight__body">A <strong>GPU-limited</strong> PC (99% GPU usage) is normal and ideal for gaming. Every bottleneck % here is an <strong>estimate</strong> — real numbers shift from game to game.</div>
+  </div>
+
+</div>
+<!-- End Tool Layout -->
+</div>
+
+<!-- SEO Content Section -->
+<section class="rt-content-section" aria-labelledby="guide-title">
+  <h2 id="guide-title">How to Use This PC Bottleneck Calculator (And What the Estimate Really Means)</h2>
+
+  <p>A <strong>PC bottleneck</strong> happens when one component in your gaming rig hits its performance ceiling before the other can stretch its legs. In simple terms, your CPU prepares each frame's game logic, physics, and draw calls, while your GPU renders the pixels on screen. If your processor cannot feed frames fast enough, your expensive graphics card sits partially idle. If your graphics card is already running flat-out at 99% usage, your CPU still has headroom — which is actually the sweet spot for gaming.</p>
+
+  <p>Use this free <strong>PC bottleneck calculator for India</strong> to get a quick, honest estimate of how well your CPU and GPU pair together at <strong>1080p, 1440p, or 4K</strong>, plus the cheapest realistic upgrade path in <strong>₹ (approximate November 2026 street and used prices)</strong>.</p>
+
+  <div style="background:var(--rt-surface-variant); padding:var(--rt-space-5); border-radius:12px; margin:var(--rt-space-6) 0;">
+    <h3 style="margin-top:0;">Honesty Note: No Online Calculator Can Measure Your Exact PC</h3>
+    <p style="margin-bottom:0;">Every percentage shown by this tool — or any bottleneck calculator on the web — is an <strong>estimate</strong> derived from relative gaming performance averages across modern titles. Real-world bottlenecks change dramatically from game to game: <em>Valorant</em> and <em>Counter-Strike 2</em> lean heavily on single-core CPU speed and L3 cache, while <em>Cyberpunk 2077</em> with ray tracing or <em>Alan Wake 2</em> hammers the GPU. RAM speed, dual-channel memory, background apps, thermal throttling, and in-game settings also shift the balance. Treat the number as a planning compass, not a lab measurement.</p>
+  </div>
+
+  <h3>CPU Bottleneck vs. GPU Bottleneck: How to Spot the Difference on Your PC</h3>
+  <p>You do not have to guess which part is holding your system back. Open the Windows Game Bar, MSI Afterburner, or NVIDIA/AMD performance overlay while playing your usual games and watch the <strong>GPU usage</strong> percentage:</p>
+  <ul>
+    <li><strong>GPU usage under ~95% with lower-than-expected FPS (CPU bottleneck):</strong> When your graphics card sits at 65%, 75%, or 85% usage while your frame rate is uncapped (no V-Sync or FPS cap), your CPU, RAM, or single-thread game engine limit is holding back the GPU. You may also notice frame-time stutters in crowded areas or CPU-heavy matches.</li>
+    <li><strong>GPU usage at 98%–99% (GPU-limited — normal and ideal):</strong> This is how a healthy gaming PC is supposed to behave. Your graphics card is delivering every frame it is capable of, and your CPU is comfortably keeping up without introducing stutter.</li>
+  </ul>
+
+  <h3>How This Calculator Estimates Bottleneck %</h3>
+  <p>Under the hood, our model anchors relative gaming performance around two widely tested Indian mid-range benchmarks from November 2026: the <strong>AMD Ryzen 5 5600</strong> (CPU score = 100) and the <strong>NVIDIA RTX 4060</strong> (GPU score = 100). Each processor and graphics card in <code>data.json</code> carries a relative score scaled from public benchmark averages.</p>
+  <p>Because higher resolutions force the GPU to shade far more pixels per frame, GPU frame output drops as you step up from 1080p to 1440p and 4K. That reduces the frame-preparation load on your processor. Our formula divides GPU score by a resolution factor (1.0 at 1080p, 1.35 at 1440p, 2.2 at 4K) and a game workload factor (1.0 for Balanced mix, 0.8 for Esports &amp; high-FPS where CPU matters more, and 1.15 for AAA story games where GPU matters more), then compares your CPU score against the balanced target. Results are capped at 60% and sorted into four practical bands:</p>
+
+  <div class="pbc-table-wrap">
+    <table class="pbc-table">
+      <thead>
+        <tr>
+          <th>Estimated %</th>
+          <th>Verdict Band</th>
+          <th>What You Should Do</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>0% – 5%</strong></td>
+          <td>Excellent match</td>
+          <td>Balanced pairing. Do not spend money upgrading either side yet.</td>
+        </tr>
+        <tr>
+          <td><strong>6% – 10%</strong></td>
+          <td>Minor, ignore it</td>
+          <td>Normal real-world variance. Totally fine for smooth gaming.</td>
+        </tr>
+        <tr>
+          <td><strong>11% – 20%</strong></td>
+          <td>Noticeable in some games</td>
+          <td>Shows up mostly in CPU-heavy esports or 1080p high-FPS titles. Upgrade only if you chase competitive frame rates.</td>
+        </tr>
+        <tr>
+          <td><strong>21%+</strong></td>
+          <td>Severe, upgrade worth it</td>
+          <td>Clear mismatch. You are leaving noticeable performance on the table; follow the ₹ upgrade fix below.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Is a 10% Bottleneck Bad?</h3>
+  <p><strong>No.</strong> One of the biggest myths in PC building is chasing "0% bottleneck." Even the fastest gaming processors on the planet can show a 5%–10% difference depending on which game you test. If your estimated bottleneck is <strong>10% or lower</strong>, ignore it and enjoy your games. In practice, only a <strong>20%+ CPU bottleneck</strong> (or an older 4GB GPU struggling in modern games) is genuinely worth spending money to fix.</p>
+
+  <h3>Does Resolution Change the Bottleneck?</h3>
+  <p>Yes — dramatically. At <strong>1080p</strong>, modern mid-range and high-end GPUs push very high frame rates, which puts heavy pressure on the CPU. Moving up to <strong>1440p</strong> shifts ~35% more pixel work onto the graphics card, and <strong>4K</strong> shifts well over double the load onto the GPU. That is why an older processor like an Intel Core i5-10400F paired with an RTX 3080 can show a noticeable CPU bottleneck at 1080p, yet become cleanly GPU-limited at 4K.</p>
+
+  <h3>How to Fix a CPU Bottleneck (Free Tweaks &amp; India Upgrades in ₹)</h3>
+  <p>Before buying new hardware, try these zero-cost fixes if you see a CPU bottleneck:</p>
+  <ul>
+    <li><strong>Enable dual-channel RAM &amp; XMP/EXPO:</strong> Running a single stick of RAM or leaving DDR4/DDR5 at stock JEDEC speeds can cost 15%–25% CPU gaming performance.</li>
+    <li><strong>Step up resolution or graphics settings:</strong> Increasing render scale, shadows, or moving to a 1440p monitor shifts workload back onto the GPU and smooths out frame times.</li>
+    <li><strong>Close background overlays and browser tabs:</strong> Recording software, RGB suites, and dozens of Chrome tabs steal CPU cycles and cache.</li>
+  </ul>
+  <p>If your hardware gap is 21%+ and you want a real upgrade in India (approximate November 2026 prices):</p>
+  <ul>
+    <li><strong>On an AM4 motherboard:</strong> A drop-in <strong>AMD Ryzen 7 5700X3D (~₹21,000–₹23,000)</strong> is the smartest value fix without changing your motherboard or RAM.</li>
+    <li><strong>On an LGA1700 motherboard:</strong> Stepping up from an i3-12100F or older chip to an <strong>Intel Core i5-13400F or i5-14400F (~₹14,500–₹17,500)</strong> clears most mid-range bottlenecks.</li>
+    <li><strong>On older sockets (LGA1200 or early AM4):</strong> Check our guide to the <a href="https://www.redrag.in/2026/07/best-gaming-cpu-under-15000-india-2026.html">Best Gaming CPU Under ₹15,000 in India</a> or plan a full motherboard + CPU upgrade in the <a href="https://tools.redrag.in/pc-build-configurator/">PC Build Configurator</a>.</li>
+  </ul>
+
+  <h3>How to Fix a GPU Bottleneck (Settings, Upscaling &amp; ₹ Upgrades)</h3>
+  <p>Remember: if you are <strong>GPU-limited</strong> and getting smooth FPS, nothing is broken! Still, if your frame rate is too low for your monitor, you have two easy levers before spending a rupee:</p>
+  <ul>
+    <li><strong>Turn on DLSS, FSR, or XeSS (Quality/Balanced):</strong> Upscaling renders internally at a lower resolution and reconstructs crisp detail, giving an instant 25%–45% FPS boost on supported GPUs.</li>
+    <li><strong>Lower GPU-heavy settings:</strong> Drop Volumetric Fog, Ray Tracing, Shadow Quality, and Screen Space Reflections from Ultra to High or Medium — often freeing 20%+ FPS with minimal visual loss.</li>
+    <li><strong>Watch your VRAM limit:</strong> On 4GB or 8GB cards at 1440p, running out of VRAM causes severe stutters. Check our <a href="https://tools.redrag.in/vram-calculator/">VRAM Calculator</a> to see how much memory modern workloads demand.</li>
+  </ul>
+  <p>When it is time to upgrade your graphics card in India (approximate November 2026 street prices):</p>
+  <ul>
+    <li><strong>Under ₹20,000:</strong> Look at a <strong>used RTX 3060 Ti (₹16,000–₹19,000 used)</strong> or <strong>used RX 6700 XT (₹17,000–₹20,000 used)</strong> — verify fair market rates on the <a href="https://tools.redrag.in/used-gpu-price-checker/">Used GPU Price Checker</a>.</li>
+    <li><strong>₹20,000–₹30,000:</strong> New cards like the <strong>RTX 4060 (~₹27,500–₹29,500)</strong>, <strong>RX 7600 (~₹23,500–₹26,000)</strong>, or <strong>Intel Arc B580 (~₹26,000–₹29,000)</strong> deliver solid 1080p and entry 1440p performance.</li>
+    <li><strong>Full build planning:</strong> Always check PSU wattage and compatibility in the <a href="https://tools.redrag.in/pc-build-configurator/">PC Build Configurator</a> before ordering parts.</li>
+  </ul>
+</section>
+
+<section class="rt-content-section">
+  <h2>Frequently Asked Questions About PC Bottlenecks</h2>
+  <div id="faq-container"></div>
+</section>
+
+<section class="rt-content-section">
+  <h2>Related Guides from REDRAG</h2>
+  <p>Explore our India-focused hardware guides to pick the right CPU, GPU, and monitor for your budget:</p>
+  <div class="rt-guides-grid">
+    <a href="https://www.redrag.in/2026/07/best-gaming-cpu-under-15000-india-2026.html" class="rt-card rt-card--guide rt-card--hover">
+      <h4>🧠 Best Gaming CPU Under ₹15,000 in India (2026)</h4>
+      <p>Ryzen 5 5600 vs Core i5-12400F compared with real Indian street prices and upgrade paths.</p>
+    </a>
+    <a href="https://www.redrag.in/2026/07/best-budget-gpu-under-20000-in-india.html" class="rt-card rt-card--guide rt-card--hover">
+      <h4>🎮 Best Budget GPU Under ₹20,000 in India</h4>
+      <p>New and used graphics card picks that avoid pairing mismatches on budget builds.</p>
+    </a>
+    <a href="https://www.redrag.in/2026/11/dlss-vs-fsr.html" class="rt-card rt-card--guide rt-card--hover">
+      <h4>⚡ DLSS vs FSR Explained: Boost FPS Without Upgrading</h4>
+      <p>How AI upscaling relieves a GPU bottleneck and when to enable Quality vs Balanced mode.</p>
+    </a>
+    <a href="https://www.redrag.in/2026/07/monitor-buying-guide-india-2026.html" class="rt-card rt-card--guide rt-card--hover">
+      <h4>🖥️ Gaming Monitor Buying Guide India (1080p vs 1440p vs 4K)</h4>
+      <p>Pick a resolution and refresh rate that actually matches your CPU and GPU combo.</p>
+    </a>
+  </div>
+</section>
+
+<section class="rt-content-section">
+  <h2>About This Tool</h2>
+  <p>The <strong>REDRAG PC Bottleneck Calculator</strong> is a free, browser-based estimator built for Indian gamers and PC builders. Everything runs locally in your browser from our curated hardware dataset — no external API calls, no signups, and no exaggerated scare numbers.</p>
+  <p><strong>How we estimate:</strong></p>
+  <ul>
+    <li>Relative gaming performance scores are scaled from public benchmark averages (November 2026), anchored to <strong>Ryzen 5 5600 = 100</strong> for CPUs and <strong>RTX 4060 = 100</strong> for GPUs.</li>
+    <li>Resolution (1080p = 1.0, 1440p = 1.35, 4K = 2.2) and game workload (Balanced = 1.0, Esports = 0.8, AAA = 1.15) adjust GPU frame demand before comparing against your CPU score.</li>
+    <li>All Indian prices shown in ₹ are approximate street or used market ranges as of November 2026.</li>
+  </ul>
+  <p>Want a CPU or GPU added to the list? <a href="https://www.redrag.in/p/contact-us.html">Contact us</a> and we'll update the dataset.</p>
+</section>
+
+<!-- End Container -->
+</div>
+</main>
+
+<!-- Footer placeholder -->
+<div id="rt-footer"></div>
+
+<!-- Shared JavaScript -->
+<script src="/shared/js/core.js?v=40"></script>
+<script src="/shared/js/components.js?v=40"></script>
+<!-- Tool-specific script -->
+<script src="tool.js?v=40"></script>
+
+<!-- Dummy body tag to prevent Livereload injection issues -->
+</body>
+</html>

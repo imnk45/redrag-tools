@@ -291,6 +291,31 @@
                 ]
             },
             "thumbnail": "/assets/images/thumbnails/thumb-used-gpu-price-checker.jpg"
+        },
+        {
+            "slug": "pc-bottleneck-calculator",
+            "name": "PC Bottleneck Calculator",
+            "icon": "⚖️",
+            "description": "Estimate whether your CPU or GPU is holding back your gaming FPS at 1080p, 1440p or 4K — 48 CPUs and 58 GPUs with India upgrade fixes in ₹.",
+            "category": "PC Hardware",
+            "status": "live",
+            "tags": [
+                "CPU",
+                "GPU",
+                "Bottleneck",
+                "India"
+            ],
+            "ogImage": "/assets/images/og-tools-hub.jpg",
+            "schema": {
+                "applicationCategory": "UtilityApplication",
+                "keywords": [
+                    "bottleneck calculator",
+                    "pc bottleneck calculator",
+                    "cpu gpu bottleneck calculator",
+                    "bottleneck calculator india"
+                ]
+            },
+            "thumbnail": "/assets/images/og-tools-hub.jpg"
         }
     ]
-}
+}

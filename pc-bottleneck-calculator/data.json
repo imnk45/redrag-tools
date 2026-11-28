@@ -1,0 +1,170 @@
+{
+  "last_updated": "2026-11-28",
+  "sources": "Relative gaming performance scores scaled from public benchmark averages, November 2026; India prices are approximate street prices, November 2026.",
+  "calibration": {
+    "gpu_anchor": "RTX 4060 = 100",
+    "cpu_anchor": "Ryzen 5 5600 = 100",
+    "balance_constant": 0.95,
+    "resolution_factors": {
+      "1080p": 1.0,
+      "1440p": 1.35,
+      "4k": 2.2
+    },
+    "workload_factors": {
+      "balanced": 1.0,
+      "esports": 0.8,
+      "aaa": 1.15
+    }
+  },
+  "cpus": [
+    { "id": "i3-10100f", "name": "Intel Core i3-10100F", "brand": "Intel", "score": 72, "socket": "LGA1200" },
+    { "id": "i3-12100f", "name": "Intel Core i3-12100F", "brand": "Intel", "score": 90, "socket": "LGA1700" },
+    { "id": "i3-13100f", "name": "Intel Core i3-13100F", "brand": "Intel", "score": 94, "socket": "LGA1700" },
+    { "id": "i3-14100f", "name": "Intel Core i3-14100F", "brand": "Intel", "score": 97, "socket": "LGA1700" },
+    { "id": "i5-10400f", "name": "Intel Core i5-10400F", "brand": "Intel", "score": 88, "socket": "LGA1200" },
+    { "id": "i5-11400f", "name": "Intel Core i5-11400F", "brand": "Intel", "score": 95, "socket": "LGA1200" },
+    { "id": "i5-11600k", "name": "Intel Core i5-11600K", "brand": "Intel", "score": 102, "socket": "LGA1200" },
+    { "id": "i5-12400f", "name": "Intel Core i5-12400F", "brand": "Intel", "score": 112, "socket": "LGA1700" },
+    { "id": "i5-13400f", "name": "Intel Core i5-13400F", "brand": "Intel", "score": 122, "socket": "LGA1700" },
+    { "id": "i5-14400f", "name": "Intel Core i5-14400F", "brand": "Intel", "score": 126, "socket": "LGA1700" },
+    { "id": "i5-12600k", "name": "Intel Core i5-12600K", "brand": "Intel", "score": 124, "socket": "LGA1700" },
+    { "id": "i5-13600k", "name": "Intel Core i5-13600K", "brand": "Intel", "score": 138, "socket": "LGA1700" },
+    { "id": "i5-14600k", "name": "Intel Core i5-14600K", "brand": "Intel", "score": 144, "socket": "LGA1700" },
+    { "id": "i7-10700k", "name": "Intel Core i7-10700K", "brand": "Intel", "score": 98, "socket": "LGA1200" },
+    { "id": "i7-11700k", "name": "Intel Core i7-11700K", "brand": "Intel", "score": 106, "socket": "LGA1200" },
+    { "id": "i7-12700k", "name": "Intel Core i7-12700K", "brand": "Intel", "score": 130, "socket": "LGA1700" },
+    { "id": "i7-13700k", "name": "Intel Core i7-13700K", "brand": "Intel", "score": 145, "socket": "LGA1700" },
+    { "id": "i7-14700k", "name": "Intel Core i7-14700K", "brand": "Intel", "score": 150, "socket": "LGA1700" },
+    { "id": "i9-12900k", "name": "Intel Core i9-12900K", "brand": "Intel", "score": 134, "socket": "LGA1700" },
+    { "id": "i9-13900k", "name": "Intel Core i9-13900K", "brand": "Intel", "score": 151, "socket": "LGA1700" },
+    { "id": "i9-14900k", "name": "Intel Core i9-14900K", "brand": "Intel", "score": 155, "socket": "LGA1700" },
+    { "id": "ultra-5-245k", "name": "Intel Core Ultra 5 245K", "brand": "Intel", "score": 136, "socket": "LGA1851" },
+    { "id": "ultra-7-265k", "name": "Intel Core Ultra 7 265K", "brand": "Intel", "score": 144, "socket": "LGA1851" },
+    { "id": "ultra-9-285k", "name": "Intel Core Ultra 9 285K", "brand": "Intel", "score": 150, "socket": "LGA1851" },
+
+    { "id": "r3-3100", "name": "AMD Ryzen 3 3100", "brand": "AMD", "score": 68, "socket": "AM4" },
+    { "id": "r5-2600", "name": "AMD Ryzen 5 2600", "brand": "AMD", "score": 66, "socket": "AM4" },
+    { "id": "r5-3600", "name": "AMD Ryzen 5 3600", "brand": "AMD", "score": 84, "socket": "AM4" },
+    { "id": "r5-5500", "name": "AMD Ryzen 5 5500", "brand": "AMD", "score": 89, "socket": "AM4" },
+    { "id": "r5-5600g", "name": "AMD Ryzen 5 5600G", "brand": "AMD", "score": 82, "socket": "AM4" },
+    { "id": "r5-5600", "name": "AMD Ryzen 5 5600", "brand": "AMD", "score": 100, "socket": "AM4" },
+    { "id": "r5-5600x", "name": "AMD Ryzen 5 5600X", "brand": "AMD", "score": 103, "socket": "AM4" },
+    { "id": "r7-5700x", "name": "AMD Ryzen 7 5700X", "brand": "AMD", "score": 106, "socket": "AM4" },
+    { "id": "r7-5800x", "name": "AMD Ryzen 7 5800X", "brand": "AMD", "score": 109, "socket": "AM4" },
+    { "id": "r7-5700x3d", "name": "AMD Ryzen 7 5700X3D", "brand": "AMD", "score": 134, "socket": "AM4" },
+    { "id": "r7-5800x3d", "name": "AMD Ryzen 7 5800X3D", "brand": "AMD", "score": 139, "socket": "AM4" },
+    { "id": "r5-7500f", "name": "AMD Ryzen 5 7500F", "brand": "AMD", "score": 130, "socket": "AM5" },
+    { "id": "r5-7600", "name": "AMD Ryzen 5 7600", "brand": "AMD", "score": 133, "socket": "AM5" },
+    { "id": "r5-7600x", "name": "AMD Ryzen 5 7600X", "brand": "AMD", "score": 137, "socket": "AM5" },
+    { "id": "r5-8600g", "name": "AMD Ryzen 5 8600G", "brand": "AMD", "score": 110, "socket": "AM5" },
+    { "id": "r7-7700", "name": "AMD Ryzen 7 7700", "brand": "AMD", "score": 139, "socket": "AM5" },
+    { "id": "r7-7700x", "name": "AMD Ryzen 7 7700X", "brand": "AMD", "score": 143, "socket": "AM5" },
+    { "id": "r7-7800x3d", "name": "AMD Ryzen 7 7800X3D", "brand": "AMD", "score": 162, "socket": "AM5" },
+    { "id": "r9-7900x", "name": "AMD Ryzen 9 7900X", "brand": "AMD", "score": 145, "socket": "AM5" },
+    { "id": "r9-7950x3d", "name": "AMD Ryzen 9 7950X3D", "brand": "AMD", "score": 161, "socket": "AM5" },
+    { "id": "r5-9600x", "name": "AMD Ryzen 5 9600X", "brand": "AMD", "score": 144, "socket": "AM5" },
+    { "id": "r7-9700x", "name": "AMD Ryzen 7 9700X", "brand": "AMD", "score": 149, "socket": "AM5" },
+    { "id": "r7-9800x3d", "name": "AMD Ryzen 7 9800X3D", "brand": "AMD", "score": 176, "socket": "AM5" },
+    { "id": "r9-9950x", "name": "AMD Ryzen 9 9950X", "brand": "AMD", "score": 156, "socket": "AM5" }
+  ],
+  "gpus": [
+    { "id": "gtx-1050-ti", "name": "NVIDIA GTX 1050 Ti", "brand": "NVIDIA", "score": 26, "vram": "4GB", "price_inr": "₹4,500–₹5,500", "market": "used" },
+    { "id": "gtx-1060-6g", "name": "NVIDIA GTX 1060 6GB", "brand": "NVIDIA", "score": 38, "vram": "6GB", "price_inr": "₹5,500–₹7,000", "market": "used" },
+    { "id": "gtx-1650", "name": "NVIDIA GTX 1650", "brand": "NVIDIA", "score": 35, "vram": "4GB", "price_inr": "₹6,000–₹7,500", "market": "used" },
+    { "id": "gtx-1650-super", "name": "NVIDIA GTX 1650 Super", "brand": "NVIDIA", "score": 47, "vram": "4GB", "price_inr": "₹7,500–₹9,000", "market": "used" },
+    { "id": "gtx-1660-super", "name": "NVIDIA GTX 1660 Super", "brand": "NVIDIA", "score": 58, "vram": "6GB", "price_inr": "₹9,500–₹11,500", "market": "used" },
+    { "id": "rtx-2060", "name": "NVIDIA RTX 2060", "brand": "NVIDIA", "score": 66, "vram": "6GB", "price_inr": "₹10,500–₹12,500", "market": "used" },
+    { "id": "rtx-2060-super", "name": "NVIDIA RTX 2060 Super", "brand": "NVIDIA", "score": 76, "vram": "8GB", "price_inr": "₹12,000–₹14,500", "market": "used" },
+    { "id": "rtx-2070-super", "name": "NVIDIA RTX 2070 Super", "brand": "NVIDIA", "score": 86, "vram": "8GB", "price_inr": "₹14,000–₹16,500", "market": "used" },
+    { "id": "rtx-3050", "name": "NVIDIA RTX 3050 8GB", "brand": "NVIDIA", "score": 63, "vram": "8GB", "price_inr": "₹17,500–₹19,500", "market": "new" },
+    { "id": "rtx-3060", "name": "NVIDIA RTX 3060 12GB", "brand": "NVIDIA", "score": 85, "vram": "12GB", "price_inr": "₹23,500–₹26,000", "market": "new" },
+    { "id": "rtx-3060-ti", "name": "NVIDIA RTX 3060 Ti", "brand": "NVIDIA", "score": 103, "vram": "8GB", "price_inr": "₹16,000–₹19,000", "market": "used" },
+    { "id": "rtx-3070", "name": "NVIDIA RTX 3070", "brand": "NVIDIA", "score": 114, "vram": "8GB", "price_inr": "₹19,000–₹23,000", "market": "used" },
+    { "id": "rtx-3070-ti", "name": "NVIDIA RTX 3070 Ti", "brand": "NVIDIA", "score": 120, "vram": "8GB", "price_inr": "₹22,000–₹25,500", "market": "used" },
+    { "id": "rtx-3080", "name": "NVIDIA RTX 3080 10GB", "brand": "NVIDIA", "score": 124, "vram": "10GB", "price_inr": "₹27,000–₹32,000", "market": "used" },
+    { "id": "rtx-3080-ti", "name": "NVIDIA RTX 3080 Ti", "brand": "NVIDIA", "score": 135, "vram": "12GB", "price_inr": "₹32,000–₹37,000", "market": "used" },
+    { "id": "rtx-3090", "name": "NVIDIA RTX 3090", "brand": "NVIDIA", "score": 140, "vram": "24GB", "price_inr": "₹42,000–₹48,000", "market": "used" },
+    { "id": "rtx-4060", "name": "NVIDIA RTX 4060", "brand": "NVIDIA", "score": 100, "vram": "8GB", "price_inr": "₹27,500–₹29,500", "market": "new" },
+    { "id": "rtx-4060-ti", "name": "NVIDIA RTX 4060 Ti 8GB", "brand": "NVIDIA", "score": 116, "vram": "8GB", "price_inr": "₹36,000–₹39,000", "market": "new" },
+    { "id": "rtx-4070", "name": "NVIDIA RTX 4070", "brand": "NVIDIA", "score": 136, "vram": "12GB", "price_inr": "₹51,000–₹55,000", "market": "new" },
+    { "id": "rtx-4070-super", "name": "NVIDIA RTX 4070 Super", "brand": "NVIDIA", "score": 150, "vram": "12GB", "price_inr": "₹57,000–₹62,000", "market": "new" },
+    { "id": "rtx-4070-ti", "name": "NVIDIA RTX 4070 Ti", "brand": "NVIDIA", "score": 162, "vram": "12GB", "price_inr": "₹55,000–₹62,000", "market": "used" },
+    { "id": "rtx-4070-ti-super", "name": "NVIDIA RTX 4070 Ti Super", "brand": "NVIDIA", "score": 172, "vram": "16GB", "price_inr": "₹76,000–₹82,000", "market": "new" },
+    { "id": "rtx-4080", "name": "NVIDIA RTX 4080", "brand": "NVIDIA", "score": 188, "vram": "16GB", "price_inr": "₹85,000–₹94,000", "market": "used" },
+    { "id": "rtx-4080-super", "name": "NVIDIA RTX 4080 Super", "brand": "NVIDIA", "score": 193, "vram": "16GB", "price_inr": "₹98,000–₹1,06,000", "market": "new" },
+    { "id": "rtx-4090", "name": "NVIDIA RTX 4090", "brand": "NVIDIA", "score": 235, "vram": "24GB", "price_inr": "₹1,65,000–₹1,85,000", "market": "used" },
+    { "id": "rtx-5060", "name": "NVIDIA RTX 5060", "brand": "NVIDIA", "score": 118, "vram": "8GB", "price_inr": "₹31,000–₹34,000", "market": "new" },
+    { "id": "rtx-5060-ti", "name": "NVIDIA RTX 5060 Ti 16GB", "brand": "NVIDIA", "score": 135, "vram": "16GB", "price_inr": "₹44,000–₹48,000", "market": "new" },
+    { "id": "rtx-5070", "name": "NVIDIA RTX 5070", "brand": "NVIDIA", "score": 162, "vram": "12GB", "price_inr": "₹58,000–₹63,000", "market": "new" },
+    { "id": "rtx-5070-ti", "name": "NVIDIA RTX 5070 Ti", "brand": "NVIDIA", "score": 196, "vram": "16GB", "price_inr": "₹82,000–₹88,000", "market": "new" },
+    { "id": "rtx-5080", "name": "NVIDIA RTX 5080", "brand": "NVIDIA", "score": 218, "vram": "16GB", "price_inr": "₹1,12,000–₹1,22,000", "market": "new" },
+    { "id": "rtx-5090", "name": "NVIDIA RTX 5090", "brand": "NVIDIA", "score": 295, "vram": "32GB", "price_inr": "₹2,25,000–₹2,45,000", "market": "new" },
+
+    { "id": "rx-580", "name": "AMD Radeon RX 580 8GB", "brand": "AMD", "score": 38, "vram": "8GB", "price_inr": "₹5,500–₹7,000", "market": "used" },
+    { "id": "rx-6400", "name": "AMD Radeon RX 6400", "brand": "AMD", "score": 36, "vram": "4GB", "price_inr": "₹10,500–₹12,000", "market": "new" },
+    { "id": "rx-6500-xt", "name": "AMD Radeon RX 6500 XT", "brand": "AMD", "score": 45, "vram": "4GB", "price_inr": "₹12,500–₹14,000", "market": "new" },
+    { "id": "rx-6600", "name": "AMD Radeon RX 6600", "brand": "AMD", "score": 80, "vram": "8GB", "price_inr": "₹18,500–₹20,500", "market": "new" },
+    { "id": "rx-6600-xt", "name": "AMD Radeon RX 6600 XT", "brand": "AMD", "score": 92, "vram": "8GB", "price_inr": "₹13,500–₹15,500", "market": "used" },
+    { "id": "rx-6650-xt", "name": "AMD Radeon RX 6650 XT", "brand": "AMD", "score": 96, "vram": "8GB", "price_inr": "₹21,500–₹24,000", "market": "new" },
+    { "id": "rx-6700-xt", "name": "AMD Radeon RX 6700 XT", "brand": "AMD", "score": 107, "vram": "12GB", "price_inr": "₹17,000–₹20,000", "market": "used" },
+    { "id": "rx-6750-xt", "name": "AMD Radeon RX 6750 XT", "brand": "AMD", "score": 112, "vram": "12GB", "price_inr": "₹19,500–₹22,500", "market": "used" },
+    { "id": "rx-6800", "name": "AMD Radeon RX 6800", "brand": "AMD", "score": 124, "vram": "16GB", "price_inr": "₹24,000–₹27,500", "market": "used" },
+    { "id": "rx-6800-xt", "name": "AMD Radeon RX 6800 XT", "brand": "AMD", "score": 134, "vram": "16GB", "price_inr": "₹27,000–₹31,000", "market": "used" },
+    { "id": "rx-6900-xt", "name": "AMD Radeon RX 6900 XT", "brand": "AMD", "score": 141, "vram": "16GB", "price_inr": "₹32,000–₹36,500", "market": "used" },
+    { "id": "rx-7600", "name": "AMD Radeon RX 7600", "brand": "AMD", "score": 97, "vram": "8GB", "price_inr": "₹23,500–₹26,000", "market": "new" },
+    { "id": "rx-7600-xt", "name": "AMD Radeon RX 7600 XT", "brand": "AMD", "score": 102, "vram": "16GB", "price_inr": "₹29,500–₹32,500", "market": "new" },
+    { "id": "rx-7700-xt", "name": "AMD Radeon RX 7700 XT", "brand": "AMD", "score": 130, "vram": "12GB", "price_inr": "₹38,000–₹42,000", "market": "new" },
+    { "id": "rx-7800-xt", "name": "AMD Radeon RX 7800 XT", "brand": "AMD", "score": 146, "vram": "16GB", "price_inr": "₹47,000–₹51,000", "market": "new" },
+    { "id": "rx-7900-gre", "name": "AMD Radeon RX 7900 GRE", "brand": "AMD", "score": 157, "vram": "16GB", "price_inr": "₹52,000–₹56,000", "market": "new" },
+    { "id": "rx-7900-xt", "name": "AMD Radeon RX 7900 XT", "brand": "AMD", "score": 182, "vram": "20GB", "price_inr": "₹68,000–₹74,000", "market": "new" },
+    { "id": "rx-7900-xtx", "name": "AMD Radeon RX 7900 XTX", "brand": "AMD", "score": 204, "vram": "24GB", "price_inr": "₹88,000–₹95,000", "market": "new" },
+    { "id": "rx-9060-xt", "name": "AMD Radeon RX 9060 XT 16GB", "brand": "AMD", "score": 124, "vram": "16GB", "price_inr": "₹35,000–₹39,000", "market": "new" },
+    { "id": "rx-9070", "name": "AMD Radeon RX 9070", "brand": "AMD", "score": 168, "vram": "16GB", "price_inr": "₹54,000–₹59,000", "market": "new" },
+    { "id": "rx-9070-xt", "name": "AMD Radeon RX 9070 XT", "brand": "AMD", "score": 190, "vram": "16GB", "price_inr": "₹64,000–₹70,000", "market": "new" },
+
+    { "id": "arc-a580", "name": "Intel Arc A580", "brand": "Intel", "score": 78, "vram": "8GB", "price_inr": "₹16,500–₹18,500", "market": "new" },
+    { "id": "arc-a750", "name": "Intel Arc A750", "brand": "Intel", "score": 88, "vram": "8GB", "price_inr": "₹19,500–₹21,500", "market": "new" },
+    { "id": "arc-a770", "name": "Intel Arc A770 16GB", "brand": "Intel", "score": 95, "vram": "16GB", "price_inr": "₹26,500–₹29,500", "market": "new" },
+    { "id": "arc-b580", "name": "Intel Arc B580", "brand": "Intel", "score": 106, "vram": "12GB", "price_inr": "₹26,000–₹29,000", "market": "new" },
+
+    { "id": "vega-7-5600g", "name": "Radeon Vega 7 (Ryzen 5 5600G iGPU)", "brand": "Integrated", "score": 14, "vram": "Shared", "price_inr": "Built-in", "market": "integrated" },
+    { "id": "radeon-780m", "name": "AMD Radeon 780M (iGPU)", "brand": "Integrated", "score": 25, "vram": "Shared", "price_inr": "Built-in", "market": "integrated" }
+  ],
+  "fixes": {
+    "cpu_by_socket": {
+      "AM4": {
+        "name": "AMD Ryzen 7 5700X3D",
+        "price_inr": "~₹21,000–₹23,000",
+        "note": "drop-in upgrade on your existing AM4 motherboard (BIOS update may be required)",
+        "max_score": 133
+      },
+      "LGA1700": {
+        "name": "Intel Core i5-13400F / i5-14400F",
+        "price_inr": "~₹14,500–₹17,500",
+        "note": "drop-in upgrade on your existing LGA1700 motherboard",
+        "max_score": 125
+      },
+      "AM5": {
+        "name": "AMD Ryzen 7 7800X3D",
+        "price_inr": "~₹36,000–₹39,000",
+        "note": "drop-in gaming upgrade on your existing AM5 motherboard",
+        "max_score": 161
+      }
+    },
+    "gpu_tiers": {
+      "under_20k": {
+        "name": "used RTX 3060 Ti (₹16,000–₹19,000 used) or used RX 6700 XT (₹17,000–₹20,000 used)",
+        "url": "https://tools.redrag.in/used-gpu-price-checker/"
+      },
+      "20k_30k": {
+        "name": "RTX 4060 (~₹27,500–₹29,500 new) or RX 7600 (~₹23,500–₹26,000 new)",
+        "url": "https://tools.redrag.in/used-gpu-price-checker/"
+      },
+      "mid_high": {
+        "name": "RTX 5060 Ti 16GB (~₹44,000–₹48,000 new) or RX 9060 XT 16GB (~₹35,000–₹39,000 new)",
+        "url": "https://tools.redrag.in/pc-build-configurator/"
+      }
+    },
+    "fallback_url": "https://tools.redrag.in/pc-build-configurator/"
+  }
+}
