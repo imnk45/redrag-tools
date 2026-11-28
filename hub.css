@@ -263,3 +263,13 @@ html[data-theme="dark"] .rt-search-input {
   opacity: 1;
   transform: scale(1.05);
 }
+
+/* Hero spacing tightened after the stats strip was removed (28 Nov 2026) */
+.rt-hero {
+  padding-bottom: 36px;
+}
+@media (max-width: 768px) {
+  .rt-hero {
+    padding-bottom: 24px;
+  }
+}
